@@ -5,3 +5,14 @@
 .event-text a.inline-char:hover{border-bottom-color:currentColor}
 .event-text .inline-char.unlinked{cursor:default}
 .timeline-note{font-size:14px;line-height:1.85;color:#71848d;margin:10px 0 28px;padding-left:12px;border-left:2px solid #ced9dd}
+
+/* Chronology navigation */
+.tabs .tab.active{background:#dceaf2;border-color:#8faebf;box-shadow:inset 0 -2px 0 #7899ad;font-weight:600}
+.tabs .tab:hover:not(.active){background:#edf3f6;border-color:#a9bdc8}
+.chron-character-nav{display:flex;align-items:center;gap:10px 15px;flex-wrap:wrap;margin:-12px 0 27px;padding:12px 0 16px;border-bottom:1px solid var(--line)}
+.chron-character-label{font-size:12px;color:var(--muted);margin-right:2px}
+.chron-character-link{font-size:13px;color:var(--character-color);border-bottom:1px solid transparent;padding:2px 0}
+.chron-character-link:hover{border-bottom-color:var(--character-color)}
+.chron-character-link span{font-size:11px}
+.inline-char{cursor:text;text-decoration:none}
+.sidebar-hint{font-size:13px;color:var(--muted);line-height:1.8}
