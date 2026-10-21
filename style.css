@@ -39,3 +39,16 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
   .event{padding-bottom:30px}
   .page-head p{font-size:14px;color:#596e78}
 }
+
+/* V2: one colored character title and a flat list of all appearances */
+.profile-head{display:flex;align-items:flex-start;gap:28px;margin:0 0 24px}
+.profile-head .profile-info{flex:1;min-width:0}
+.profile-head h1{font-size:clamp(36px,5vw,55px);line-height:1.3;margin:10px 0 4px}
+.profile-head .portrait{display:block;max-width:230px;width:34%;height:auto;max-height:400px;object-fit:contain;object-position:top;border-radius:3px}
+.appearance-list{border-top:1px solid #c8d4d9;margin-top:16px}
+.appearance-record{padding:22px 0 24px;border-bottom:1px solid #d7e0e4}
+.appearance-top{display:flex;gap:16px;align-items:baseline;color:#647987;font-size:13px;letter-spacing:.035em}
+.appearance-number{font-size:11px;color:#869ba4;min-width:22px}
+.appearance-role{color:#405562;font-size:17px;margin:10px 0 7px}
+.appearance-text{white-space:pre-line;line-height:1.85;color:#34424b;font-size:16px;margin:10px 0 0;overflow-wrap:anywhere}
+@media(max-width:680px){.profile-head{gap:15px;flex-wrap:wrap}.profile-head .portrait{width:min(55%,230px);max-height:300px}.appearance-record{padding:18px 0 22px}.appearance-text{font-size:16px;line-height:1.8}}
