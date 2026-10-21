@@ -16,3 +16,26 @@
 .chron-character-link span{font-size:11px}
 .inline-char{cursor:text;text-decoration:none}
 .sidebar-hint{font-size:13px;color:var(--muted);line-height:1.8}
+
+
+/* V1.1 | 全站阅读对比度优化：仅样式，不修改内容和布局结构 */
+:root{--ink:#283c48;--body:#34424b;--muted:#647780;--line:#bccbd0}
+body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
+.page-head p,.home-card p,.timeline-note,.hint,.empty{color:#596e78}
+.breadcrumb,.eyebrow,.small-label,.mast,.card-top,.credit,.subtitle,.source-list,.index-row .source,.sidebar h3,.sidebar a,.sidebar button,.site-footer,.fact label,.accordion summary .idx{color:var(--muted)}
+.event-text{font-size:16px;line-height:1.75;letter-spacing:0}
+.event-year{font-size:15px;color:#526a78;font-weight:500;line-height:1.6;margin-bottom:7px}
+.timeline{border-left-color:#aabec7}
+.event::before{background:#809eac}
+.event-text .inline-char{font-weight:600}
+.accordion .inside{font-size:16px;line-height:1.75}
+.note-card p,.source-list,.timeline-note{font-size:14px;line-height:1.75}
+.tab,.chip,.chron-character-link,.index-row .source{font-size:14px}
+.chron-character-label,.fact label,.hint{font-size:13px}
+@media(max-width:540px){
+  body{font-size:16px;line-height:1.75}
+  .event-text{font-size:16px;line-height:1.75}
+  .event-year{font-size:15px}
+  .event{padding-bottom:30px}
+  .page-head p{font-size:14px;color:#596e78}
+}
