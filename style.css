@@ -52,3 +52,16 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .appearance-role{color:#405562;font-size:17px;margin:10px 0 7px}
 .appearance-text{white-space:pre-line;line-height:1.85;color:#34424b;font-size:16px;margin:10px 0 0;overflow-wrap:anywhere}
 @media(max-width:680px){.profile-head{gap:15px;flex-wrap:wrap}.profile-head .portrait{width:min(55%,230px);max-height:300px}.appearance-record{padding:18px 0 22px}.appearance-text{font-size:16px;line-height:1.8}}
+
+/* V2.1 | 人物登场记录的阅读层级与浅雾色区分 */
+.appearance-record{padding:24px 0 26px;border-bottom:1px solid #d3dee2}
+.appearance-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;letter-spacing:0;color:#536d7b}
+.appearance-number{font:12px/1.5 Georgia,serif;color:#7c929d;min-width:24px}
+.appearance-source{display:inline-block;padding:3px 10px;border-radius:3px;background:#e8f0f5;border:1px solid #d4e3ea;color:#42667a;font-size:13px;line-height:1.65}
+/* 四种淡色仅用于来源标签，按记录依次循环；不改变其世界观归属 */
+.appearance-record:nth-child(4n+2) .appearance-source{background:#f4ede6;border-color:#e9dbce;color:#85644c}
+.appearance-record:nth-child(4n+3) .appearance-source{background:#e8f0eb;border-color:#d4e4db;color:#4d7563}
+.appearance-record:nth-child(4n+4) .appearance-source{background:#edeaf2;border-color:#ddd5e7;color:#76618c}
+.appearance-role{font-size:18px;line-height:1.55;font-weight:500;color:#2f4654;margin:13px 0 8px}
+.appearance-text{font-size:14px;line-height:1.8;font-weight:400;color:#53636d;margin:8px 0 0;white-space:pre-line;overflow-wrap:anywhere;letter-spacing:0}
+@media(max-width:680px){.appearance-record{padding:20px 0 23px}.appearance-top{gap:9px}.appearance-role{font-size:17px}.appearance-text{font-size:14px;line-height:1.85}}
