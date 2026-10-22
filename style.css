@@ -150,3 +150,29 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .npc-recurring-row .source{white-space:nowrap;color:#708591;font-size:12px}
 .npc-source-group summary .appearance-source{font-weight:500}
 @media(max-width:600px){.npc-recurring-row{gap:8px}.npc-recurring-row .npc-world-tags{margin-left:0}.npc-recurring-row .source{margin-left:auto}.npc-recurring-row .npc-world-tags .appearance-source{font-size:11px;padding:3px 7px}}
+
+/* V3.1 Four-world relationship atlas: cultivation/modern above, apocalypse/historical below */
+.rel-overview-frame{border:1px solid #d1dbda;background:#f7f8f7;border-radius:10px;padding:14px;display:grid;gap:12px;margin:18px 0 14px}
+.rel-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"cultivation modern" "apocalypse historical";align-items:stretch}
+.rel-single-grid{grid-template-columns:minmax(0,1fr)}
+.rel-world-cultivation{grid-area:cultivation}.rel-world-modern{grid-area:modern}
+.rel-world-apocalypse{grid-area:apocalypse}.rel-world-historical{grid-area:historical}
+.rel-single-grid .rel-world-panel{grid-area:auto}
+.rel-world-panel{min-width:0;border:1px solid #dce4e3;border-radius:7px;background:#fbfcfb;overflow:hidden}
+.rel-panel-head{display:flex;align-items:center;gap:11px;padding:13px 17px;border-bottom:1px solid #e1e8e7}
+.rel-panel-head h3{margin:0;font-size:19px;font-weight:500;color:#385568}
+.rel-panel-index,.rel-panel-count{font-size:12px;color:#80949b}
+.rel-panel-count{margin-left:auto}
+.rel-world-modern .rel-panel-head{background:#e8f0f5}
+.rel-world-historical .rel-panel-head{background:#f4ede6}
+.rel-world-cultivation .rel-panel-head{background:#e8f0eb}
+.rel-world-apocalypse .rel-panel-head{background:#edeaf2}
+.rel-panel-scroll{overflow-x:auto;max-width:100%;padding:8px 4px}
+.rel-panel-scroll svg{display:block;height:auto;max-width:none}
+.rel-panel-scroll svg a{cursor:pointer;text-decoration:none}
+.rel-panel-scroll svg a:hover circle{stroke-width:3}
+@media(max-width:760px){
+.rel-overview-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"cultivation" "modern" "apocalypse" "historical"}
+.rel-overview-frame{padding:8px;gap:10px}
+.rel-panel-head{padding:12px}
+}
