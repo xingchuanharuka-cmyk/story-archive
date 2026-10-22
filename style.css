@@ -90,3 +90,9 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 /* V2.3: clearer, accessible character-name colors; no index color inheritance */
 .index-row .name{font-weight:600;text-decoration:none}
 .index-row:hover .name{text-decoration:underline;text-underline-offset:4px}
+
+/* V2.4 NPC index and source-grouped single appearances */
+.npc-intro{font-size:14px;color:#5d7180;line-height:1.8;margin:15px 0 25px}
+.npc-index .index-row{gap:16px}.npc-index .index-row .name{font-size:20px;color:#435e70}.npc-index .index-row .source{margin-left:auto;color:#6e8490;font-size:13px}
+.npc-source-group{padding:20px 0 25px;border-top:1px solid #cfdbdf}.npc-source-group h2{display:flex;align-items:center;gap:18px;margin:0 0 10px;font-weight:normal}.npc-single-record{padding:13px 0 16px;border-bottom:1px solid #e1e7e9}.npc-single-record:last-child{border-bottom:0}.npc-single-record h3{font-size:18px;color:#354e60;margin:0 0 6px}.npc-single-record p{font-size:14px;color:#53636d;line-height:1.8;margin:0;overflow-wrap:anywhere}
+@media(max-width:600px){.npc-single-record h3{font-size:17px}.npc-source-group{padding:18px 0}.npc-index .index-row .name{font-size:18px}}
