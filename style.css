@@ -115,3 +115,30 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .personality-tags{display:flex;flex-wrap:wrap;gap:7px}
 .personality-tag{display:inline-flex;align-items:center;border:1px solid color-mix(in srgb,var(--personality-color) 45%,transparent);border-radius:7px;padding:5px 10px;background:color-mix(in srgb,var(--personality-color) 11%,transparent);color:color-mix(in srgb,var(--personality-color) 84%,#172b38);font-size:13px;font-weight:500;line-height:1.5;white-space:normal}
 @media(max-width:600px){.personality-tags{gap:6px}.personality-tag{padding:4px 8px;font-size:12px}.personality-groups{margin-top:11px}}
+
+/* V2.7 CHAR relationship overview and world views */
+.relation-section{margin-top:26px}
+.relation-overview-img{display:block;width:100%;height:auto;border:1px solid #d5ddda;border-radius:7px}
+.relation-world-heading{margin-top:38px;margin-bottom:14px}
+.relation-graph-scroll{width:100%;overflow-x:auto;margin:20px 0 30px;background:#fafbf9;border:1px solid #d8e1df;border-radius:8px}
+.relation-graph{display:block;min-width:590px;width:100%;height:auto}
+.relation-graph a{cursor:pointer}
+.relation-graph a:hover circle{stroke-width:3}
+.relation-search{box-sizing:border-box;width:100%;padding:12px 14px;background:#fcfdfc;border:1px solid #cbd9de;border-radius:5px;color:#34424b;font:inherit}
+.relation-entry{padding:18px 2px;border-bottom:1px solid #d9e1e4;font-size:16px}
+.relation-entry p{font-size:14px;line-height:1.75;color:#52636c;margin:8px 0 0}
+.relation-kind{font-size:12px;color:#667d88;margin-left:12px}
+@media(max-width:600px){.relation-graph{min-width:570px}.relation-entry{font-size:15px}}
+
+/* V2.8 editable SVG relation map */
+.relation-controls{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin:20px 0 14px}
+.relation-zoom{display:flex;align-items:center;gap:12px;color:#526b75;font-size:13px}
+.relation-zoom button{font:inherit;color:#405562;background:#edf3f2;border:1px solid #c8d7d6;border-radius:5px;padding:6px 12px;cursor:pointer}
+.relation-canvas{overflow:auto;width:100%;box-sizing:border-box;border:1px solid #d4dfd9;border-radius:9px;background:#f8f8f3;max-height:760px;min-height:260px}
+.char-rel-svg{display:block;height:auto;max-width:none;background:radial-gradient(#dce4db 0.5px,transparent .6px);background-size:16px 16px}
+.char-rel-node{cursor:pointer}.char-rel-node:hover circle{stroke-width:3;fill:#fff}
+.char-rel-node-name{font-size:13px;font-family:STZhongsong,Songti SC,serif}
+.char-rel-node-caption{font-size:10px;fill:#6b7d7b}
+.char-rel-edge-label{font-size:10px;fill:#7b8984;paint-order:stroke;stroke:#f8f8f3;stroke-width:4px;stroke-linejoin:round}
+.relation-tip{font-size:12px;margin:8px 0 32px}
+@media(max-width:600px){.relation-controls{display:block}.relation-zoom{margin:12px 0}.relation-canvas{max-height:560px}}
