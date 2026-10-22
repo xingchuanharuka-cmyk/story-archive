@@ -38,7 +38,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "温文尔雅",
+        "冷酷腹黑",
+        "生性多疑",
+        "善于权谋",
+        "仁慈与狠厉并存"
+      ]
     },
     {
       "id": "char-lijiang",
@@ -107,7 +114,13 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "通透聪明",
+        "少年气",
+        "外热内冷",
+        "贱兮兮"
+      ]
     },
     {
       "id": "char-beishuo",
@@ -151,7 +164,15 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "社牛暴君",
+        "讲排场",
+        "KY",
+        "不内耗",
+        "睚眦必报",
+        "随性"
+      ]
     },
     {
       "id": "char-guqi",
@@ -180,7 +201,15 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "傲慢",
+        "傲娇",
+        "目中无人",
+        "感情沉重",
+        "性格扭曲",
+        "欺强欺弱"
+      ]
     },
     {
       "id": "char-qiumiao",
@@ -209,7 +238,29 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityGroups": [
+        {
+          "label": "当前可见",
+          "tags": [
+            "礼貌的",
+            "理性的",
+            "缺德的",
+            "狂傲的",
+            "偏激的"
+          ]
+        },
+        {
+          "label": "尚未可见",
+          "tags": [
+            "幽默的",
+            "挑逗的",
+            "引诱的",
+            "共情的",
+            "疯狂的"
+          ]
+        }
+      ]
     },
     {
       "id": "char-xinghuairong",
@@ -233,7 +284,12 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "个性纯粹",
+        "不屑权谋",
+        "外糙内细"
+      ]
     },
     {
       "id": "char-songzhishi",
@@ -272,7 +328,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "温和",
+        "理性的使用者",
+        "隐性的恶劣",
+        "控制欲",
+        "不恋旧"
+      ]
     },
     {
       "id": "char-louyanning",
@@ -306,7 +369,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "严管妻",
+        "挂壁男二",
+        "惊才绝艳",
+        "冷脸贱",
+        "妹控但抖s"
+      ]
     },
     {
       "id": "char-shuijuya",
@@ -340,7 +410,12 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "万人迷",
+        "外温内冷",
+        "蹭吃蹭喝"
+      ]
     },
     {
       "id": "char-beixiangnan",
@@ -364,7 +439,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "孤儿",
+        "天才",
+        "社交节能",
+        "戴耳机只为免打扰",
+        "hot nerd"
+      ]
     },
     {
       "id": "char-xunyilun",
@@ -388,7 +470,13 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "绿茶会长",
+        "破碎小狗",
+        "游戏菜逼",
+        "处心积虑"
+      ]
     },
     {
       "id": "char-jiyang",
@@ -412,7 +500,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "桀骜张扬",
+        "锋芒毕露",
+        "玩世不恭",
+        "理想主义",
+        "幼稚爱闹"
+      ]
     },
     {
       "id": "char-xieman",
@@ -436,7 +531,10 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "高岭之花"
+      ]
     },
     {
       "id": "char-beiruimin",
@@ -480,7 +578,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "冷淡矜贵",
+        "毒舌懒狗",
+        "清醒锐利",
+        "占有欲",
+        "试探心"
+      ]
     },
     {
       "id": "char-beiruien",
@@ -524,7 +629,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "口蜜腹剑",
+        "中央空调",
+        "高功能坏狗",
+        "擅长伪装",
+        "道德感薄弱"
+      ]
     },
     {
       "id": "char-leizhi",
@@ -532,7 +644,7 @@ window.ARCHIVE_DATA = {
       "world": "现代",
       "source": "雷止",
       "identity": "",
-      "color": "#A04C56",
+      "color": "#367EAC",
       "portrait": "images/modern/leizhi.jpg",
       "appearances": [
         {
@@ -563,7 +675,15 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "寡言",
+        "低人际期待",
+        "实用主义",
+        "直接",
+        "聪明",
+        "不擅回应关心"
+      ]
     },
     {
       "id": "char-songchao",
@@ -592,7 +712,14 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "斯文得体",
+        "锋利自持",
+        "精明",
+        "审美挑剔",
+        "爱自己"
+      ]
     },
     {
       "id": "char-maijianhai",
@@ -621,7 +748,11 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "律宗“教徒”",
+        "可爱侵略症"
+      ]
     },
     {
       "id": "char-qiaozhi",
@@ -655,7 +786,11 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "轻浮役",
+        "反骨"
+      ]
     },
     {
       "id": "char-cheyixian",
@@ -684,7 +819,13 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "玩世不恭",
+        "浪子",
+        "理想主义",
+        "善于隐藏真实的一面"
+      ]
     },
     {
       "id": "char-xisha",
@@ -708,7 +849,13 @@ window.ARCHIVE_DATA = {
       ],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "冷漠寡言",
+        "傲慢",
+        "冷血",
+        "利益至上"
+      ]
     },
     {
       "id": "char-ashnaxin",
@@ -721,7 +868,14 @@ window.ARCHIVE_DATA = {
       "appearances": [],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "桀骜",
+        "隐忍",
+        "阴险虚伪",
+        "笑里藏刀",
+        "复仇心强"
+      ]
     },
     {
       "id": "char-qiuchen",
@@ -734,7 +888,12 @@ window.ARCHIVE_DATA = {
       "appearances": [],
       "kind": "char",
       "links": [],
-      "events": []
+      "events": [],
+      "personalityTags": [
+        "甜系爱豆脸",
+        "绿茶怨夫",
+        "心男德班长"
+      ]
     },
     {
       "id": "npc-qiuwanlu",
@@ -1275,6 +1434,25 @@ window.ARCHIVE_DATA = {
           "text": "阴琢"
         }
       ]
+    },
+    {
+      "id": "char-dayibie",
+      "name": "达一别",
+      "world": "现代",
+      "source": "达一别",
+      "identity": "",
+      "color": "#506E84",
+      "portrait": "",
+      "appearances": [],
+      "personalityTags": [
+        "不清高",
+        "不内耗",
+        "清醒利己",
+        "善于制造暧昧",
+        "半真半假"
+      ],
+      "links": [],
+      "kind": "char"
     }
   ],
   "recurring": [

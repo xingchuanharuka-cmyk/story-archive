@@ -107,3 +107,11 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .npc-source-group .npc-single-record{margin-left:27px}
 .npc-source-group summary:hover{background:#f0f4f5}
 @media(max-width:600px){.npc-source-group summary{gap:9px}.npc-group-count{font-size:11px}.npc-source-group .npc-single-record{margin-left:10px}}
+
+/* V2.6 人物姓名下的半透明性格标签，颜色跟随 CHAR 代表色 */
+.personality-groups{display:flex;flex-direction:column;gap:10px;margin:13px 0 10px;max-width:100%}
+.personality-group{display:flex;flex-direction:column;gap:7px}
+.personality-group-label{font-size:12px;letter-spacing:.06em;color:#576875;font-weight:600}
+.personality-tags{display:flex;flex-wrap:wrap;gap:7px}
+.personality-tag{display:inline-flex;align-items:center;border:1px solid color-mix(in srgb,var(--personality-color) 45%,transparent);border-radius:7px;padding:5px 10px;background:color-mix(in srgb,var(--personality-color) 11%,transparent);color:color-mix(in srgb,var(--personality-color) 84%,#172b38);font-size:13px;font-weight:500;line-height:1.5;white-space:normal}
+@media(max-width:600px){.personality-tags{gap:6px}.personality-tag{padding:4px 8px;font-size:12px}.personality-groups{margin-top:11px}}
