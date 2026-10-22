@@ -197,27 +197,6 @@ window.ARCHIVE_GRAPH = {
       "y": 551
     },
     {
-      "id": "n28",
-      "name": "纪扬",
-      "world": "现代",
-      "x": 390,
-      "y": 770
-    },
-    {
-      "id": "n29",
-      "name": "黎奖",
-      "world": "现代",
-      "x": 680,
-      "y": 707
-    },
-    {
-      "id": "n30",
-      "name": "谢满",
-      "world": "现代",
-      "x": 889,
-      "y": 638
-    },
-    {
       "id": "n31",
       "name": "求渺",
       "world": "现代",
@@ -289,11 +268,6 @@ window.ARCHIVE_GRAPH = {
       "label": "舍友"
     },
     {
-      "from": "n21",
-      "to": "n22",
-      "label": "朋友"
-    },
-    {
       "from": "n24",
       "to": "n25",
       "label": "朋友"
@@ -307,6 +281,16 @@ window.ARCHIVE_GRAPH = {
       "from": "n32",
       "to": "n31",
       "label": "表兄弟"
+    },
+    {
+      "from": "n13",
+      "to": "n11",
+      "label": "亦师亦父亦兄"
+    },
+    {
+      "from": "n11",
+      "to": "n12",
+      "label": "宿敌"
     }
   ]
 };
