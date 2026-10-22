@@ -1,7 +1,8 @@
 /* 人物资料：CHAR 仅归档主场世界观；跨卡登场记录集中展示。 */
 window.ARCHIVE_DATA = {
  worlds:["现代", "古代", "修真", "末世"],
- characters:[
+ characters:
+ [
   {
     "id": "char-gulilang",
     "name": "辜琳琅",
@@ -111,7 +112,7 @@ window.ARCHIVE_DATA = {
     "world": "修真",
     "source": "北朔",
     "identity": "魔尊",
-    "color": "#A84D48",
+    "color": "#A83B43",
     "portrait": "images/cultivation/beishuo.jpg",
     "appearances": [
       {
@@ -155,7 +156,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "辜麒",
     "identity": "辜家假少爷",
-    "color": "#8056A5",
+    "color": "#7953A0",
     "portrait": "images/modern/guqi.jpg",
     "appearances": [
       {
@@ -344,7 +345,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "北向南",
     "identity": "",
-    "color": "#537D9D",
+    "color": "#356FA4",
     "portrait": "images/modern/beixiangnan.jpg",
     "appearances": [
       {
@@ -368,7 +369,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "荀逸伦",
     "identity": "",
-    "color": "#87698C",
+    "color": "#244D75",
     "portrait": "images/modern/xunyilun.jpg",
     "appearances": [
       {
@@ -392,7 +393,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "纪扬",
     "identity": "",
-    "color": "#6E739A",
+    "color": "#754B9A",
     "portrait": "images/modern/jiyang.jpg",
     "appearances": [
       {
@@ -416,7 +417,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "谢满",
     "identity": "",
-    "color": "#587F79",
+    "color": "#367451",
     "portrait": "images/modern/xieman.jpg",
     "appearances": [
       {
@@ -440,7 +441,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "贝瑞旻",
     "identity": "",
-    "color": "#5B718B",
+    "color": "#A73570",
     "portrait": "images/modern/beiruimin.jpg",
     "appearances": [
       {
@@ -484,7 +485,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "贝瑞恩",
     "identity": "",
-    "color": "#7B6A9C",
+    "color": "#957100",
     "portrait": "images/modern/beiruien.jpg",
     "appearances": [
       {
@@ -567,7 +568,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "宋潮",
     "identity": "",
-    "color": "#8B665F",
+    "color": "#4C515B",
     "portrait": "images/modern/songchao.jpg",
     "appearances": [
       {
@@ -596,7 +597,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "麦见海",
     "identity": "",
-    "color": "#3F827D",
+    "color": "#887323",
     "portrait": "images/modern/maijianhai.jpg",
     "appearances": [
       {
@@ -625,7 +626,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "乔治",
     "identity": "",
-    "color": "#6B7E9E",
+    "color": "#766484",
     "portrait": "images/modern/qiaozhi.jpg",
     "appearances": [
       {
@@ -659,7 +660,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "车以弦",
     "identity": "",
-    "color": "#8A6988",
+    "color": "#A83E43",
     "portrait": "images/modern/cheyixian.jpg",
     "appearances": [
       {
@@ -688,7 +689,7 @@ window.ARCHIVE_DATA = {
     "world": "现代",
     "source": "西杀",
     "identity": "",
-    "color": "#7C5665",
+    "color": "#8D3039",
     "portrait": "images/modern/xisha.jpg",
     "appearances": [
       {
@@ -862,6 +863,32 @@ window.ARCHIVE_DATA = {
       }
     ],
     "kind": "npc",
+    "links": [],
+    "events": []
+  },
+  {
+    "id": "char-ashnaxin",
+    "name": "阿史那信",
+    "world": "古代",
+    "source": "阿史那信",
+    "identity": "",
+    "color": "#8056A5",
+    "portrait": "images/historical/ashnaxin.jpg",
+    "appearances": [],
+    "kind": "char",
+    "links": [],
+    "events": []
+  },
+  {
+    "id": "char-qiuchen",
+    "name": "柊尘",
+    "world": "现代",
+    "source": "柊尘",
+    "identity": "",
+    "color": "#254F81",
+    "portrait": "images/modern/qiuchen.jpg",
+    "appearances": [],
+    "kind": "char",
     "links": [],
     "events": []
   }
