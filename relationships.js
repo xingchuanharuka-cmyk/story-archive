@@ -216,6 +216,20 @@ window.ARCHIVE_GRAPH = {
       "world": "现代",
       "x": 889,
       "y": 638
+    },
+    {
+      "id": "n31",
+      "name": "求渺",
+      "world": "现代",
+      "x": 260,
+      "y": 875
+    },
+    {
+      "id": "n32",
+      "name": "达一别",
+      "world": "现代",
+      "x": 115,
+      "y": 750
     }
   ],
   "edges": [
@@ -240,59 +254,9 @@ window.ARCHIVE_GRAPH = {
       "label": "弟子"
     },
     {
-      "from": "n3",
-      "to": "n4",
-      "label": "同一人"
-    },
-    {
-      "from": "n4",
-      "to": "n6",
-      "label": "百年前的同事"
-    },
-    {
-      "from": "n5",
-      "to": "n6",
-      "label": "同一人"
-    },
-    {
-      "from": "n3",
-      "to": "n7",
-      "label": "同一人"
-    },
-    {
-      "from": "n3",
-      "to": "n9",
-      "label": "同一人"
-    },
-    {
-      "from": "n8",
-      "to": "n9",
-      "label": "同一人"
-    },
-    {
-      "from": "n9",
-      "to": "n11",
-      "label": "上司"
-    },
-    {
-      "from": "n10",
-      "to": "n11",
-      "label": "同一人"
-    },
-    {
       "from": "n11",
       "to": "n12",
       "label": "敌对"
-    },
-    {
-      "from": "n11",
-      "to": "n13",
-      "label": "一帝朝廷关系"
-    },
-    {
-      "from": "n14",
-      "to": "n12",
-      "label": "同一人"
     },
     {
       "from": "n15",
@@ -330,11 +294,6 @@ window.ARCHIVE_GRAPH = {
       "label": "朋友"
     },
     {
-      "from": "n23",
-      "to": "n24",
-      "label": "情敌"
-    },
-    {
       "from": "n24",
       "to": "n25",
       "label": "朋友"
@@ -345,24 +304,9 @@ window.ARCHIVE_GRAPH = {
       "label": "情敌"
     },
     {
-      "from": "n28",
-      "to": "n29",
-      "label": "同一人"
-    },
-    {
-      "from": "n19",
-      "to": "n29",
-      "label": "同一人"
-    },
-    {
-      "from": "n12",
-      "to": "n14",
-      "label": "同一人"
-    },
-    {
-      "from": "n15",
-      "to": "n24",
-      "label": "同一人"
+      "from": "n32",
+      "to": "n31",
+      "label": "表兄弟"
     }
   ]
 };
