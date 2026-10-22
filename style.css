@@ -142,3 +142,11 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .char-rel-edge-label{font-size:10px;fill:#7b8984;paint-order:stroke;stroke:#f8f8f3;stroke-width:4px;stroke-linejoin:round}
 .relation-tip{font-size:12px;margin:8px 0 32px}
 @media(max-width:600px){.relation-controls{display:block}.relation-zoom{margin:12px 0}.relation-canvas{max-height:560px}}
+
+/* V3.0 NPC world badges and frequency ordering */
+.npc-recurring-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.npc-recurring-row .npc-world-tags{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+.npc-recurring-row .npc-world-tags .appearance-source{font-size:12px;padding:4px 9px;white-space:nowrap;font-weight:500}
+.npc-recurring-row .source{white-space:nowrap;color:#708591;font-size:12px}
+.npc-source-group summary .appearance-source{font-weight:500}
+@media(max-width:600px){.npc-recurring-row{gap:8px}.npc-recurring-row .npc-world-tags{margin-left:0}.npc-recurring-row .source{margin-left:auto}.npc-recurring-row .npc-world-tags .appearance-source{font-size:11px;padding:3px 7px}}
