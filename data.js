@@ -831,7 +831,7 @@ window.ARCHIVE_DATA = {
         {
           "source": "现代·车以弦",
           "role": "（主场）",
-          "text": "Alpha\nCEO\nAGE24\nHEIGHT189 cm"
+          "text": "Alpha\nCEO\nAGE24\nHEIGHT189 cm\n\nLunaris香水公司创始人，不夜城名利场的中心。阳光开朗、妙语连珠，无人处却能窥见淡漠的一隅。他是上城区昂贵的爱马仕，循序渐进的猎手，却总在捕获猎物的瞬间抽身离去。红发如火，心似荒原。"
         },
         {
           "source": "现代·柊尘",
@@ -866,7 +866,7 @@ window.ARCHIVE_DATA = {
         {
           "source": "现代·西杀",
           "role": "（主场）",
-          "text": "Alpha Male\nIron Rust · 铁锈味\nAge 26\nHeight 190 cm"
+          "text": "Alpha Male\nIron Rust · 铁锈味\nAge 26\nHeight 190 cm\n\nThe Mask\n冷峻疏离，高不可攀。眉眼天生含笑，常常给人以虚幻的温柔错觉。\n\nThe Truth\n一个冷静的疯子，控制欲极强的策划者。为了得到你不择手段，正在对你们的过去大编特遍。"
         },
         {
           "source": "现代·车以弦",

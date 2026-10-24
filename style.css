@@ -534,3 +534,6 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* V5.2 | 首页三张目录卡片的中文主标题恢复华文中宋。 */
 .home-grid-three .home-card h2 { font-family:'STZhongsong','华文中宋','Songti SC','Noto Serif SC',serif; font-weight:400; }
+
+/* V5.4 | 西杀主场双段说明突出显示 */
+.appearance-text strong{font-weight:650;color:inherit}
