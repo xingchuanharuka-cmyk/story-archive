@@ -407,3 +407,64 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
  .painting-caption{grid-template-columns:38px minmax(0,1fr);gap:9px}
  .painting-caption p{font-size:13px}
 }
+
+
+/* V4.6 | 华文中宋正文加深：提高手机端对比度，不改变角色专属标色 */
+:root {
+  --ink: #253640;
+  --body: #30424c;
+  --muted: #53656f;
+}
+body { color: var(--body); }
+.home-card p,
+.page-head p,
+.timeline-note,
+.hint,
+.empty,
+.sidebar-hint,
+.relation-explainer { color: #465b67; }
+.appearance-text,
+.repo-entry-content,
+.repo-long-entry .repo-entry-content,
+.repo-short-entry .repo-entry-content,
+.repo-ending .repo-entry-content,
+.notes-warning-copy p,
+.painting-intro,
+.npc-single-body,
+.source-list,
+.event-text { color: #354751; }
+.appearance-role,
+.repo-entry-title,
+.relationship-record-detail,
+.birthday-date,
+.birthday-source,
+.index-row .source,
+.appearance-top,
+.repo-intro,
+.repo-section-head p { color: #4a5e69; }
+.repo-quote { color: #3b5361; }
+.painting-caption p { color: #465b68; }
+.notes-gate-actions .notes-decline,
+.home-private a,
+.home-private-note,
+.breadcrumb,
+.eyebrow,
+.small-label,
+.mast,
+.card-top,
+.credit,
+.subtitle,
+.sidebar h3,
+.sidebar a,
+.sidebar button,
+.site-footer,
+.fact label,
+.accordion summary .idx { color: var(--muted); }
+@media (max-width: 680px) {
+  .appearance-text,
+  .repo-entry-content,
+  .notes-warning-copy p,
+  .event-text { color: #2f414b; }
+  .painting-caption p { color: #405360; }
+}
+/* 人物专属颜色通过内联样式指定，以上规则不覆盖 .repo-char-name 或 .inline-char 的颜色。 */
