@@ -968,6 +968,30 @@ window.ARCHIVE_DATA = {
       "events": []
     },
     {
+      "id": "npc-damaile",
+      "name": "达美乐",
+      "world": "现代",
+      "source": "达美乐",
+      "identity": "重复出现的 NPC",
+      "color": "#5B7180",
+      "portrait": "",
+      "appearances": [
+        {
+          "source": "现代·达一别",
+          "role": "",
+          "text": "画家，求万路的妻子。"
+        },
+        {
+          "source": "末世·求渺",
+          "role": "",
+          "text": "出身中城区中产家庭。父亲求万路是物理海洋学教授，母亲达美乐是画家，父母虽无共同语言但也算相敬如宾。"
+        }
+      ],
+      "kind": "npc",
+      "links": [],
+      "events": []
+    },
+    {
       "id": "npc-beirang",
       "name": "北壤",
       "world": "现代",
@@ -1788,6 +1812,13 @@ window.ARCHIVE_DATA = {
       "sources": [
         "现代·车以弦",
         "现代·西杀"
+      ]
+    },
+    {
+      "name": "达美乐",
+      "sources": [
+        "现代·达一别",
+        "末世·求渺"
       ]
     }
   ],
