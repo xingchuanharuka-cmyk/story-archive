@@ -528,3 +528,6 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 @media (max-width: 600px) {
   .birthday-season .birthday-date { font-size: 19px; }
 }
+
+/* V5.0: 生日日期字体与时间编年日期保持一致。 */
+.birthday-season .birthday-date { font-family: 'IBM Plex Mono', monospace; }
