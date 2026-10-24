@@ -531,3 +531,6 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* V5.0: 生日日期字体与时间编年日期保持一致。 */
 .birthday-season .birthday-date { font-family: 'IBM Plex Mono', monospace; }
+
+/* V5.2 | 首页三张目录卡片的中文主标题恢复华文中宋。 */
+.home-grid-three .home-card h2 { font-family:'STZhongsong','华文中宋','Songti SC','Noto Serif SC',serif; font-weight:400; }
