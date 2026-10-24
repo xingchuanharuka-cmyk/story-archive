@@ -345,3 +345,65 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .repo-ending>.repo-entry-content{padding:23px 3px}
 @media(max-width:680px){.home-private-note{font-size:11px}.repo-long-entry summary{gap:9px;min-height:70px;flex-wrap:wrap}.repo-entry-label{font-size:17px}.repo-entry-title{font-size:13px}.repo-long-entry .repo-entry-content{padding:6px 3px 23px 15px}.repo-short-entry .repo-entry-content{padding-left:0}.repo-entry-content{font-size:14px;line-height:1.95}.repo-quote{font-size:14px;padding:12px 14px}.repo-section-head h2{font-size:25px}}
 @media(prefers-reduced-motion:reduce){.repo-expand:after,.repo-long-entry summary{transition:none}}
+
+/* V4.3: gentle title motion and repositioned birthday note */
+.archive-typing{display:block;text-align:center}
+.archive-typing span{display:inline-block;white-space:nowrap;overflow:hidden;vertical-align:bottom;animation:archive-type-erase 7.2s steps(17,end) infinite;clip-path:inset(0 100% 0 0)}
+@keyframes archive-type-erase{
+  0%,8%{clip-path:inset(0 100% 0 0)}
+  46%,64%{clip-path:inset(0 0 0 0)}
+  96%,100%{clip-path:inset(0 100% 0 0)}
+}
+.archive-rays{transform-box:view-box;animation:archive-ray-breath 5s ease-in-out infinite;opacity:.75}
+.archive-rays-left{--ray-shift:-9px}
+.archive-rays-right{--ray-shift:9px}
+@keyframes archive-ray-breath{0%,100%{transform:translateX(0);opacity:.72}50%{transform:translateX(var(--ray-shift));opacity:1}}
+.birthday-standalone-note{margin:28px 0 12px;padding:17px 20px;background:#f0f4f5;border-left:2px solid #a7bdc7;color:#5a6e7b}
+.birthday-standalone-note p{margin:0;line-height:1.9;font-size:14px}
+@media(prefers-reduced-motion:reduce){.archive-typing span{animation:none;clip-path:none}.archive-rays{animation:none;opacity:1}}
+
+
+/* V4.4 | Personal repo as four genuinely separate tab panels */
+.repo-page-layout{display:block;max-width:100%}
+.repo-page-layout>.content{max-width:920px;width:100%;margin:0 auto}
+.repo-page-layout>.sidebar{display:none}
+.repo-page-layout .repo-section{margin:8px 0 36px}
+.repo-page-layout .repo-ending{margin-top:8px}
+.repo-page-layout .repo-intro{padding-bottom:15px}
+.repo-page-layout .repo-tabs{margin-bottom:27px}
+.repo-page-layout .repo-tabs .tabs{display:flex;flex-wrap:wrap;gap:9px;border-bottom:1px solid #d3e0e4;padding-bottom:16px}
+.repo-page-layout .repo-tabs .tab{white-space:nowrap}
+.repo-page-layout .repo-entry-content{line-height:2.05}
+.repo-char-name{font-weight:600;text-decoration:none}
+.repo-long-entry .repo-entry-label{flex-shrink:0}
+.repo-title-pill{display:inline-flex;align-items:center;padding:6px 13px;border-radius:999px;
+ background:rgba(145,170,182,.14);background:color-mix(in srgb,var(--repo-pill-color) 12%,transparent);
+ border:1px solid rgba(145,170,182,.34);border-color:color-mix(in srgb,var(--repo-pill-color) 32%,transparent);
+ color:#536b79;line-height:1.55}
+.repo-long-entry summary{gap:13px;flex-wrap:wrap}
+.repo-long-entry .repo-expand{margin-left:auto}
+.repo-long-entry[open] .repo-title-pill{background:color-mix(in srgb,var(--repo-pill-color) 17%,transparent)}
+.painting-intro{padding:19px 4px 27px;font-size:14px;line-height:1.95;color:#526671}
+.painting-intro>p{margin:0 0 20px}
+.painting-worlds{padding:18px 22px;background:#f0f4f5;border-left:2px solid #a5bdc8}
+.painting-worlds-heading{display:block;color:#7d919d;font:11px Georgia,serif;letter-spacing:.13em;margin-bottom:11px}
+.painting-worlds p{margin:6px 0}
+.painting-world-label{color:#526c7c;font-weight:600}
+.painting-gallery{display:grid;grid-template-columns:minmax(0,1fr);gap:33px;padding:10px 0 36px}
+.painting-item{margin:0;padding:0 0 27px;border-bottom:1px solid #d5e1e4;min-width:0}
+.painting-frame{background:#eef2f2;border:1px solid #d9e3e5;border-radius:5px;overflow:hidden;min-height:90px;display:flex;align-items:center;justify-content:center}
+.painting-frame img{display:block;width:100%;height:auto;max-height:900px;object-fit:contain}
+.painting-missing{display:none;color:#8296a1;font-size:13px;text-align:center;padding:20px}
+.painting-frame.is-missing .painting-missing{display:block}
+.painting-caption{display:grid;grid-template-columns:50px minmax(0,1fr);gap:14px;padding:17px 4px 0}
+.painting-count{font:12px Georgia,serif;color:#8aa0ad;letter-spacing:.05em;padding-top:5px}
+.painting-caption p{font-family:'LXGW WenKai','STKaiti','KaiTi','Noto Serif SC',serif;font-size:14px;line-height:1.95;color:#607683;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.page-head p:empty{display:none}
+@media(max-width:680px){
+ .repo-page-layout .repo-tabs .tabs{gap:7px}
+ .repo-page-layout .repo-tabs .tab{font-size:13px;padding:8px 10px}
+ .repo-title-pill{padding:5px 10px}
+ .painting-worlds{padding:14px 16px}
+ .painting-caption{grid-template-columns:38px minmax(0,1fr);gap:9px}
+ .painting-caption p{font-size:13px}
+}
