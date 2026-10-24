@@ -16,7 +16,7 @@
     </g>
     <g fill="#38536A" font-family="'Noto Serif SC','STZhongsong','Songti SC',serif" text-anchor="middle">
       <text x="310" y="139" font-size="91" font-weight="600" letter-spacing="5">调和器</text>
-      <text x="310" y="248" font-size="41" letter-spacing="9">宇宙</text>
+      <text x="310" y="248" font-size="41" font-weight="600" letter-spacing="9">宇宙</text>
       <text x="310" y="309" font-size="37" letter-spacing="8">档案馆</text>
     </g>
     <g fill="#66899D">
