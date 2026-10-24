@@ -468,3 +468,44 @@ body { color: var(--body); }
   .painting-caption p { color: #405360; }
 }
 /* 人物专属颜色通过内联样式指定，以上规则不覆盖 .repo-char-name 或 .inline-char 的颜色。 */
+
+/* V4.7 | 阅读札记专用排版：深墨蓝文字 + 清晰的无衬线长文，
+   引文与摸鱼批注仍保留区别于正文的手写感。 */
+.repo-page-layout>.content { max-width: 790px; }
+.repo-page-layout .repo-entry-content,
+.repo-page-layout .painting-intro,
+.notes-warning-copy p {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  color: #263640;
+  letter-spacing: .012em;
+}
+.repo-page-layout .repo-entry-content p { margin-bottom: 1.3em; }
+.repo-page-layout .repo-quote {
+  font-family: 'LXGW WenKai', 'STKaiti', 'KaiTi', 'Noto Serif SC', serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #30434f;
+  background: #edf3f5;
+}
+.repo-page-layout .painting-intro { line-height: 1.95; }
+.repo-page-layout .painting-world-label { color: #344c5a; }
+.repo-page-layout .painting-caption p {
+  font-family: 'LXGW WenKai', 'STKaiti', 'KaiTi', 'Noto Serif SC', serif;
+  color: #334650;
+  font-size: 15px;
+  line-height: 1.95;
+}
+.repo-page-layout .repo-entry-title,
+.repo-page-layout .repo-intro,
+.repo-page-layout .repo-section-head p { color: #455965; }
+@media (max-width: 680px) {
+  .repo-page-layout .repo-entry-content,
+  .repo-page-layout .painting-intro,
+  .notes-warning-copy p { font-size: 16px; line-height: 1.95; }
+  .repo-page-layout .repo-quote { font-size: 15px; line-height: 1.95; }
+  .repo-page-layout .painting-caption p { font-size: 15px; }
+}
+/* CHAR 专属标色通过内联颜色保留，不做点击跳转。 */
