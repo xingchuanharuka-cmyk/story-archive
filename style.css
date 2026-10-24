@@ -311,3 +311,37 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .relationship-record-symbol{color:#9a7b80;padding:0 5px}
 .relationship-record-detail{color:#72858f;text-align:right}
 @media(max-width:600px){.relationship-scroll{max-height:67vh;min-height:340px}.relationship-toolbar .tabs{margin-bottom:8px}.relationship-zoom{margin-bottom:13px}.relationship-record{display:block}.relationship-record-detail{display:block;text-align:left;margin-top:4px}.relationship-legend{font-size:12px}}
+
+/* V4.2 | Personal repo: understated homepage entry, warning gate, literary notes */
+.home-private-note{font-size:12px;color:#93a0a6;letter-spacing:0}
+.notes-warning-copy h2{font-family:'Noto Sans SC','Microsoft YaHei',sans-serif;font-size:16px;font-weight:700;letter-spacing:.04em;color:#38576b}
+.repo-intro{padding:2px 0 26px;color:#81919b;font-size:13px}
+.repo-intro p{margin:8px 0 0}
+.repo-section{margin:10px 0 62px;scroll-margin-top:110px}
+.repo-section-head{border-bottom:1px solid #cbd9de;padding-bottom:15px;margin-bottom:6px}
+.repo-section-head h2{font-family:'Noto Serif SC','STZhongsong',serif;font-size:28px;font-weight:500;color:#344f61;margin:9px 0 2px;letter-spacing:.045em}
+.repo-section-head p{font-size:12px;color:#8a9da6;margin:0}
+.repo-long-entry{border-bottom:1px solid #d6e0e4}
+.repo-long-entry summary{display:flex;align-items:center;gap:15px;min-height:83px;padding:16px 4px;cursor:pointer;list-style:none;transition:background .18s ease}
+.repo-long-entry summary::-webkit-details-marker{display:none}
+.repo-long-entry summary:hover{background:#eef3f5}
+.repo-ordinal{flex:0 0 26px;color:#95a9b2;font:12px Georgia,serif;letter-spacing:.05em}
+.repo-entry-label{color:#3f6073;font-family:'Noto Serif SC','STZhongsong',serif;font-size:20px;white-space:nowrap}
+.repo-entry-title{color:#718794;font-size:14px;line-height:1.6}
+.repo-expand{width:17px;height:17px;flex:0 0 17px;margin-left:auto;position:relative}
+.repo-expand:before,.repo-expand:after{content:'';position:absolute;background:#829eac;top:8px;left:2px;width:13px;height:1px}
+.repo-expand:after{transform:rotate(90deg);transition:transform .2s}
+.repo-long-entry[open] .repo-expand:after{transform:rotate(0)}
+.repo-entry-content{font-size:15px;color:#4b5e68;line-height:2.05;overflow-wrap:anywhere}
+.repo-long-entry .repo-entry-content{padding:3px 10px 26px 45px}
+.repo-entry-content p{margin:0 0 1.35em;white-space:pre-wrap}
+.repo-entry-content p:last-child{margin-bottom:0}
+.repo-quote{margin:22px 0 25px;padding:13px 17px 13px 21px;border-left:2px solid #a3bbc8;background:#edf3f5;color:#506b7b;font-family:'LXGW WenKai','Noto Serif SC','STZhongsong',serif;font-size:15px;font-weight:400;line-height:2.05;white-space:pre-wrap}
+.repo-short-entry{padding:23px 3px 25px;border-bottom:1px solid #d6e0e4}
+.repo-short-head{display:flex;align-items:baseline;gap:14px;margin-bottom:11px}
+.repo-short-head h3{font-family:'Noto Serif SC','STZhongsong',serif;color:#3f6073;font-size:20px;font-weight:500;margin:0}
+.repo-short-entry .repo-entry-content{padding-left:40px}
+.repo-ending{margin-top:65px}
+.repo-ending>.repo-entry-content{padding:23px 3px}
+@media(max-width:680px){.home-private-note{font-size:11px}.repo-long-entry summary{gap:9px;min-height:70px;flex-wrap:wrap}.repo-entry-label{font-size:17px}.repo-entry-title{font-size:13px}.repo-long-entry .repo-entry-content{padding:6px 3px 23px 15px}.repo-short-entry .repo-entry-content{padding-left:0}.repo-entry-content{font-size:14px;line-height:1.95}.repo-quote{font-size:14px;padding:12px 14px}.repo-section-head h2{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.repo-expand:after,.repo-long-entry summary{transition:none}}
