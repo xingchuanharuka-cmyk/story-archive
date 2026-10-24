@@ -13,7 +13,7 @@ window.ARCHIVE_DATA = {
       "source": "辜琳琅",
       "identity": "承梁开国之君",
       "color": "#92601A",
-      "portrait": "images/historical/gulilang.jpg",
+      "portrait": "images/historical/gulinlang.jpg",
       "appearances": [
         {
           "source": "古代·辜琳琅",
@@ -57,7 +57,7 @@ window.ARCHIVE_DATA = {
       "portrait": "images/modern/lijiang.jpg",
       "appearances": [
         {
-          "source": "现代·港城·黎奖",
+          "source": "现代·黎奖",
           "role": "大学生、辩论队成员（主场）",
           "text": "生日4月27日，英文名Leo，身高186cm。\n辩论队公认“最难缠的那个”。\n港男松弛感，带点冷幽默，损人只朝熟人开刀，对陌生人礼貌。嘻嘻哈哈，内核稳定，没几个人真正走进过他的防线。"
         },
@@ -87,22 +87,22 @@ window.ARCHIVE_DATA = {
           "text": "大乘，现代土木系大学生穿书，绑定了基建系统。表面咸鱼实则善良，知晓原著剧情。"
         },
         {
-          "source": "现代·港城·贝瑞旻",
+          "source": "现代·贝瑞旻",
           "role": "好友",
           "text": "土木男研，妙语连珠，爱吐槽龙傲天小说，还笑话他恋爱脑。"
         },
         {
-          "source": "现代·港城·贝瑞恩",
+          "source": "现代·贝瑞恩",
           "role": "朋友",
           "text": "24 岁土木研三，妙语连珠的吐槽役，苦逼工地人。"
         },
         {
-          "source": "现代·港城·麦见海",
+          "source": "现代·麦见海",
           "role": "舍友／校友",
           "text": "一个风风火火吐槽俗僧辩论帅哥。"
         },
         {
-          "source": "现代·港城·乔治",
+          "source": "现代·乔治",
           "role": "朋友",
           "text": "相声搭档，土木苦逼研究生。"
         },
@@ -120,7 +120,15 @@ window.ARCHIVE_DATA = {
         "少年气",
         "外热内冷",
         "贱兮兮"
-      ]
+      ],
+      "portraitsByWorld": {
+        "现代": [
+          "images/modern/lijiang.jpg"
+        ],
+        "修真": [
+          "images/cultivation/lijiang.jpg"
+        ]
+      }
     },
     {
       "id": "char-beishuo",
@@ -129,7 +137,7 @@ window.ARCHIVE_DATA = {
       "source": "北朔",
       "identity": "魔尊",
       "color": "#A83B43",
-      "portrait": "images/cultivation/beishuo.jpg",
+      "portrait": "images/cultivation/beishuo1.jpg",
       "appearances": [
         {
           "source": "修真·北朔",
@@ -172,6 +180,10 @@ window.ARCHIVE_DATA = {
         "不内耗",
         "睚眦必报",
         "随性"
+      ],
+      "portraits": [
+        "images/cultivation/beishuo1.jpg",
+        "images/cultivation/beishuo2.jpg"
       ]
     },
     {
@@ -415,6 +427,10 @@ window.ARCHIVE_DATA = {
         "万人迷",
         "外温内冷",
         "蹭吃蹭喝"
+      ],
+      "portraits": [
+        "images/cultivation/shuijuya.jpg",
+        "images/cultivation/shuijuya2.jpg"
       ]
     },
     {
@@ -864,7 +880,7 @@ window.ARCHIVE_DATA = {
       "source": "阿史那信",
       "identity": "",
       "color": "#8056A5",
-      "portrait": "images/historical/ashnaxin.jpg",
+      "portrait": "images/historical/ashinaxin.jpg",
       "appearances": [],
       "kind": "char",
       "links": [],
@@ -875,6 +891,10 @@ window.ARCHIVE_DATA = {
         "阴险虚伪",
         "笑里藏刀",
         "复仇心强"
+      ],
+      "portraits": [
+        "images/historical/ashinaxin.jpg",
+        "images/historical/ashinaxin2.jpg"
       ]
     },
     {
@@ -884,7 +904,7 @@ window.ARCHIVE_DATA = {
       "source": "柊尘",
       "identity": "",
       "color": "#254F81",
-      "portrait": "images/modern/qiuchen.jpg",
+      "portrait": "images/modern/zhongchen.jpg",
       "appearances": [],
       "kind": "char",
       "links": [],
@@ -1453,6 +1473,82 @@ window.ARCHIVE_DATA = {
       ],
       "links": [],
       "kind": "char"
+    },
+    {
+      "id": "npc-photo-shufeiyao",
+      "name": "束非遥",
+      "world": "末世",
+      "source": "束非遥",
+      "identity": "",
+      "color": "#52758A",
+      "portrait": "images/apocalypse/shufeiyao.jpg",
+      "appearances": [
+        {
+          "source": "末世·求渺",
+          "role": "",
+          "text": "束非遥：22岁，ENFJ，动能科二级贤者/第四突击大队队长，异能「热熔」。父母死在污染区，对污染体和丧尸之父“求渺”有刻骨铭心的仇恨。"
+        }
+      ],
+      "kind": "npc",
+      "links": [],
+      "events": []
+    },
+    {
+      "id": "npc-photo-wudai",
+      "name": "乌代",
+      "world": "末世",
+      "source": "乌代",
+      "identity": "",
+      "color": "#52758A",
+      "portrait": "images/apocalypse/wudai.jpg",
+      "appearances": [
+        {
+          "source": "末世·求渺",
+          "role": "",
+          "text": "乌代夺舍尤里安，是第七污染区BOSS。非人的美丽，可生天使般的双翼；邪念、恶趣味且残忍。受宿主影响，对user有极强掠夺欲和占有欲。"
+        }
+      ],
+      "kind": "npc",
+      "links": [],
+      "events": []
+    },
+    {
+      "id": "npc-photo-chengming",
+      "name": "程明",
+      "world": "现代",
+      "source": "程明",
+      "identity": "",
+      "color": "#52758A",
+      "portrait": "images/modern/chengming.jpg",
+      "appearances": [
+        {
+          "source": "现代·纪扬",
+          "role": "",
+          "text": "程明"
+        }
+      ],
+      "kind": "npc",
+      "links": [],
+      "events": []
+    },
+    {
+      "id": "npc-photo-linjianshen",
+      "name": "林见深",
+      "world": "现代",
+      "source": "林见深",
+      "identity": "",
+      "color": "#52758A",
+      "portrait": "images/modern/linjianshen.jpg",
+      "appearances": [
+        {
+          "source": "现代",
+          "role": "",
+          "text": ""
+        }
+      ],
+      "kind": "npc",
+      "links": [],
+      "events": []
     }
   ],
   "recurring": [
@@ -2065,6 +2161,12 @@ window.ARCHIVE_DATA = {
       "source": "末世·求渺",
       "text": "“七杀”：贤者塔通用战斗系统，没有人知道他的底层设定是保护user。百年前由团队建造的污染区内使用的智能罗盘和自动战斗系统，可以变成罗盘和枪两种状态。现在为学生广为使用，是常用装备。非常强大。内置性格是说话温柔幽默的男青年，但腹黑。",
       "world": "末世"
+    },
+    {
+      "name": "林见深",
+      "world": "现代",
+      "source": "现代",
+      "text": ""
     }
   ],
   "events": [
@@ -2104,6 +2206,17 @@ window.ARCHIVE_DATA = {
       "highlights": [
         "贝瑞旻",
         "辜麟"
+      ]
+    },
+    {
+      "id": "m-08",
+      "world": "现代",
+      "year": "2024.11.15",
+      "text": "宋潮（36）开场，雷止（17）",
+      "people": [],
+      "highlights": [
+        "宋潮",
+        "雷止"
       ]
     },
     {
@@ -2245,7 +2358,7 @@ window.ARCHIVE_DATA = {
       "id": "h-07",
       "world": "古代",
       "year": "承安一年",
-      "text": "大梁灭国，辜琳琅（19）诛杀昏君，建立承梁，追封邢怀戎，清洗功臣。",
+      "text": "大梁灭国，辜琳琅（20）诛杀昏君，建立承梁，追封邢怀戎，清洗功臣。",
       "people": [
         "h-gu",
         "h-xing"
@@ -2259,7 +2372,7 @@ window.ARCHIVE_DATA = {
       "id": "h-08",
       "world": "古代",
       "year": "承安四年",
-      "text": "辜琳琅（21）开场",
+      "text": "辜琳琅（23）开场",
       "people": [
         "h-gu"
       ],
@@ -2402,7 +2515,7 @@ window.ARCHIVE_DATA = {
       "id": "x-07",
       "world": "修真",
       "year": "修真历2848年",
-      "text": "沈墨死于情报任务，宋知世（19）判断不可接应，放弃救援。第一枚铜钱上腕。",
+      "text": "沈默死于情报任务，宋知世（19）判断不可接应，放弃救援。第一枚铜钱上腕。",
       "people": [
         "x-song"
       ],
@@ -3079,6 +3192,145 @@ window.ARCHIVE_DATA = {
           "text": "“七杀”：贤者塔通用战斗系统，没有人知道他的底层设定是保护user。百年前由团队建造的污染区内使用的智能罗盘和自动战斗系统，可以变成罗盘和枪两种状态。现在为学生广为使用，是常用装备。非常强大。内置性格是说话温柔幽默的男青年，但腹黑。"
         }
       ]
+    },
+    {
+      "world": "现代",
+      "source": "现代",
+      "people": [
+        {
+          "name": "林见深",
+          "world": "现代",
+          "source": "现代",
+          "text": ""
+        }
+      ]
     }
-  ]
+  ],
+  "birthdays": {
+    "noBirthday": [
+      "邢怀戎",
+      "辜琳琅",
+      "阿史那信",
+      "水俱雅",
+      "北朔",
+      "西杀"
+    ],
+    "note": "邢怀戎、辜琳琅、阿史那信、水俱雅、北朔、西杀应该是没有生日设定，有一部分char生日简介没写，是我用不同模型roll了几次跑出来的，应该也是正确的，如果认为不对的可以和我反馈讨论",
+    "seasons": [
+      {
+        "name": "春",
+        "english": "SPRING",
+        "entries": [
+          [
+            "达一别",
+            "3月14日",
+            "现代"
+          ],
+          [
+            "柊尘",
+            "4月1日",
+            "现代"
+          ],
+          [
+            "黎奖",
+            "4月27日",
+            "现代 / 修真"
+          ],
+          [
+            "谢满",
+            "4月30日",
+            "现代"
+          ]
+        ]
+      },
+      {
+        "name": "夏",
+        "english": "SUMMER",
+        "entries": [
+          [
+            "乔治",
+            "6月6日",
+            "现代"
+          ],
+          [
+            "贝瑞旻",
+            "6月22日",
+            "现代"
+          ],
+          [
+            "纪扬",
+            "7月24日",
+            "现代"
+          ],
+          [
+            "宋潮",
+            "8月25日",
+            "现代"
+          ]
+        ]
+      },
+      {
+        "name": "秋",
+        "english": "AUTUMN",
+        "entries": [
+          [
+            "麦见海",
+            "10月27日",
+            "现代"
+          ],
+          [
+            "辜麒",
+            "11月8日",
+            "现代"
+          ]
+        ]
+      },
+      {
+        "name": "冬",
+        "english": "WINTER",
+        "entries": [
+          [
+            "贝瑞恩",
+            "12月1日",
+            "现代"
+          ],
+          [
+            "楼宴宁",
+            "腊月初八",
+            "修真"
+          ],
+          [
+            "宋知世",
+            "1月1日",
+            "修真"
+          ],
+          [
+            "雷止",
+            "1月9日",
+            "现代"
+          ],
+          [
+            "车以弦",
+            "1月9日",
+            "现代"
+          ],
+          [
+            "求渺",
+            "2月14日",
+            "末世"
+          ],
+          [
+            "荀逸伦",
+            "2月19日",
+            "现代"
+          ],
+          [
+            "北向南",
+            "（大约在冬季）",
+            "现代"
+          ]
+        ]
+      }
+    ]
+  }
 };

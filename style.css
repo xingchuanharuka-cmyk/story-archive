@@ -224,3 +224,59 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .notes-decline{font-size:13px;color:#758b96}
 @media(max-width:800px){.home-grid-three{grid-template-columns:1fr 1fr}.home-grid-three .home-card:last-child{grid-column:1/-1}}
 @media(max-width:540px){.home-grid-three{grid-template-columns:1fr}.home-grid-three .home-card:last-child{grid-column:auto}.home-grid-three .home-card{min-height:155px}.home-private{margin-top:38px}.notes-gate h1{font-size:29px}}
+
+/* V3.8: historical reign labels (only the year, not the description) */
+.event-year.reign-yongan{color:#a76c55}
+.event-year.reign-chengan{color:#537f76}
+.event-year.reign-shunning{color:#7372a2}
+/* Preserve user-authored line breaks in chronology entries */
+.event-text{white-space:pre-line}
+/* Birthdays: compact seasonal index, no alterations to existing world chronologies */
+.birthday-unknown{margin:18px 0 15px;padding:17px 19px;background:#f1f3f2;border:1px solid #d8e0e1}
+.birthday-unknown h2{font-size:15px;font-weight:500;color:#667b85;margin:0 0 12px}
+.birthday-no-list{display:flex;flex-wrap:wrap;gap:9px 17px}
+.birthday-no-name{font-size:14px;color:#6c7c83}
+.birthday-note{margin:15px 0 10px}
+.birthday-sort-hint{font-size:12px;color:#85959c;margin:0 0 26px}
+.birthday-seasons{display:grid;grid-template-columns:1fr;gap:24px}
+.birthday-season{--season-color:#b97880;display:grid;grid-template-columns:92px minmax(0,1fr);gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+.birthday-season-spring{--season-color:#b97880}
+.birthday-season-summer{--season-color:#5e8b78}
+.birthday-season-autumn{--season-color:#ad8650}
+.birthday-season-winter{--season-color:#6485a9}
+.birthday-season-title{display:flex;flex-direction:column;gap:3px;align-items:flex-start}
+.birthday-season-name{font-size:32px;line-height:1.2;color:var(--season-color);font-family:'Noto Serif SC','STZhongsong','Songti SC',serif}
+.birthday-season-en{font:10px Georgia,serif;letter-spacing:1.3px;color:var(--season-color)}
+.birthday-season-entries{min-width:0}
+.birthday-entry{display:grid;grid-template-columns:120px minmax(85px,1fr) minmax(100px,1fr);align-items:baseline;gap:12px;padding:9px 2px;border-bottom:1px solid #e1e7e7;font-size:14px}
+.birthday-date{font-variant-numeric:tabular-nums;color:#667d88}
+.birthday-name{font-size:16px;color:#3e5663}
+.birthday-source{font-size:12px;color:#81939a;text-align:right}
+@media(max-width:600px){.birthday-season{grid-template-columns:54px minmax(0,1fr);gap:12px}.birthday-season-name{font-size:26px}.birthday-season-en{font-size:8px;letter-spacing:.3px}.birthday-entry{grid-template-columns:94px minmax(65px,1fr);gap:5px 9px}.birthday-source{grid-column:2;text-align:left;font-size:11px}.birthday-date{font-size:12px}}
+
+/* V3.9: source-grounded multiple character portraits and NPC image entries */
+.profile-head.has-portrait .portrait-gallery{
+  flex:0 0 clamp(210px,40%,325px);width:clamp(210px,40%,325px);
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:8px;
+}
+.profile-head.has-portrait .portrait-gallery .portrait{
+  display:block;width:100%;max-width:100%;height:auto;max-height:340px;
+  object-fit:contain;object-position:top;border-radius:4px;
+}
+.npc-row-identity{display:flex;align-items:center;gap:12px;min-width:0}
+.npc-index-thumb{width:42px;height:52px;object-fit:cover;object-position:top;border-radius:3px;border:1px solid #d5dfe2;flex:0 0 auto}
+.npc-row-identity .name{min-width:0}
+.npc-single-record.has-image{display:flex;align-items:flex-start;gap:16px}
+.npc-single-photo{display:block;flex:0 0 88px;width:88px;max-width:88px}
+.npc-single-photo img{display:block;width:100%;height:auto;max-height:128px;object-fit:contain;object-position:top;border-radius:3px}
+.npc-single-body{min-width:0;flex:1}
+.npc-single-body h3 a:hover{color:#557f97;text-decoration:underline;text-underline-offset:4px}
+.npc-missing-info{font-style:italic;color:#83959d!important}
+@media(max-width:680px){
+ .profile-head.has-portrait .portrait-gallery{flex:0 0 43%;width:43%;grid-template-columns:1fr;gap:8px}
+ .profile-head.has-portrait .portrait-gallery .portrait{width:100%;max-height:245px}
+ .npc-index-thumb{width:34px;height:42px}
+ .npc-row-identity{gap:7px}
+ .npc-single-photo{flex-basis:68px;width:68px;max-width:68px}
+ .npc-single-record.has-image{gap:11px}
+}
