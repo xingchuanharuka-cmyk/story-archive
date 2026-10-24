@@ -543,3 +543,8 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .archive-star-small{animation-duration:5.7s;animation-delay:-2.1s}
 @keyframes archive-star-glimmer{0%,100%{opacity:.76;transform:scale(.94)}46%{opacity:1;transform:scale(1.06)}72%{opacity:.84;transform:scale(.99)}}
 @media(prefers-reduced-motion:reduce){.archive-star{animation:none;opacity:1;transform:none}}
+
+/* V6.3 | 闻观渡主场彩蛋：标题层级与档案注释 */
+.wen-section-heading{font-weight:650;color:#2f4654;display:inline-block;margin-top:3px}
+.profile-easter-note{margin:25px 0 8px;padding:13px 17px;border-left:2px solid #a7bac6;background:#f3f6f7;color:#4c606c;font-size:13px;line-height:1.9}
+.profile-easter-note strong{font-weight:600}
