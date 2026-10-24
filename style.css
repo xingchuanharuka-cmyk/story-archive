@@ -514,3 +514,17 @@ body { color: var(--body); }
 body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif; }
 .note-card p { font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif; }
 /* 单独设计的文学标题、引用与手写批注继续沿用各自的特殊字体。 */
+
+/* V4.9: 生日数字与季节同色；时间线人名保留角色色，不额外加粗。 */
+.birthday-season .birthday-date {
+  color: var(--season-color);
+  font-family: 'Noto Sans SC','Source Han Sans SC','PingFang SC',sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+.event-text .inline-char { font-weight: 400; }
+@media (max-width: 600px) {
+  .birthday-season .birthday-date { font-size: 19px; }
+}
