@@ -1,296 +1,435 @@
 window.ARCHIVE_GRAPH = {
-  "nodes": [
-    {
-      "id": "n0",
-      "name": "宋知世",
-      "world": "修真",
-      "x": 200,
-      "y": 330
+  "worlds": {
+    "现代": {
+      "width": 1680,
+      "height": 1120,
+      "clusters": [
+        {
+          "label": "港城及关联人物",
+          "x": 35,
+          "y": 35,
+          "w": 1065,
+          "h": 750
+        },
+        {
+          "label": "柊尘相关",
+          "x": 1120,
+          "y": 35,
+          "w": 525,
+          "h": 505
+        },
+        {
+          "label": "北向南相关",
+          "x": 1120,
+          "y": 560,
+          "w": 525,
+          "h": 240
+        },
+        {
+          "label": "其他联系",
+          "x": 365,
+          "y": 805,
+          "w": 720,
+          "h": 270
+        }
+      ],
+      "nodes": [
+        {
+          "name": "乔治",
+          "x": 180,
+          "y": 195
+        },
+        {
+          "name": "麦见海",
+          "x": 440,
+          "y": 195
+        },
+        {
+          "name": "黎奖",
+          "x": 305,
+          "y": 415
+        },
+        {
+          "name": "贝瑞旻",
+          "x": 595,
+          "y": 420
+        },
+        {
+          "name": "贝瑞恩",
+          "x": 795,
+          "y": 325
+        },
+        {
+          "name": "辜麒",
+          "x": 900,
+          "y": 565
+        },
+        {
+          "name": "雷止",
+          "x": 790,
+          "y": 120
+        },
+        {
+          "name": "宋潮",
+          "x": 1010,
+          "y": 120
+        },
+        {
+          "name": "辜琳琅",
+          "x": 1035,
+          "y": 695
+        },
+        {
+          "name": "柊尘",
+          "x": 1375,
+          "y": 275
+        },
+        {
+          "name": "纪扬",
+          "x": 1215,
+          "y": 135
+        },
+        {
+          "name": "车以弦",
+          "x": 1535,
+          "y": 135
+        },
+        {
+          "name": "谢满",
+          "x": 1515,
+          "y": 435
+        },
+        {
+          "name": "北向南",
+          "x": 1265,
+          "y": 680
+        },
+        {
+          "name": "荀逸伦",
+          "x": 1510,
+          "y": 680
+        },
+        {
+          "name": "达一别",
+          "x": 600,
+          "y": 945
+        },
+        {
+          "name": "求渺",
+          "x": 895,
+          "y": 945
+        }
+      ],
+      "edges": [
+        {
+          "fromName": "黎奖",
+          "toName": "乔治",
+          "label": "舍友",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -14
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "麦见海",
+          "label": "舍友",
+          "direction": "mutual",
+          "labelDx": 24,
+          "labelDy": 5
+        },
+        {
+          "fromName": "乔治",
+          "toName": "麦见海",
+          "label": "舍友",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -14
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "贝瑞旻",
+          "label": "朋友",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -15
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "贝瑞恩",
+          "label": "朋友",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -28
+        },
+        {
+          "fromName": "贝瑞旻",
+          "toName": "贝瑞恩",
+          "label": "兄弟",
+          "direction": "mutual",
+          "labelDx": -5,
+          "labelDy": -14
+        },
+        {
+          "fromName": "贝瑞旻",
+          "toName": "辜麒",
+          "label": "豪门交集",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": 22
+        },
+        {
+          "fromName": "贝瑞恩",
+          "toName": "辜麒",
+          "label": "嘲笑其下放经历",
+          "direction": "single",
+          "labelDx": 28,
+          "labelDy": 0
+        },
+        {
+          "fromName": "贝瑞恩",
+          "toName": "雷止",
+          "label": "情敌／乐子",
+          "direction": "single",
+          "labelDx": -18,
+          "labelDy": 0
+        },
+        {
+          "fromName": "宋潮",
+          "toName": "雷止",
+          "label": "老板",
+          "direction": "single",
+          "labelDx": 0,
+          "labelDy": -17
+        },
+        {
+          "fromName": "柊尘",
+          "toName": "纪扬",
+          "label": "情敌",
+          "direction": "mutual",
+          "labelDx": -14,
+          "labelDy": 0
+        },
+        {
+          "fromName": "柊尘",
+          "toName": "车以弦",
+          "label": "朋友",
+          "direction": "mutual",
+          "labelDx": 18,
+          "labelDy": 0
+        },
+        {
+          "fromName": "柊尘",
+          "toName": "谢满",
+          "label": "朋友",
+          "direction": "mutual",
+          "labelDx": 20,
+          "labelDy": 0
+        },
+        {
+          "fromName": "北向南",
+          "toName": "荀逸伦",
+          "label": "情敌",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -15
+        },
+        {
+          "fromName": "辜麒",
+          "toName": "辜琳琅",
+          "label": "远房亲戚",
+          "direction": "mutual",
+          "labelDx": -65,
+          "labelDy": 16
+        },
+        {
+          "fromName": "达一别",
+          "toName": "求渺",
+          "label": "表兄弟",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -16
+        }
+      ]
     },
-    {
-      "id": "n1",
-      "name": "楼宴宁",
-      "world": "修真",
-      "x": 385,
-      "y": 270
+    "修真": {
+      "width": 1080,
+      "height": 750,
+      "clusters": [],
+      "nodes": [
+        {
+          "name": "宋知世",
+          "x": 255,
+          "y": 200
+        },
+        {
+          "name": "楼宴宁",
+          "x": 540,
+          "y": 180
+        },
+        {
+          "name": "求渺",
+          "x": 155,
+          "y": 495
+        },
+        {
+          "name": "黎奖",
+          "x": 535,
+          "y": 485
+        },
+        {
+          "name": "水俱雅",
+          "x": 845,
+          "y": 490
+        },
+        {
+          "name": "北朔",
+          "x": 845,
+          "y": 190
+        }
+      ],
+      "edges": [
+        {
+          "fromName": "宋知世",
+          "toName": "楼宴宁",
+          "label": "仇人的徒弟",
+          "direction": "single",
+          "labelDx": 0,
+          "labelDy": -15
+        },
+        {
+          "fromName": "宋知世",
+          "toName": "求渺",
+          "label": "长明粥铺成员",
+          "direction": "mutual",
+          "labelDx": -30,
+          "labelDy": 0
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "宋知世",
+          "label": "原著男主、讨厌的角色",
+          "direction": "single",
+          "labelDx": 38,
+          "labelDy": 10
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "楼宴宁",
+          "label": "有点惺惺相惜的感觉",
+          "direction": "single",
+          "labelDx": 52,
+          "labelDy": 0
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "水俱雅",
+          "label": "掌门／弟子",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -15
+        },
+        {
+          "fromName": "北朔",
+          "toName": "水俱雅",
+          "label": "内核对立，但有一丝损友情",
+          "direction": "mutual",
+          "labelDx": -20,
+          "labelDy": 0
+        }
+      ]
     },
-    {
-      "id": "n2",
-      "name": "水俱雅",
-      "world": "修真",
-      "x": 205,
-      "y": 460
+    "古代": {
+      "width": 1080,
+      "height": 750,
+      "clusters": [],
+      "nodes": [
+        {
+          "name": "黎奖",
+          "x": 150,
+          "y": 370
+        },
+        {
+          "name": "辜琳琅",
+          "x": 450,
+          "y": 370
+        },
+        {
+          "name": "邢怀戎",
+          "x": 450,
+          "y": 140
+        },
+        {
+          "name": "阿史那信",
+          "x": 800,
+          "y": 370
+        },
+        {
+          "name": "辜麒",
+          "x": 800,
+          "y": 615
+        }
+      ],
+      "edges": [
+        {
+          "fromName": "辜琳琅",
+          "toName": "邢怀戎",
+          "label": "亦师亦父亦兄",
+          "direction": "single",
+          "labelDx": 90,
+          "labelDy": 0
+        },
+        {
+          "fromName": "辜琳琅",
+          "toName": "阿史那信",
+          "label": "敌对",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -15
+        },
+        {
+          "fromName": "辜麒",
+          "toName": "阿史那信",
+          "label": "敌对",
+          "direction": "mutual",
+          "labelDx": 30,
+          "labelDy": 0
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "辜琳琅",
+          "label": "上司",
+          "direction": "single",
+          "labelDx": 0,
+          "labelDy": -15
+        }
+      ]
     },
-    {
-      "id": "n3",
-      "name": "黎奖",
-      "world": "修真",
-      "x": 395,
-      "y": 510
-    },
-    {
-      "id": "n4",
-      "name": "北朔",
-      "world": "修真",
-      "x": 300,
-      "y": 620
-    },
-    {
-      "id": "n5",
-      "name": "求渺",
-      "world": "修真",
-      "x": 48,
-      "y": 705
-    },
-    {
-      "id": "n6",
-      "name": "求渺",
-      "world": "末世",
-      "x": 226,
-      "y": 950
-    },
-    {
-      "id": "n7",
-      "name": "北朔",
-      "world": "末世",
-      "x": 185,
-      "y": 645
-    },
-    {
-      "id": "n8",
-      "name": "黎奖",
-      "world": "末世",
-      "x": 391,
-      "y": 755
-    },
-    {
-      "id": "n9",
-      "name": "辜琳琅",
-      "world": "末世",
-      "x": 515,
-      "y": 1000
-    },
-    {
-      "id": "n10",
-      "name": "黎奖",
-      "world": "古代",
-      "x": 508,
-      "y": 696
-    },
-    {
-      "id": "n11",
-      "name": "辜琳琅",
-      "world": "古代",
-      "x": 680,
-      "y": 880
-    },
-    {
-      "id": "n12",
-      "name": "阿史那信",
-      "world": "古代",
-      "x": 806,
-      "y": 741
-    },
-    {
-      "id": "n13",
-      "name": "邢怀戎",
-      "world": "古代",
-      "x": 860,
-      "y": 880
-    },
-    {
-      "id": "n14",
-      "name": "辜麒",
-      "world": "现代",
-      "x": 1060,
-      "y": 770
-    },
-    {
-      "id": "n15",
-      "name": "雷止",
-      "world": "现代",
-      "x": 942,
-      "y": 392
-    },
-    {
-      "id": "n16",
-      "name": "宋潮",
-      "world": "现代",
-      "x": 1174,
-      "y": 365
-    },
-    {
-      "id": "n17",
-      "name": "贝瑞旻",
-      "world": "现代",
-      "x": 809,
-      "y": 390
-    },
-    {
-      "id": "n18",
-      "name": "贝瑞恩",
-      "world": "现代",
-      "x": 628,
-      "y": 299
-    },
-    {
-      "id": "n19",
-      "name": "黎奖",
-      "world": "现代",
-      "x": 496,
-      "y": 515
-    },
-    {
-      "id": "n20",
-      "name": "乔治",
-      "world": "现代",
-      "x": 676,
-      "y": 516
-    },
-    {
-      "id": "n21",
-      "name": "麦见海",
-      "world": "现代",
-      "x": 611,
-      "y": 617
-    },
-    {
-      "id": "n22",
-      "name": "纪扬",
-      "world": "现代",
-      "x": 688,
-      "y": 236
-    },
-    {
-      "id": "n23",
-      "name": "柊尘",
-      "world": "现代",
-      "x": 925,
-      "y": 238
-    },
-    {
-      "id": "n24",
-      "name": "车以弦",
-      "world": "现代",
-      "x": 1080,
-      "y": 60
-    },
-    {
-      "id": "n25",
-      "name": "谢满",
-      "world": "现代",
-      "x": 1125,
-      "y": 250
-    },
-    {
-      "id": "n26",
-      "name": "北向南",
-      "world": "现代",
-      "x": 1066,
-      "y": 478
-    },
-    {
-      "id": "n27",
-      "name": "荀逸伦",
-      "world": "现代",
-      "x": 1211,
-      "y": 551
-    },
-    {
-      "id": "n31",
-      "name": "求渺",
-      "world": "现代",
-      "x": 260,
-      "y": 875
-    },
-    {
-      "id": "n32",
-      "name": "达一别",
-      "world": "现代",
-      "x": 115,
-      "y": 750
+    "末世": {
+      "width": 1080,
+      "height": 600,
+      "clusters": [],
+      "nodes": [
+        {
+          "name": "北朔",
+          "x": 320,
+          "y": 295
+        },
+        {
+          "name": "求渺",
+          "x": 770,
+          "y": 295
+        }
+      ],
+      "edges": [
+        {
+          "fromName": "北朔",
+          "toName": "求渺",
+          "label": "百年前的同事",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -15
+        }
+      ]
     }
-  ],
-  "edges": [
-    {
-      "from": "n0",
-      "to": "n1",
-      "label": "仇人的徒弟"
-    },
-    {
-      "from": "n1",
-      "to": "n3",
-      "label": "有点惺惺相惜的感觉"
-    },
-    {
-      "from": "n0",
-      "to": "n5",
-      "label": "长期师徒成员"
-    },
-    {
-      "from": "n2",
-      "to": "n3",
-      "label": "弟子"
-    },
-    {
-      "from": "n11",
-      "to": "n12",
-      "label": "敌对"
-    },
-    {
-      "from": "n15",
-      "to": "n16",
-      "label": "老板"
-    },
-    {
-      "from": "n17",
-      "to": "n15",
-      "label": "情敌"
-    },
-    {
-      "from": "n18",
-      "to": "n17",
-      "label": "兄弟"
-    },
-    {
-      "from": "n18",
-      "to": "n19",
-      "label": "朋友"
-    },
-    {
-      "from": "n19",
-      "to": "n20",
-      "label": "舍友"
-    },
-    {
-      "from": "n19",
-      "to": "n21",
-      "label": "舍友"
-    },
-    {
-      "from": "n24",
-      "to": "n25",
-      "label": "朋友"
-    },
-    {
-      "from": "n26",
-      "to": "n27",
-      "label": "情敌"
-    },
-    {
-      "from": "n32",
-      "to": "n31",
-      "label": "表兄弟"
-    },
-    {
-      "from": "n13",
-      "to": "n11",
-      "label": "亦师亦父亦兄"
-    },
-    {
-      "from": "n11",
-      "to": "n12",
-      "label": "宿敌"
-    }
-  ]
+  }
 };

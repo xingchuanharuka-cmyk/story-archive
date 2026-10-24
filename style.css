@@ -280,3 +280,34 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
  .npc-single-photo{flex-basis:68px;width:68px;max-width:68px}
  .npc-single-record.has-image{gap:11px}
 }
+
+/* V4.0 / CHAR relationship maps: one large map per worldview */
+.page-layout.relationship-fullwidth{display:block}
+.page-layout.relationship-fullwidth>.content{width:100%}
+.page-layout.relationship-fullwidth>.sidebar{display:none}
+.relation-section{margin:0}
+.relation-section .subheading{margin:9px 0 8px}
+.relation-explainer{font-size:14px;margin:0 0 20px}
+.relationship-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.relationship-toolbar .tabs{margin:0 0 16px}
+.relationship-zoom{display:flex;gap:10px;align-items:center;margin-bottom:16px;color:#6e8490;font:13px Georgia,serif}
+.relationship-zoom button{width:34px;height:32px;border:1px solid #cad9df;border-radius:5px;background:#f2f7f8;color:#466173;font-size:20px;line-height:1}
+.relationship-zoom button:hover{background:#e4eef2}
+.relationship-scroll{width:100%;max-height:78vh;min-height:360px;overflow:auto;border:1px solid #d4e0e2;border-radius:10px;background:#f7f8f7;scrollbar-width:thin;overscroll-behavior:contain}
+.relationship-map{display:block;max-width:none;flex-shrink:0;font-family:'STZhongsong','华文中宋','Songti SC',serif}
+.relationship-person{cursor:pointer;text-decoration:none}
+.relationship-person:hover circle{stroke-width:4}
+.relationship-person:hover rect{fill:#fff}
+.relationship-label{pointer-events:none}
+.relationship-legend{display:flex;flex-wrap:wrap;gap:18px 30px;margin:17px 0 7px;font-size:13px;color:#667f8c}
+.relationship-legend i{display:inline-block;width:32px;height:0;border-top:2px solid #8a9da6;vertical-align:middle;margin-right:7px}
+.relationship-legend .relationship-legend-arrow{border-top-style:dashed;border-color:#9a7b80}
+.relationship-records{margin-top:28px;border-top:1px solid #d4e0e2;border-bottom:1px solid #d4e0e2}
+.relationship-records summary{padding:16px 4px;cursor:pointer;color:#516b79;font-size:14px}
+.relationship-records[open] summary{border-bottom:1px solid #e0e7e9}
+.relationship-record{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:12px 6px;border-bottom:1px solid #e5ebed;font-size:14px}
+.relationship-record:last-child{border-bottom:0}
+.relationship-record-names{color:#405562;white-space:nowrap}
+.relationship-record-symbol{color:#9a7b80;padding:0 5px}
+.relationship-record-detail{color:#72858f;text-align:right}
+@media(max-width:600px){.relationship-scroll{max-height:67vh;min-height:340px}.relationship-toolbar .tabs{margin-bottom:8px}.relationship-zoom{margin-bottom:13px}.relationship-record{display:block}.relationship-record-detail{display:block;text-align:left;margin-top:4px}.relationship-legend{font-size:12px}}
