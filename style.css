@@ -537,3 +537,9 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* V5.4 | 西杀主场双段说明突出显示 */
 .appearance-text strong{font-weight:650;color:inherit}
+
+/* V6.0 | 宇宙标题与四芒星互换位置；星光仅轻微呼吸闪烁。 */
+.archive-star{transform-box:fill-box;transform-origin:center;animation:archive-star-glimmer 4.8s ease-in-out infinite}
+.archive-star-small{animation-duration:5.7s;animation-delay:-2.1s}
+@keyframes archive-star-glimmer{0%,100%{opacity:.76;transform:scale(.94)}46%{opacity:1;transform:scale(1.06)}72%{opacity:.84;transform:scale(.99)}}
+@media(prefers-reduced-motion:reduce){.archive-star{animation:none;opacity:1;transform:none}}

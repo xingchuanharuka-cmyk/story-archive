@@ -16,12 +16,12 @@
     </g>
     <g fill="#38536A" font-family="'Noto Serif SC','STZhongsong','Songti SC',serif" text-anchor="middle">
       <text x="310" y="139" font-size="91" font-weight="600" letter-spacing="5">调和器</text>
-      <text x="310" y="248" font-size="41" font-weight="600" letter-spacing="9">宇宙</text>
+      <text x="310" y="208" font-size="41" font-weight="600" letter-spacing="9">宇宙</text>
       <text x="310" y="309" font-size="37" letter-spacing="8">档案馆</text>
     </g>
     <g fill="#66899D">
-      <path d="M310 175 L314 187 L326 191 L314 195 L310 207 L306 195 L294 191 L306 187 Z"/>
-      <path d="M310 322 L312 330 L320 332 L312 334 L310 342 L308 334 L300 332 L308 330 Z"/>
+      <path class="archive-star archive-star-main" d="M310 235 L314 247 L326 251 L314 255 L310 267 L306 255 L294 251 L306 247 Z"/>
+      <path class="archive-star archive-star-small" d="M310 322 L312 330 L320 332 L312 334 L310 342 L308 334 L300 332 L308 330 Z"/>
       <circle cx="310" cy="374" r="1.8"/>
     </g>
     <text x="310" y="366" fill="#839BA9" font-family="Georgia,serif"
