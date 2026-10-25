@@ -2,7 +2,7 @@ window.ARCHIVE_GRAPH = {
   "worlds": {
     "现代": {
       "width": 1680,
-      "height": 1120,
+      "height": 1110,
       "clusters": [
         {
           "label": "港城及关联人物",
@@ -27,9 +27,16 @@ window.ARCHIVE_GRAPH = {
         },
         {
           "label": "其他联系",
-          "x": 365,
+          "x": 35,
           "y": 805,
-          "w": 720,
+          "w": 770,
+          "h": 270
+        },
+        {
+          "label": "雪场之上",
+          "x": 835,
+          "y": 805,
+          "w": 810,
           "h": 270
         }
       ],
@@ -86,13 +93,13 @@ window.ARCHIVE_GRAPH = {
         },
         {
           "name": "纪扬",
-          "x": 1215,
+          "x": 1535,
           "y": 135
         },
         {
           "name": "车以弦",
-          "x": 1535,
-          "y": 135
+          "x": 1190,
+          "y": 435
         },
         {
           "name": "谢满",
@@ -111,12 +118,27 @@ window.ARCHIVE_GRAPH = {
         },
         {
           "name": "达一别",
-          "x": 600,
+          "x": 235,
           "y": 945
         },
         {
           "name": "求渺",
-          "x": 895,
+          "x": 590,
+          "y": 945
+        },
+        {
+          "name": "阴琢",
+          "x": 1215,
+          "y": 135
+        },
+        {
+          "name": "Arvid",
+          "x": 1090,
+          "y": 945
+        },
+        {
+          "name": "Luca",
+          "x": 1440,
           "y": 945
         }
       ],
@@ -214,7 +236,7 @@ window.ARCHIVE_GRAPH = {
           "toName": "车以弦",
           "label": "朋友",
           "direction": "mutual",
-          "labelDx": 18,
+          "labelDx": -10,
           "labelDy": 0
         },
         {
@@ -248,6 +270,22 @@ window.ARCHIVE_GRAPH = {
           "direction": "mutual",
           "labelDx": 0,
           "labelDy": -16
+        },
+        {
+          "fromName": "阴琢",
+          "toName": "车以弦",
+          "label": "发小",
+          "direction": "mutual",
+          "labelDx": 45,
+          "labelDy": 0
+        },
+        {
+          "fromName": "Arvid",
+          "toName": "Luca",
+          "label": "队友",
+          "direction": "mutual",
+          "labelDx": 0,
+          "labelDy": -20
         }
       ]
     },
@@ -418,6 +456,11 @@ window.ARCHIVE_GRAPH = {
           "name": "求渺",
           "x": 770,
           "y": 295
+        },
+        {
+          "name": "宋知世",
+          "x": 770,
+          "y": 485
         }
       ],
       "edges": [
@@ -428,6 +471,14 @@ window.ARCHIVE_GRAPH = {
           "direction": "mutual",
           "labelDx": 0,
           "labelDy": -15
+        },
+        {
+          "fromName": "求渺",
+          "toName": "宋知世",
+          "label": "“七杀”",
+          "direction": "mutual",
+          "labelDx": 80,
+          "labelDy": 0
         }
       ]
     }

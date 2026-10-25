@@ -36,7 +36,7 @@ window.ARCHIVE_WORLDBUILDING = [
       {
         "title": "不夜城",
         "paragraphs": [
-          "车以弦、西杀主舞台。",
+          "车以弦、西杀、阴琢主舞台。",
           "文都大学：西杀开场白2主舞台"
         ]
       },
@@ -59,6 +59,14 @@ window.ARCHIVE_WORLDBUILDING = [
           "B市：达一别和user在B市当过出租屋邻居。",
           "无人岛：达一别主舞台。",
           "海草岛：乔治时刻2主舞台"
+        ]
+      },
+      {
+        "title": "欧洲＆美国",
+        "paragraphs": [
+          "阿斯彭：Arvid居住地",
+          "纽约长岛：瓦尔兹家族所在地",
+          "米兰：Luca开场"
         ]
       }
     ]
