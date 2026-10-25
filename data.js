@@ -548,6 +548,7 @@ window.ARCHIVE_DATA = {
       "identity": "",
       "color": "#754B9A",
       "portrait": "images/modern/jiyang.jpg",
+      "portraits": ["images/modern/jiyang.jpg", "images/modern/jiyang2.jpg"],
       "appearances": [
         {
           "source": "现代·纪扬",
