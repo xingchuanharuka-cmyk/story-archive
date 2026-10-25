@@ -496,7 +496,7 @@ window.ARCHIVE_DATA = {
         {
           "source": "现代·荀逸伦",
           "role": "",
-          "text": "情敌哥 北向南（20）\n关系归纳： 与荀逸伦处于同一校园关系网络，二人存在明确的竞争性关系。"
+          "text": "情敌哥 北向南（20）\n特征: 社交节能，你的男友。\n关系: 未加入任何学生组织或社团，偶尔旁听校辩论。荀逸伦对他表面笑嘻嘻，实则不然。"
         }
       ],
       "kind": "char",
@@ -548,7 +548,10 @@ window.ARCHIVE_DATA = {
       "identity": "",
       "color": "#754B9A",
       "portrait": "images/modern/jiyang.jpg",
-      "portraits": ["images/modern/jiyang.jpg", "images/modern/jiyang2.jpg"],
+      "portraits": [
+        "images/modern/jiyang.jpg",
+        "images/modern/jiyang2.jpg"
+      ],
       "appearances": [
         {
           "source": "现代·纪扬",
@@ -824,7 +827,7 @@ window.ARCHIVE_DATA = {
         {
           "source": "现代·乔治",
           "role": "（主场）",
-          "text": "生日6.6，英文名George，193，鲁东人\n校草，白发，练习生时候马上大一，在海草岛当练习生选秀中，一路高票，人气和边旭旗鼓相当。"
+          "text": "生日6.6，英文名George，193，鲁东人\n校草，白发，练习生时候马上大一，红毛好豆，老干部性格。在海草岛当练习生选秀中，一路高票，人气和边旭旗鼓相当。"
         },
         {
           "source": "现代·黎奖",
@@ -1140,7 +1143,7 @@ window.ARCHIVE_DATA = {
         {
           "source": "现代·乔治",
           "role": "",
-          "text": "在海草岛当练习生选秀中，一路高票，人气和边旭旗鼓相当。"
+          "text": "红毛好豆，老干部性格。在海草岛当练习生选秀中，一路高票，人气和边旭旗鼓相当。"
         },
         {
           "source": "达一别",
@@ -1500,12 +1503,12 @@ window.ARCHIVE_DATA = {
         {
           "source": "现代·车以弦",
           "role": "",
-          "text": "闵书赫法医"
+          "text": "闵书赫法医\n表面幽默风趣的专家，实则享受解剖和死亡美学。\n“大半夜发我一些内脏解剖图，真的很影响我吃宵夜。。”"
         },
         {
           "source": "现代·西杀",
           "role": "",
-          "text": "闵书赫"
+          "text": "闵书赫\n银发红瞳，表面幽默绅士，实则享受解剖和死亡美学。\n趁手的刀，暂时。"
         }
       ]
     },
@@ -1524,12 +1527,12 @@ window.ARCHIVE_DATA = {
         {
           "source": "现代·车以弦",
           "role": "",
-          "text": "阴琢 （单人卡已出）发小"
+          "text": "阴琢 （单人卡已出）发小\n装成omega的疯子，父母亲兄妹，经常失眠，睚眦必报，和叔伯争家产中。\n“他爸妈的基因真够稳定遗传的，疯得一脉相承”"
         },
         {
           "source": "现代·西杀",
           "role": "",
-          "text": "阴琢"
+          "text": "阴琢\n近亲产物的21岁Alpha，善于伪装的绿茶，睚眦必报。\n脑子被养坏的疯狗。"
         }
       ]
     },
