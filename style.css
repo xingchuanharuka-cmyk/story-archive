@@ -554,3 +554,38 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .char-index-thumb{display:block;width:42px;height:52px;object-fit:cover;object-position:top;border-radius:3px;border:1px solid #d5dfe2;flex:0 0 auto}
 .char-row-identity .name{min-width:0}
 @media(max-width:650px){.char-index-thumb{width:34px;height:42px}.char-row-identity{gap:9px}}
+
+
+/* V7.3 | Worldbuilding: four collapsible worldview sections. */
+.worldbuilding-view{margin-top:25px;max-width:100%}
+.worldbuilding-view .subheading{margin:10px 0 10px;font-family:'STZhongsong','华文中宋','Songti SC',serif;font-size:clamp(24px,3vw,31px);font-weight:500;color:#334854}
+.worldbuilding-intro{margin:0 0 29px;color:#61737e;font-size:15px;line-height:1.8}
+.worldbuilding-accordions{display:grid;gap:15px}
+.worldbuilding-world{--wb-accent:#6c91a6;--wb-wash:#e8f0f5;border:1px solid #d5e0e3;border-radius:7px;background:#fcfdfc;overflow:hidden}
+.worldbuilding-historical{--wb-accent:#a07b65;--wb-wash:#f4ede6}
+.worldbuilding-cultivation{--wb-accent:#638c78;--wb-wash:#e8f0eb}
+.worldbuilding-apocalypse{--wb-accent:#877698;--wb-wash:#edeaf2}
+.worldbuilding-world>summary{display:flex;align-items:center;gap:18px;padding:22px 24px;cursor:pointer;list-style:none;background:var(--wb-wash);border-left:3px solid var(--wb-accent);color:#344954;transition:background .2s ease}
+.worldbuilding-world>summary::-webkit-details-marker{display:none}
+.worldbuilding-world>summary:hover{filter:brightness(.99)}
+.worldbuilding-world-number{font:12px Georgia,serif;letter-spacing:.08em;color:#8597a0}
+.worldbuilding-world-title{font-family:'STZhongsong','华文中宋','Songti SC',serif;font-size:24px;letter-spacing:.09em}
+.worldbuilding-world-count{font-size:12px;color:#7a8d96;margin-left:auto}
+.worldbuilding-chevron{font-size:19px;color:var(--wb-accent);transition:transform .2s}
+.worldbuilding-world[open] .worldbuilding-chevron{transform:rotate(180deg)}
+.worldbuilding-world-body{padding:7px 30px 18px 34px}
+.worldbuilding-entry{padding:23px 0 25px;border-bottom:1px solid #e2e9eb}
+.worldbuilding-entry:last-child{border-bottom:0}
+.worldbuilding-entry-head{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
+.worldbuilding-entry-number{font:12px Georgia,serif;color:#9aa9af;min-width:25px}
+.worldbuilding-entry-head h3{margin:0;color:#3c5663;font-family:'STZhongsong','华文中宋','Songti SC',serif;font-size:21px;font-weight:500;line-height:1.5}
+.worldbuilding-entry-body{padding-left:39px}
+.worldbuilding-paragraph{margin:8px 0 12px;font-size:15px;line-height:1.95;color:#41515b;overflow-wrap:anywhere}
+.worldbuilding-paragraph:last-child{margin-bottom:0}
+.worldbuilding-keyword{font-family:'Noto Sans SC','Source Han Sans SC','Microsoft YaHei',sans-serif;font-weight:600;color:#4d8290;letter-spacing:.025em}
+.worldbuilding-character{color:var(--wb-name-color,#8a6075);font-weight:500}
+.worldbuilding-speculative{font-family:'STZhongsong','华文中宋','Songti SC',serif;font-style:italic;color:#847787;padding:10px 14px;border-left:2px solid #c7bacb;background:#f8f6f8}
+.worldbuilding-opening{margin-top:20px;padding:17px 20px;background:#f6f5f9;border-left:2px solid #b9a9c5}
+.worldbuilding-opening .worldbuilding-paragraph{font-size:14px}
+@media(max-width:600px){.worldbuilding-view{margin-top:18px}.worldbuilding-world>summary{padding:16px 14px;gap:10px}.worldbuilding-world-title{font-size:21px}.worldbuilding-world-count{font-size:11px}.worldbuilding-world-body{padding:0 16px 10px 18px}.worldbuilding-entry{padding:19px 0 20px}.worldbuilding-entry-head{gap:8px}.worldbuilding-entry-head h3{font-size:18px}.worldbuilding-entry-body{padding-left:0}.worldbuilding-paragraph{font-size:14px;line-height:1.9}.worldbuilding-opening{padding:12px 13px}.worldbuilding-view .subheading{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.worldbuilding-world>summary,.worldbuilding-chevron{transition:none}}
