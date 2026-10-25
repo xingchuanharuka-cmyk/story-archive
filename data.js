@@ -2350,6 +2350,18 @@ window.ARCHIVE_DATA = {
       ]
     },
     {
+      "id": "m-06",
+      "world": "现代",
+      "year": "2023.10.18",
+      "text": "黎奖（21）开场",
+      "people": [
+        "m-li"
+      ],
+      "highlights": [
+        "黎奖"
+      ]
+    },
+    {
       "id": "m-02",
       "world": "现代",
       "year": "2024.6.18",
@@ -2406,18 +2418,6 @@ window.ARCHIVE_DATA = {
       "people": [],
       "highlights": [
         "雷止"
-      ]
-    },
-    {
-      "id": "m-06",
-      "world": "现代",
-      "year": "2026.10.18",
-      "text": "黎奖（21）开场",
-      "people": [
-        "m-li"
-      ],
-      "highlights": [
-        "黎奖"
       ]
     },
     {
