@@ -374,7 +374,7 @@ body{color:var(--body);line-height:1.75;-webkit-font-smoothing:auto}
 .repo-page-layout .repo-tabs .tabs{display:flex;flex-wrap:wrap;gap:9px;border-bottom:1px solid #d3e0e4;padding-bottom:16px}
 .repo-page-layout .repo-tabs .tab{white-space:nowrap}
 .repo-page-layout .repo-entry-content{line-height:2.05}
-.repo-char-name{font-weight:600;text-decoration:none}
+.repo-char-name{font-weight:400;text-decoration:none}
 .repo-long-entry .repo-entry-label{flex-shrink:0}
 .repo-title-pill{display:inline-flex;align-items:center;padding:6px 13px;border-radius:999px;
  background:rgba(145,170,182,.14);background:color-mix(in srgb,var(--repo-pill-color) 12%,transparent);
