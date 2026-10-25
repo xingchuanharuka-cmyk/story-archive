@@ -1781,7 +1781,7 @@ window.ARCHIVE_DATA = {
         },
         {
           "source": "现代·Arvid",
-          "role": "队友",
+          "role": "",
           "text": "Luca (25)：队友。不会读空气,唯一能忍受Arvid冷脸并坚持贴贴的勇士。"
         }
       ]

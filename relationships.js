@@ -260,8 +260,8 @@ window.ARCHIVE_GRAPH = {
           "toName": "辜琳琅",
           "label": "远房亲戚",
           "direction": "mutual",
-          "labelDx": -65,
-          "labelDy": 16
+          "labelDx": 86,
+          "labelDy": -32
         },
         {
           "fromName": "达一别",
