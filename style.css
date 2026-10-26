@@ -618,3 +618,11 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .worldbuilding-paragraph{font-size:13px;line-height:1.65;margin:3px 0 6px}
  .worldbuilding-opening{padding:9px 11px}
 }
+
+/* NPC 出场记录：非公开卡面设定的个人推测，默认折叠 */
+.npc-hidden-note{margin-top:12px;border:1px solid #cad3d8;border-radius:5px;background:#f1f4f6;color:#465966;overflow:hidden}
+.npc-hidden-note summary{padding:11px 14px;cursor:pointer;list-style:none;font-size:.9em;letter-spacing:.04em;user-select:none}
+.npc-hidden-note summary::-webkit-details-marker{display:none}
+.npc-hidden-note summary::after{content:'＋';float:right;color:#7892a0}
+.npc-hidden-note[open] summary::after{content:'－'}
+.npc-hidden-note-body{padding:12px 14px 15px;border-top:1px solid #d6dfe3;font-size:.94em;line-height:1.75;color:#52626e}
