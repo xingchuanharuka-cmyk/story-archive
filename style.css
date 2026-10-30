@@ -855,3 +855,6 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .intro-work-body .research-source-quote{padding:14px 13px}
 }
 @media(prefers-reduced-motion:reduce){.intro-work-toggle,.history-topic-toggle{transition:none}}
+
+/* V9.1：提高引言展示卡片正文的阅读对比度 */
+.intro-quote-hero .intro-quote-lines{color:#3b5362;font-weight:600}
