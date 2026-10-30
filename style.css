@@ -903,3 +903,16 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 @media(max-width:680px){
   .intro-work-body {font-size:14px;}
 }
+
+/* V9.3：设定考据「阅前必看」与个人札记「阅前必看」使用相同字号与正文排版。 */
+.research-warning-copy p {
+  font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:16px;
+  font-weight:400;
+  line-height:2;
+  color:#263640;
+  letter-spacing:.012em;
+}
+@media(max-width:680px){
+  .research-warning-copy p {font-size:16px;line-height:1.95;}
+}
