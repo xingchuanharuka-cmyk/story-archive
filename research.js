@@ -9,7 +9,7 @@ window.ARCHIVE_RESEARCH = (() => {
   const quote = (text, source) => `<blockquote class="research-source-quote"><p>${fmt(text)}</p>${source?`<cite>${fmt(source)}</cite>`:''}</blockquote>`;
   const source = s => `<p class="research-citation">${fmt(s)}</p>`;
   const desc = (label, content) => `<p class="research-feature"><strong>${fmt(label)}</strong>${fmt(content)}</p>`;
-  const personal = text => `<details class="research-personal"><summary><span>个人解读 · 主观分析</span><span class="research-chevron">＋</span></summary><div class="research-personal-body">${p(text)}</div></details>`;
+  const personal = text => `<details class="research-personal"><summary><span>个人解读</span><span class="research-chevron">＋</span></summary><div class="research-personal-body">${p(text)}</div></details>`;
   const details = (number,title,inner) => `<details class="research-accordion" ${number==='01'?'open':''}><summary><span class="research-accordion-number">${number}</span><span class="research-accordion-title">${title}</span><span class="research-accordion-icon" aria-hidden="true">＋</span></summary><div class="research-accordion-body">${inner}</div></details>`;
   const overview = [
     h('【紫薇斗数】'),
@@ -152,9 +152,9 @@ window.ARCHIVE_RESEARCH = (() => {
   ].join('');
 
   const portraits = [
-    ['宋知世','七<strong>杀</strong>','images/cultivation/songzhishi.jpg'],
-    ['求渺','<strong>破</strong>军','images/apocalypse/qiumiao.jpg'],
-    ['北朔','贪<strong>狼</strong>','images/cultivation/beishuo1.jpg']
+    ['宋知世','七杀','images/cultivation/songzhishi.jpg'],
+    ['求渺','破军','images/apocalypse/qiumiao.jpg'],
+    ['北朔','贪狼','images/cultivation/beishuo1.jpg']
   ];
   const intro = `<div class="research-topic-hero"><div class="research-topic-eyebrow">CLASSICAL ALLUSIONS / 星曜与命理</div><div class="research-topic-decoration" aria-hidden="true">✧　✦　✧</div><h2>杀破狼</h2><p class="research-topic-subtitle">七杀 · 破军 · 贪狼</p><div class="research-portrait-row">${portraits.map(([name,star,photo])=>`<div class="research-portrait-person" style="--person-color:${colors[name]}"><div class="research-portrait-ring"><img src="${photo}" alt="${name}头像" loading="lazy" onerror="this.style.opacity=0"></div><span class="research-person-name">${name}</span><span class="research-cross-star" aria-hidden="true">✦</span><div class="research-star-name">${star}</div></div>`).join('')}</div></div>`;
   const opening = `<div class="research-intro-copy"><details class="research-author-note" open><summary><span>考据者的备注</span><span aria-hidden="true">＋</span></summary><div>${p('对杀破狼的考据，我是先从原始来源考据出发，延伸到后世对杀破狼的解读。从原始文献来看，我觉得调和器老师应该参考后世的延伸含义更多，从传统命理的设定来看，七杀是最贴合宋知世设定的，原书对破军、贪狼的评价偏低，所以很多部分就不是很贴求渺和北朔。')}</div></details><div class="research-references"><span class="research-reference-label">参考文献 / REFERENCES</span><p>《紫微斗数全书》，《中州派紫微斗数深造讲义》，有参考一些各种各样网页的解读</p></div>${p('杀破狼是中国传统术数紫微斗数中的一个组合称谓，由三颗星曜组成：七杀、破军、贪狼')}${p('在紫微斗数中，三颗星曜具有特定的排列关系，彼此处于三合宫位。')}</div>`;
