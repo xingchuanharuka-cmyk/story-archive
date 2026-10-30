@@ -780,3 +780,78 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .history-section .research-source-quote{padding:14px 16px}
  .history-conclusion{padding:18px 17px}
 }
+
+/* V8.8：历史考据按人物折叠，姓名及可能参考对象始终可见 */
+.history-topic{border:1px solid #e0e8e9;border-radius:5px;overflow:hidden;margin-bottom:22px;background:#fff}
+.history-topic-summary{display:block;position:relative;cursor:pointer;list-style:none}
+.history-topic-summary::-webkit-details-marker{display:none}
+.history-topic-summary:focus-visible{outline:2px solid #91a9b9;outline-offset:-3px}
+.history-topic-summary .history-person-hero{border:0;border-bottom:0;padding-right:75px;transition:background .2s}
+.history-topic-summary:hover .history-person-hero{background:#edf3f5}
+.history-topic[open] .history-person-hero{border-bottom:1px solid #e0e8e9}
+.history-topic-toggle{position:absolute;right:32px;top:50%;transform:translateY(-50%);color:#718e9d;font:26px Georgia,serif;transition:transform .2s}
+.history-topic[open] .history-topic-toggle{transform:translateY(-50%) rotate(45deg)}
+.history-topic-body{padding:8px 27px 18px}
+
+/* V8.8：引言考据，文学档案式长文阅读 */
+.research-intro{max-width:900px;margin:0 auto 85px;color:#536b78}
+.intro-page-heading{text-align:center;padding:30px 10px 40px}
+.intro-page-heading>span{font:11px Georgia,serif;letter-spacing:2.5px;color:#8da3ae}
+.intro-page-heading h2{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;font-weight:400;color:#4d6c7e;font-size:38px;letter-spacing:.17em;margin:16px 0}
+.intro-page-heading p{font-size:13px;color:#91a3ad;margin:0}
+.intro-person{margin:0 0 57px}
+.intro-person-heading{display:flex;align-items:center;gap:24px;padding:17px 27px 22px;border-bottom:1px solid #dce5e8}
+.intro-person-avatar{width:92px;height:92px;border:3px solid #fafafa;outline:1px solid color-mix(in srgb,var(--intro-person-color) 60%,#d6e1e6);box-shadow:0 5px 16px #5b70831c;border-radius:50%;overflow:hidden;flex:none}
+.intro-person-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.intro-person-eyebrow{font:10px Georgia,serif;letter-spacing:1.8px;color:#98a9b2}
+.intro-person-meta h2{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;color:var(--intro-person-color);font-size:34px;letter-spacing:.1em;font-weight:500;margin:7px 0 0}
+.intro-person-works{padding-top:16px}
+.intro-work{border:1px solid #e1e7e9;background:#fff;border-radius:5px;margin:13px 0;overflow:hidden}
+.intro-work>summary{list-style:none;display:flex;align-items:center;gap:16px;padding:19px 23px;cursor:pointer;background:#f7f9f9;transition:background .2s}
+.intro-work>summary::-webkit-details-marker{display:none}
+.intro-work>summary:hover{background:#eef4f5}
+.intro-work>summary:focus-visible{outline:2px solid #9fb6c2;outline-offset:-3px}
+.intro-work-name{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;font-size:21px;letter-spacing:.04em;color:#506d7c;flex:none}
+.intro-work-subtitle{font-size:12px;color:#96a6ae;flex:1;line-height:1.6}
+.intro-work-toggle{font:24px Georgia,serif;color:#9bb0bb;transition:transform .2s}
+.intro-work[open] .intro-work-toggle{transform:rotate(45deg)}
+.intro-work-body{padding:23px 32px 35px;font-size:14px;line-height:2.1;overflow-wrap:anywhere}
+.intro-work-body>p,.intro-article-section p{margin:12px 0;line-height:2.1}
+.intro-quote-hero{position:relative;text-align:center;background:linear-gradient(145deg,#f0f5f6,#f9f9f7 55%,#f6f3f6);padding:38px 24px 34px;margin:0 0 29px;border:1px solid #e2e9eb}
+.intro-quote-label{font:10px Georgia,serif;color:#90a6b2;letter-spacing:2.1px}
+.intro-quote-ornament{font:25px Georgia,serif;color:var(--intro-person-color);margin:8px 0}
+.intro-quote-lines{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;font-size:clamp(18px,2.5vw,25px);letter-spacing:.07em;line-height:2.1;color:#526b7b;white-space:normal}
+.intro-quote-sub{font-family:'LXGW WenKai','STKaiti','KaiTi',serif;font-size:12px!important;color:#8b9eaa;margin:17px 0 0!important}
+.intro-section-title{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;font-size:21px;font-weight:500;color:#4c6c7e;border-bottom:1px solid #dce5e8;padding:0 0 9px;margin:30px 0 18px}
+.intro-article-section{margin:20px 0 35px}
+.intro-work-body .research-subhead{margin:28px 0 13px;font-size:20px}
+.intro-work-body .research-minihead{margin:21px 0 10px}
+.intro-work-body .research-source-quote{margin:17px 0;padding:19px 23px}
+.intro-work-body .research-source-quote p{white-space:normal;line-height:2}
+.intro-work-body .research-personal{margin:23px 0 12px}
+.intro-work-body .research-personal-body{padding:17px 22px 22px}
+.intro-work-body .research-personal-body p{margin:12px 0;line-height:2}
+.intro-word-comparison{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:19px 0}
+.intro-word-comparison>div{background:#f1f5f6;border:1px solid #e1e9eb;padding:16px 18px}
+.intro-word-comparison span{display:block;color:#8398a3;font-size:12px;margin-bottom:9px}
+.intro-word-comparison p{font-family:'STZhongsong','华文中宋',serif;font-size:18px;color:#536f7e;margin:0}
+.intro-word-comparison strong{color:#a15d69;font-weight:700}
+@media(max-width:680px){
+ .history-topic-summary .history-person-hero{padding-right:44px}
+ .history-topic-toggle{right:15px;font-size:22px}
+ .history-topic-body{padding:8px 15px 16px}
+ .intro-page-heading h2{font-size:30px}
+ .intro-person-heading{padding:15px 8px 18px;gap:17px}
+ .intro-person-avatar{width:75px;height:75px}
+ .intro-person-meta h2{font-size:28px}
+ .intro-work>summary{padding:17px 13px;gap:9px;flex-wrap:wrap}
+ .intro-work-name{font-size:18px}
+ .intro-work-subtitle{font-size:11px}
+ .intro-work-body{padding:18px 14px 26px;font-size:13px}
+ .intro-quote-hero{padding:28px 12px}
+ .intro-quote-lines{font-size:18px;line-height:1.95}
+ .intro-section-title{font-size:18px}
+ .intro-word-comparison{grid-template-columns:1fr}
+ .intro-work-body .research-source-quote{padding:14px 13px}
+}
+@media(prefers-reduced-motion:reduce){.intro-work-toggle,.history-topic-toggle{transition:none}}

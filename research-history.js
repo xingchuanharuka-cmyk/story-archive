@@ -78,5 +78,6 @@ window.ARCHIVE_HISTORY = (() => {
   ].join('');
   const hero = (name,ref,photo) => `<div class="history-person-hero" style="--history-color:${colors[name]}"><div class="history-person-portrait"><img src="${photo}" alt="${name}头像" loading="lazy"></div><div class="history-person-heading"><div class="history-person-eyebrow">HISTORICAL PARALLELS / 历史人物对照</div><h2>${name}</h2><p>或许参考了${ref}？</p></div></div>`;
   const introHtml = `<div class="history-introduction"><div class="history-intro-label">考据者的注释 / PREFACE</div>${intro.map(p).join('')}<p class="history-strong-note"><strong>原始文献可作为历史经历的依据，但人物经历相似不等于已经证实这是调和器老师的创作来源。</strong></p></div>`;
-  return { render: () => `<div class="research-history">${introHtml}<div class="history-topic">${hero('辜琳琅','朱元璋','images/historical/gulinlang.jpg')}<div class="history-topic-body">${linlang}</div></div><div class="history-topic">${hero('阿史那信','金日磾','images/historical/ashinaxin.jpg')}<div class="history-topic-body">${ashina}</div></div></div>`};
+  const topic = (name,reference,photo,body) => `<details class="history-topic"><summary class="history-topic-summary">${hero(name,reference,photo)}<span class="history-topic-toggle" aria-hidden="true">＋</span></summary><div class="history-topic-body">${body}</div></details>`;
+  return { render: () => `<div class="research-history">${introHtml}${topic('辜琳琅','朱元璋','images/historical/gulinlang.jpg',linlang)}${topic('阿史那信','金日磾','images/historical/ashinaxin.jpg',ashina)}</div>`};
 })();
