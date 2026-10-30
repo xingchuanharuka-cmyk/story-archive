@@ -858,3 +858,48 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* V9.1：提高引言展示卡片正文的阅读对比度 */
 .intro-quote-hero .intro-quote-lines{color:#3b5362;font-weight:600}
+
+
+/* V9.2：设定考据正文与人物档案正文统一视觉对比度。
+   保留人物代表色、标题层级、史料引文的不同字体及卡片底色。 */
+.research-intro,
+.research-history,
+.research-intro-copy,
+.research-accordion-body,
+.intro-work-body,
+.history-introduction,
+.history-topic-body,
+.research-personal-body,
+.history-comment,
+.history-conclusion,
+.history-north,
+.research-warning-copy p {
+  color:#34424b;
+  font-weight:400;
+}
+/* 段落与人物档案 .appearance-text 一致，手机端不再缩小到 13px。 */
+.research-accordion-body,
+.intro-work-body,
+.history-introduction,
+.history-compare p,
+.history-text p,
+.history-conclusion p,
+.history-comment p,
+.history-north p,
+.history-section>p,
+.research-personal-body,
+.research-intro-copy,
+.research-warning-copy p {
+  font-size:14px;
+  line-height:1.85;
+}
+/* 史料仍用区别于正文的引文排版，但不再显得灰淡。 */
+.research-source-quote { color:#405765; }
+.research-source-quote p { color:#405765; }
+.research-references p { color:#58534e; }
+.research-citation { color:#526c7a; }
+/* 引言主体继续使用文学式衬线字体，颜色与正文对比度一致。 */
+.intro-quote-hero .intro-quote-lines { color:#34424b; font-weight:600; }
+@media(max-width:680px){
+  .intro-work-body {font-size:14px;}
+}
