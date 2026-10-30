@@ -42,7 +42,7 @@ window.ARCHIVE_INTRO = (() => {
 而对于十八岁的辜家假少爷来说，他的命运似乎从一开始就不属于他。他还不明白，命运已经找到了他的杜鹃花丛，正在试图将他与user分离。
 
 再看辜麒的状态名：“不要丢下我。”“我们逃跑吧。”
-“我们逃跑吧”与简媜原句中的邀请也形成了呼应。也许辜麒真正想对user说的是：不要丢下我，我们从系统安排的命运中逃跑吧。`),true);
+“我们逃跑吧”与简媜原句中的邀请也形成了呼应。也许辜麒真正想对user说的是：不要丢下我，我们从系统安排的命运中逃跑吧。`),false);
 
  const guqiPyg = item('皮格马利翁','奥维德《变形记》第十卷',
  quoteHero('皮格马利翁','辜麒 · 爱好栏','偷偷雕刻无数个user。\n没有一件能让他满意，有时他怀疑这是一场皮格马利翁，\n但堆积如山的废料向他证明了你的不可替代。','典故 / ALLUSION'),
@@ -95,7 +95,7 @@ window.ARCHIVE_INTRO = (() => {
 如果单独从这句话出发，我的理解是这样：
 我来：现代土木男大意外闯入早已写好的故事。
 我见：他本以读者的眼光认识这个世界，却发现一旦书页里的故事变成现实，比他想得还要残酷和真实。
-我……：黎奖需要做出自己的选择。`),true);
+我……：黎奖需要做出自己的选择。`),false);
 
  const maijianhai=item('应无所往而生真心','《金刚般若波罗蜜经》',
  quoteHero('应无所往而生真心','现代·麦见海','应无所往而生真心'),
@@ -112,7 +112,7 @@ window.ARCHIVE_INTRO = (() => {
  renderText(`“住”变成“往”：原文讨论的是心的执著，麦见海的引言则引入了方向、去往何处的含义。
 “其心”变成“真心”：原文中的“其心”应结合前文的清净心理解；改成“真心”后，在爱情故事里便可能产生“真挚感情”的双关。不过佛教本来就有“真心”“妄心”等概念，所以“真心”并不是只能解释成爱情。
 
-玻珠麦见海跑得还不算特别多所以先不写个人解读，也许以后会补？`),true);
+玻珠麦见海跑得还不算特别多所以先不写个人解读，也许以后会补？`),false);
 
  const george=item('维纳斯断臂','《米洛斯的维纳斯》',
  quoteHero('维纳斯断臂','现代·乔治','你之于我，\n如维纳斯断臂'),
@@ -134,7 +134,7 @@ window.ARCHIVE_INTRO = (() => {
 无法触及之物：你的存在犹如断臂，已成为无法重新拥有的事物。
 因缺失而产生的美：正因为你不在，那种遗憾才获得了特殊的意义。
 
-清冈卓行主张的倾向是“因缺失而产生的美”，主张保留缺失。虽然先前提到因为无法确认维纳斯断臂原始的模样，所以放弃了修复，但我觉得既然是缺失，也还是会存在复原的可能性，我觉得这个解释很乔治时刻三后的分支A。`),true);
+清冈卓行主张的倾向是“因缺失而产生的美”，主张保留缺失。虽然先前提到因为无法确认维纳斯断臂原始的模样，所以放弃了修复，但我觉得既然是缺失，也还是会存在复原的可能性，我觉得这个解释很乔治时刻三后的分支A。`),false);
 
  const lijiangModern=item('亿万年后相合的尘','宇宙中的物质循环',
  quoteHero('亿万年后相合的尘','现代·黎奖','我总会和你重逢，\n越过作者疲软的笔锋，越过他他他他的故事，\n如亿万年后相合的尘。'),
@@ -173,7 +173,7 @@ window.ARCHIVE_INTRO = (() => {
 二十三岁时，他突破细胞衰亡机制，研制出能够逆转衰老的“零点试剂”。
 区别是俄耳甫斯是因为爱情而挑战死亡，求渺则是因为求知欲与傲慢而挑战死亡。
 不太清楚其他人跑出来的是怎么样的，我是跑过u死亡的线路的，此男全程都是很冷静的疯狂，想要重构一切尝试一切办法逆转u的死亡结局。让我觉得求渺对死亡的态度无疑是傲慢的，他不会忏悔违背了伦理。如果是他将爱人从冥界带回，他会成为那个回头的人吗？我个人的理解是不会。
-我跑出来过一个疯得我特别喜欢的：u死后求渺把送给u的戒指从她手上拿了下来，不管大小也不使用重构，就这样套进自己的指节里，任由它嵌进自己的肉里，好冷静好迷人好喜欢……`),true);
+我跑出来过一个疯得我特别喜欢的：u死后求渺把送给u的戒指从她手上拿了下来，不管大小也不使用重构，就这样套进自己的指节里，任由它嵌进自己的肉里，好冷静好迷人好喜欢……`),false);
 
  const qiumiaoOlympus=item('奥林匹斯的黄昏','奥林匹斯山与诸神黄昏',
  quoteHero('奥林匹斯的黄昏','末世·求渺','把我的名字刻在奥林匹斯的黄昏\n漫长的百年和恶贯满盈\n尾声自你唇舌滚落'),
@@ -221,5 +221,5 @@ window.ARCHIVE_INTRO = (() => {
 求渺关于西西弗这部分的性格描述总给我一种愉悦犯的感觉（）他的行为逻辑出于他纯粹的求知欲，他和西西弗的不同是比起因为畏惧死亡而突破限制，他就是出于对“是否存在可能性突破限制”这一课题的探究，他做了，他就能做到，所以求渺的傲慢并非毫无道理。让他感到愉悦的不是完成把石头推到山上这一个目的，而是把石头推上山这一个过程，这和加缪最后得出的结论确实是有逻辑相似之处的，但他和西西弗的核心逻辑是有根本区别的。
 关于奥林匹斯盗取求渺成果这一个点，其实我还联想到了普罗米修斯盗火这个典故，但普罗米修斯盗火是为了人类，这个典故评价是偏正面的，并不适合放在奥林匹斯这个反派的身上，所以我就没有再把这个典故放进来。`));
 
- return {render:()=>`<div class="research-intro"><div class="intro-page-heading"><span>EPIGRAPHS &amp; REFERENCES</span><h2>引言考据</h2><p>从一句引言出发，追寻文字、典故与角色故事的交汇。</p></div>${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}</div>`};
+ return {render:()=>`<div class="research-intro"><div class="intro-page-heading"><span>EPIGRAPHS &amp; REFERENCES</span><h2>引言考据</h2></div>${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george)}</div>`};
 })();
