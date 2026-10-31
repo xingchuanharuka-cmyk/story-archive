@@ -918,7 +918,7 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 }
 
 
-/* V9.5 — 设定考据排版校准：普通正文严格参照人物档案 .appearance-text。
+/* V9.6 — 设定考据排版校准：普通正文严格参照人物档案 .appearance-text。
    引文、来源署名、引言展示卡保留独立的文学排版；人物专属颜色不动。 */
 .research-page .research-intro-copy,
 .research-page .research-accordion-body,
@@ -933,13 +933,13 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .research-page .history-north p,
 .research-page .history-section>p {
   font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
-  font-size:16px;
+  font-size:15px;
   line-height:1.8;
   font-weight:400;
   color:#34424b;
 }
 /* 历史考据注释框和正文中的强调文字继承正常正文色，不改引文。 */
-.research-page .history-strong-note{font-size:16px;line-height:1.8;}
+.research-page .history-strong-note{font-size:15px;line-height:1.8;}
 /* 标题在手机端也有足够字重；星曜名保留原本的轻字重设计。 */
 .research-page-head h1,
 .research-topic-hero h2,
@@ -965,5 +965,5 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
   .research-page .history-conclusion p,
   .research-page .history-comment p,
   .research-page .history-north p,
-  .research-page .history-section>p {font-size:16px;line-height:1.8;}
+  .research-page .history-section>p {font-size:15px;line-height:1.8;}
 }
