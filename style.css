@@ -1003,3 +1003,27 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
     linear-gradient(130deg,#f6faf9 0%,#faf8fb 38%,#f8f8f6 66%,#f9f7fa 100%);
   border-color:#e1e8ea;
 }
+
+/* V9.11 — 统一人物档案、人际关系、时间编年页的栏目页眉，参照设定考据。 */
+.page-head.archive-section-head {
+  text-align:center;
+  padding:15px 0 20px;
+  margin-bottom:38px;
+}
+.page-head.archive-section-head h1 {
+  font-family:'STZhongsong','华文中宋','Songti SC','Noto Serif SC',serif;
+  font-size:clamp(31px,4vw,44px);
+  font-weight:700;
+  color:#354f61;
+  letter-spacing:.08em;
+  line-height:1.4;
+  margin:12px 0 6px;
+}
+.page-head.archive-section-head p {
+  font-size:13px;
+  color:#8495a0;
+  margin:0;
+}
+@media(max-width:680px){
+  .page-head.archive-section-head{margin-bottom:25px}
+}
