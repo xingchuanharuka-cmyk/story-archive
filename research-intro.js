@@ -221,5 +221,5 @@ window.ARCHIVE_INTRO = (() => {
 求渺关于西西弗这部分的性格描述总给我一种愉悦犯的感觉（）他的行为逻辑出于他纯粹的求知欲，他和西西弗的不同是比起因为畏惧死亡而突破限制，他就是出于对“是否存在可能性突破限制”这一课题的探究，他做了，他就能做到，所以求渺的傲慢并非毫无道理。让他感到愉悦的不是完成把石头推到山上这一个目的，而是把石头推上山这一个过程，这和加缪最后得出的结论确实是有逻辑相似之处的，但他和西西弗的核心逻辑是有根本区别的。
 关于奥林匹斯盗取求渺成果这一个点，其实我还联想到了普罗米修斯盗火这个典故，但普罗米修斯盗火是为了人类，这个典故评价是偏正面的，并不适合放在奥林匹斯这个反派的身上，所以我就没有再把这个典故放进来。`));
 
- return {render:()=>`<div class="research-intro"><div class="intro-page-heading"><span>EPIGRAPHS &amp; REFERENCES</span><h2>引言考据</h2></div>${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george)}</div>`};
+ return {render:()=>`<div class="research-intro">${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george)}</div>`};
 })();
