@@ -1,6 +1,6 @@
 /* 历史考据：按考据作者提供的文字整理；原始引文尚未额外复核。 */
 window.ARCHIVE_HISTORY = (() => {
-  const colors = {'辜琳琅':'#92601A','阿史那信':'#8056A5','邢怀戎':'#A83C4B'};
+  const colors = Object.fromEntries(window.ARCHIVE_DATA.characters.filter(c=>c.kind==='char').map(c=>[c.name,c.color]));
   const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt = s => esc(s).replace(/辜琳琅|阿史那信|邢怀戎/g, n=>`<span class="research-name" style="color:${colors[n]}">${n}</span>`);
   const p = s => `<p>${fmt(s)}</p>`;

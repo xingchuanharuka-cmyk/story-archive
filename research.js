@@ -1,6 +1,6 @@
 /* 设定考据：V8.6 初版。正文保留考据作者提供的资料及主观分析，未另行校订来源。 */
 window.ARCHIVE_RESEARCH = (() => {
-  const colors = {'宋知世':'#A83C4B','求渺':'#47759A','北朔':'#A83B43'};
+  const colors = Object.fromEntries(window.ARCHIVE_DATA.characters.filter(c=>c.kind==='char').map(c=>[c.name,c.color]));
   const escape = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt = s => escape(s).replace(/宋知世|求渺|北朔/g, name=>`<span class="research-name" style="color:${colors[name]}">${name}</span>`);
   const p = s => `<p>${fmt(s)}</p>`;
@@ -12,8 +12,8 @@ window.ARCHIVE_RESEARCH = (() => {
   const personal = text => `<details class="research-personal"><summary><span>个人解读</span><span class="research-chevron">＋</span></summary><div class="research-personal-body">${p(text)}</div></details>`;
   const details = (number,title,inner) => `<details class="research-accordion" ${number==='01'?'open':''}><summary><span class="research-accordion-number">${number}</span><span class="research-accordion-title">${title}</span><span class="research-accordion-icon" aria-hidden="true">＋</span></summary><div class="research-accordion-body">${inner}</div></details>`;
   const overview = [
-    h('【紫薇斗数】'),
-    p('中国古代天文学“紫薇垣”。古人把天空划分为不同星区，紫微垣位于北天极附近，在传统星象文化中与天帝居所、帝王权威相联系。紫微斗数则以“紫微星”为十四主星之首。紫微斗数有十四颗主星，包括紫微、天机、太阳、武曲、天同、廉贞、天府、太阴、贪狼、巨门、天相、天梁、七杀、破军。'),
+    h('【紫微斗数】'),
+    p('中国古代天文学“紫微垣”。古人把天空划分为不同星区，紫微垣位于北天极附近，在传统星象文化中与天帝居所、帝王权威相联系。紫微斗数则以“紫微星”为十四主星之首。紫微斗数有十四颗主星，包括紫微、天机、太阳、武曲、天同、廉贞、天府、太阴、贪狼、巨门、天相、天梁、七杀、破军。'),
     p('在紫微斗数中，七杀、破军、贪狼是十四主星中的三颗。它们在排盘规则下形成特定的三合关系，因此被合称为“杀破狼”。'),
     h('一、七杀：杀伐、权柄与开创'),
     desc('传统记载：','《紫微斗数全书》称七杀为“斗中之上将，实成败之孤辰”，将其与将领、权柄、成败及孤克联系起来。'),
@@ -99,9 +99,9 @@ window.ARCHIVE_RESEARCH = (() => {
   ].join('');
 
   const originals = [
-    p('下面是对来源《紫薇斗数全书》考据，感兴趣的可以看看，我都提取了我认为的关键点出来'),
+    p('下面是对来源《紫微斗数全书》考据，感兴趣的可以看看，我都提取了我认为的关键点出来'),
     h('【七杀】'),
-    source('原文出自《紫薇斗数全书》卷一〈诸星问答论〉的七杀问：「问七杀星所主若何？」，只截取了部分'),
+    source('原文出自《紫微斗数全书》卷一〈诸星问答论〉的七杀问：「问七杀星所主若何？」，只截取了部分'),
     h4('总述'),
     quote('七杀南斗第六星也，属火、金。乃斗中之上将，实成败之孤辰。在斗司斗柄，主于风宪。其威作金之灵，其性若清凉之状。主于数则宜僧道，主于身定历艰辛。在命宫若限不扶夭折，在官禄得地，化祸为祥。'),
     desc('“南斗第六星” — ','七杀的星曜归属'),
@@ -115,7 +115,7 @@ window.ARCHIVE_RESEARCH = (() => {
     desc('“会刑囚于田宅、父母，刑伤父母，产业难留” — ','容易刑克父母（双亲早亡），也难以继承家产祖业'),
     desc('“纵使一身孤独，也应寿年不长。” — ','就算一身孤独，寿命也不长。'),
     h('【破军】'),
-    source('原文出自《紫薇斗数全书》卷一〈诸星问答论〉的破军问：「问破军所主若何？」，只截取了部分'),
+    source('原文出自《紫微斗数全书》卷一〈诸星问答论〉的破军问：「问破军所主若何？」，只截取了部分'),
     h4('总述'),
     quote('破军属水，北斗第七星也，司夫妻、子息、奴仆之神。居子午入庙，在天为杀气，在数为耗星，故化气曰耗。主人暴凶狡诈，其性奸猾，与人寡合，动辄损人。不成人之善，善助人之恶。'),
     desc('“北斗第七星” — ','破军的星曜归属'),
@@ -128,7 +128,7 @@ window.ARCHIVE_RESEARCH = (() => {
     desc('“会紫贪则鼠窃狗盗” — ','紫贪在卯酉同宫，破军永远在贪狼的三合位，所以紫贪坐命时破军必在三方，这个条件其实是紫贪本身的问题被破军放大。'),
     personal('（截这个只是我觉得有点好笑啊啊啊，是说北朔和求渺在一起就没好事吗×）'),
     h('【贪狼】'),
-    source('原文出自《紫薇斗数全书》卷一〈诸星问答论〉的贪狼问：「问贪狼所主若何？」，只截取了部分'),
+    source('原文出自《紫微斗数全书》卷一〈诸星问答论〉的贪狼问：「问贪狼所主若何？」，只截取了部分'),
     quote('贪狼北斗解厄之神，第一星也。属水，化气为桃花，为标准，乃主祸福之神。受善恶定奸诈瞒人，授学神仙之术。又好高吟浮荡，作巧成拙。入庙乐之宫，可为祥可为祸。会破军迷花恋酒而丧命，同禄存可吉'),
     desc('“北斗第一星” — ','古籍赋予贪狼的星曜归属'),
     desc('“解厄之神” — ','带有解除灾厄意味的称谓'),

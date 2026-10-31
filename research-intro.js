@@ -1,6 +1,6 @@
 /* 引言考据：考据者提供的正文；将原文、引文和个人解读分层展示。 */
 window.ARCHIVE_INTRO = (() => {
- const colors={'辜麒':'#C58A32','黎奖':'#B28A2D','麦见海':'#657D8C','乔治':'#6D7C9E','求渺':'#47759A','宋知世':'#A83C4B','邢怀戎':'#A83C4B','辜琳琅':'#C58A32'};
+ const colors = Object.fromEntries(window.ARCHIVE_DATA.characters.filter(c=>c.kind==='char').map(c=>[c.name,c.color]));
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const fmt=s=>esc(s).replace(/宋知世|邢怀戎|辜琳琅|麦见海|辜麒|乔治|求渺|黎奖/g,n=>`<span class="research-name" style="color:${colors[n]}">${n}</span>`);
  const renderText = raw => {
