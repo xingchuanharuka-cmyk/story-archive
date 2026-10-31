@@ -967,3 +967,20 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
   .research-page .history-north p,
   .research-page .history-section>p {font-size:15px;line-height:1.8;}
 }
+
+/* V9.7：考据普通正文较 V9.6 微微加深，接近阅读札记的墨蓝色；
+   保留 15px 字号、标题、角色专属颜色和史料引文样式。 */
+.research-page .research-intro-copy,
+.research-page .research-accordion-body,
+.research-page .intro-work-body,
+.research-page .research-personal-body,
+.research-page .history-introduction,
+.research-page .history-topic-body,
+.research-page .history-compare p,
+.research-page .history-text p,
+.research-page .history-conclusion p,
+.research-page .history-comment p,
+.research-page .history-north p,
+.research-page .history-section>p {
+  color:#2e3d46;
+}
