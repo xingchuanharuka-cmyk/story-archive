@@ -110,7 +110,8 @@ window.ARCHIVE_INTRO = (() => {
 ## 具体改动了什么？`)+
  `<div class="intro-word-comparison"><div><span>《金刚经》原文</span><p>应无所<strong>住</strong>而生其心</p></div><div><span>麦见海引言</span><p>应无所<strong>往</strong>而生其心</p></div></div>`+
  renderText(`“住”变成“往”：原文讨论的是心的执著，麦见海的引言则引入了方向、去往何处的含义。
-玻珠麦见海跑得还不算特别多所以先不写个人解读，也许以后会补？`),false);
+玻珠麦见海跑得还不算特别多所以先不写个人解读，也许以后会补？`)+
+ '<aside class="intro-erratum" role="note"><span class="intro-erratum-tag">勘误</span><span class="intro-erratum-text">本人自行发现并修正：此前将麦见海的引言误录为“应无所往而生真心”，经重新核对，正确引言为“应无所往而生其心”。相关对照及解读已同步修正。</span></aside>',false);
 
  const george=item('维纳斯断臂','《米洛斯的维纳斯》',
  quoteHero('维纳斯断臂','《米洛斯的维纳斯》','你之于我，\n如维纳斯断臂'),
@@ -219,5 +220,5 @@ window.ARCHIVE_INTRO = (() => {
 求渺关于西西弗这部分的性格描述总给我一种愉悦犯的感觉（）他的行为逻辑出于他纯粹的求知欲，他和西西弗的不同是比起因为畏惧死亡而突破限制，他就是出于对“是否存在可能性突破限制”这一课题的探究，他做了，他就能做到，所以求渺的傲慢并非毫无道理。让他感到愉悦的不是完成把石头推到山上这一个目的，而是把石头推上山这一个过程，这和加缪最后得出的结论确实是有逻辑相似之处的，但他和西西弗的核心逻辑是有根本区别的。
 关于奥林匹斯盗取求渺成果这一个点，其实我还联想到了普罗米修斯盗火这个典故，但普罗米修斯盗火是为了人类，这个典故评价是偏正面的，并不适合放在奥林匹斯这个反派的身上，所以我就没有再把这个典故放进来。`));
 
- return {render:()=>`<div class="research-intro">${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai+'<aside class="intro-erratum" role="note"><span class="intro-erratum-tag">勘误</span><span class="intro-erratum-text">本人自行发现并修正：此前将麦见海的引言误录为“应无所往而生真心”，经重新核对，正确引言为“应无所往而生其心”。相关对照及解读已同步修正。</span></aside>')}${group('乔治','images/modern/qiaozhi.jpg',george)}</div>`};
+ return {render:()=>`<div class="research-intro">${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george)}</div>`};
 })();
