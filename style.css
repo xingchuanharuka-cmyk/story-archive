@@ -1027,3 +1027,9 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 @media(max-width:680px){
   .page-head.archive-section-head{margin-bottom:25px}
 }
+
+/* V9.13：麦见海引言勘误，作为常显小标签独立于折叠考据正文。 */
+.intro-erratum{display:flex;align-items:flex-start;gap:10px;margin:10px 0 22px;padding:11px 14px;background:#f6f7f7;border-left:2px solid #aebdc5;color:#657985;font-size:12px;line-height:1.85}
+.intro-erratum-tag{flex:none;display:inline-block;border:1px solid #aebdc5;border-radius:3px;padding:0 6px;color:#4d6776;font-size:11px;font-weight:700;line-height:1.8;letter-spacing:.06em}
+.intro-erratum-text{flex:1;min-width:0}
+@media(max-width:680px){.intro-erratum{padding:10px 11px;gap:8px;font-size:12px}}
