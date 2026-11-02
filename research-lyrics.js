@@ -233,7 +233,7 @@ window.ARCHIVE_LYRICS = (() => {
 我想过忘记
 是最后最坏的打算
 一尘不染
-如此简单。`
+如此简单`
     }
   ];
   const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -245,31 +245,38 @@ window.ARCHIVE_LYRICS = (() => {
       const active = norm(line).includes(norm(t.focus));
       return `<p class="lyric-line${active?' lyric-line-focus':''}"${active?' data-lyric-focus="true"':''} data-line="${j}">${esc(line)}</p>`;
     }).join('');
-    const hasOfficialEmbed = t.name==='黎奖' || t.name==='雷止';
-    const hasQQEmbed = t.name==='麦见海' && Boolean(t.qqMid);
-    const player = hasOfficialEmbed && t.songId
+    // 仅《少女的祈祷》和《鹤顶红》保留官方外链嵌入播放器；其他两首仅跳转网易云。
+    const hasNetease = t.name==='雷止';
+    const hasQQ = t.name==='麦见海' && Boolean(t.qqMid);
+    const embed = hasNetease
       ? `<iframe class="lyric-netease-embed" title="${esc(t.artist)}《${esc(t.title)}》网易云音乐播放器" src="https://music.163.com/outchain/player?type=2&id=${encodeURIComponent(t.songId)}&auto=0&height=66" width="330" height="86" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media"></iframe>`
-      : hasQQEmbed
+      : hasQQ
         ? `<div class="lyric-qq-embed-slot" data-qq-songmid="${esc(t.qqMid)}"><p class="lyric-external-hint">QQ音乐播放器加载中……</p></div>`
-        : `<p class="lyric-external-hint">暂未提供可用的官方外链播放器，请在网易云音乐中收听。</p>`;
-    const discControl = (hasOfficialEmbed || hasQQEmbed)
-      ? `<button class="lyric-disc-control" type="button" aria-pressed="false" aria-label="让${esc(t.name)}的唱片开始转动；仅控制动画，不控制音乐播放" title="手动开启或暂停唱片动画"><span class="lyric-disc"><span class="lyric-disc-center">${String(i+1).padStart(2,'0')}</span></span></button>`
-      : `<div class="lyric-disc"><span class="lyric-disc-center">${String(i+1).padStart(2,'0')}</span></div>`;
+        : '';
+    const sourceUrl=hasQQ?(t.qqUrl||t.url):t.url;
+    const sourceLabel=hasQQ?'QQ音乐':'网易云音乐';
     return `<article class="lyric-track${t.name==='黎奖'?' lyric-track--lijiang':''}" style="--lyric-char:${esc(c.color || '#547080')}">
       <header class="lyric-track-header"><img class="lyric-avatar" src="${esc(c.portrait||'')}" alt="${esc(t.name)}头像" loading="lazy"><div class="lyric-track-meta"><span class="lyric-track-label">CHARACTER / LYRICS</span><h3>${esc(t.name)}</h3><p>「${esc(t.quote)}」</p></div></header>
-      <div class="lyric-track-grid"><div class="lyric-player"><div class="lyric-disc-wrap">${discControl}</div><div class="lyric-player-info"><span class="lyric-song">${esc(t.title)}</span><span class="lyric-artist">${esc(t.artist)}</span></div>${player}<a class="lyric-open-link" href="${esc(t.qqUrl||t.url)}" target="_blank" rel="noopener noreferrer">在${hasQQEmbed?'QQ':'网易云'}音乐中打开 ↗</a>${hasOfficialEmbed||hasQQEmbed?`<p class="lyric-play-note">在播放器内手动播放；点击唱片可开启／暂停旋转动画（两者暂无法自动同步）</p>`:`<p class="lyric-play-note">不自动播放</p>`}</div>
-      <div class="lyric-reader"><div class="lyric-reader-top"><span>LYRICS / 歌词</span><span>上下滑动阅读 ↓</span></div><div class="lyric-scroll" tabindex="0" role="region" aria-label="${esc(t.title)}歌词，可手动滚动">${rows}</div>${t.note?`<p class="lyric-source-note">${esc(t.note)}</p>`:''}</div></div></article>`;
+      <div class="lyric-music-card">
+        <div class="lyric-cover" aria-label="${esc(t.title)}歌词封面">
+          <div class="lyric-cover-top"><span>LYRICS / 歌词</span><span>上下滑动阅读 ↓</span></div>
+          <div class="lyric-scroll" tabindex="0" role="region" aria-label="${esc(t.title)}歌词，可手动滚动">${rows}</div>
+        </div>
+        <div class="lyric-nowplaying"><div class="lyric-nowplaying-info"><h4>${esc(t.title)}</h4><p>${esc(t.artist)}</p></div><span class="lyric-heart" aria-hidden="true">♡</span></div>
+        <div class="lyric-progress" aria-hidden="true"><span class="lyric-progress-line"><i></i></span><div class="lyric-progress-time"><span>0:00</span><span>—:——</span></div></div>
+        <div class="lyric-transport" aria-hidden="true"><span class="lyric-shuffle">⤨</span><span class="lyric-prev">◀❙</span><span class="lyric-play-decor">▶</span><span class="lyric-next">❙▶</span><span class="lyric-repeat">↪</span></div>
+        ${embed?`<div class="lyric-actual-player">${embed}</div>`:''}
+        <a class="lyric-open-link" href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">在${sourceLabel}中打开 ↗</a>
+        ${t.note?`<p class="lyric-source-note">${esc(t.note)}</p>`:''}
+      </div>
+    </article>`;
   };
-  const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据 <span>（施工中）</span></h2><p>歌曲与引用歌词暂先整理于此，出处介绍及个人解读待补充。</p></div><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
+  const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据 <span>（施工中）</span></h2><p>歌曲与引用歌词暂先整理于此，出处介绍及个人解读待补充。</p></div><p class="lyric-copyright-note">因为版权问题，目前可在 Web 内播放的只有<span style="color:var(--lyric-lei)">《少女的祈祷》</span>和<span style="color:var(--lyric-mai)">《鹤顶红》</span>，<span style="color:var(--lyric-li)">《没有理想的人不伤心》</span>和<span style="color:var(--lyric-ji)">《瞬》</span>提供外链跳转。我默认使用网易云音乐，所以外链是网易云链接。<br>只能在嵌入的外链播放器内点击播放，歌词下方的播放键仅作美化装饰。</p><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
   const align = root => {
     if(!root) return;
-    root.querySelectorAll('.lyric-disc-control').forEach(button=>{
-      button.addEventListener('click',()=>{
-        const spinning=button.getAttribute('aria-pressed')==='true';
-        button.setAttribute('aria-pressed',String(!spinning));
-        button.setAttribute('aria-label',!spinning?'暂停唱片转动（不会暂停音乐）':'开始唱片转动（不会播放音乐）');
-      });
-    });
+    const colorFor = name => (charByName(name)||{}).color || '#547080';
+    const section = root.querySelector('.research-lyrics');
+    if(section){section.style.setProperty('--lyric-lei',colorFor('雷止'));section.style.setProperty('--lyric-mai',colorFor('麦见海'));section.style.setProperty('--lyric-li',colorFor('黎奖'));section.style.setProperty('--lyric-ji',colorFor('纪扬'));}
     // QQ音乐分享链接只含歌曲 MID，旧版外链播放器要求数字 songid。
     // 通过 QQ 音乐公开歌曲详情 JSONP 取得数字 ID；不可用时保留原站链接。
     root.querySelectorAll('.lyric-qq-embed-slot').forEach(slot=>{
