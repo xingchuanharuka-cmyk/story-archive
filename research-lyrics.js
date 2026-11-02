@@ -320,8 +320,7 @@ window.ARCHIVE_LYRICS = (() => {
 古典钢琴曲《少女的祈祷》（La prière d'une vierge）由波兰女作曲家泰克拉·芭达捷芙斯卡（Tekla Bądarzewska-Baranowska）创作，于19世纪中叶发表，1859年刊载于法国音乐刊物后广为流传。`
     },
     '纪扬': {
-      background: `## 一、歌曲基本信息
-歌曲名称：《瞬》
+      background: `歌曲名称：《瞬》
 演唱：郑润泽
 作词：郑润泽
 作曲：郑润泽
@@ -396,7 +395,7 @@ window.ARCHIVE_LYRICS = (() => {
       ${renderStudy(t.name)}
     </article>`;
   };
-  const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据 <span>（施工中）</span></h2><p>歌曲资料、创作背景及个人解读已按曲目整理，可展开下方栏目阅读。</p></div><p class="lyric-copyright-note">因为版权问题，目前可在 Web 内播放的只有<span style="color:var(--lyric-lei)">《少女的祈祷》</span>和<span style="color:var(--lyric-mai)">《鹤顶红》</span>，<span style="color:var(--lyric-li)">《没有理想的人不伤心》</span>和<span style="color:var(--lyric-ji)">《瞬》</span>提供外链跳转。我默认使用网易云音乐，所以外链是网易云链接。<br>只能在嵌入的外链播放器内点击播放，歌词下方的播放键仅作美化装饰。</p><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
+  const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据</h2></div><p class="lyric-copyright-note">因为版权问题，目前可在 Web 内播放的只有<span style="color:var(--lyric-lei)">《少女的祈祷》</span>和<span style="color:var(--lyric-mai)">《鹤顶红》</span>，<span style="color:var(--lyric-li)">《没有理想的人不伤心》</span>和<span style="color:var(--lyric-ji)">《瞬》</span>提供外链跳转。我默认使用网易云音乐，所以外链是网易云链接。<br>只能在嵌入的外链播放器内点击播放，歌词下方的播放键仅作美化装饰。</p><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
   const align = root => {
     if(!root) return;
     const colorFor = name => (charByName(name)||{}).color || '#547080';
