@@ -83,13 +83,15 @@ window.ARCHIVE_LYRICS = (() => {
 他也会伤心
 他也会伤心
 他也会伤心
-伤心。`
+伤心`
     },
     {
       name:'麦见海', title:'鹤顶红', artist:'麦浚龙',
       quote:'羊的身 蛇的心事',
       url:'https://music.163.com/dj?id=2493403029&uct2=U2FsdGVkX18Wh3QTSC2W9R/KIWw8WEV+6bONzCrxz4c=',
       djId:'2493403029',
+      qqMid:'004N7Yhx3N4Wmc',
+      qqUrl:'https://c6.y.qq.com/base/fcgi-bin/u?__=xRFCDLvbqaVk',
       focus:'羊的身 蛇的心事',
       lyrics:`万暗中 丹顶鹤的 一团红
 烧得眼睛也想排洪
@@ -119,7 +121,7 @@ window.ARCHIVE_LYRICS = (() => {
 辛苦过活快乐痛。`
     },
     {
-      name:'雷止', title:'少女祈祷中', artist:'杨千嬅',
+      name:'雷止', title:'少女的祈祷', artist:'杨千嬅',
       quote:'祈求天地 放过一双恋人',
       url:'https://music.163.com/song?id=3312508535&uct2=U2FsdGVkX18vFh2e+XuL7nnbHdq3waWqZAZKuhnL7f8=',
       songId:'3312508535',
@@ -244,15 +246,18 @@ window.ARCHIVE_LYRICS = (() => {
       return `<p class="lyric-line${active?' lyric-line-focus':''}"${active?' data-lyric-focus="true"':''} data-line="${j}">${esc(line)}</p>`;
     }).join('');
     const hasOfficialEmbed = t.name==='黎奖' || t.name==='雷止';
+    const hasQQEmbed = t.name==='麦见海' && Boolean(t.qqMid);
     const player = hasOfficialEmbed && t.songId
       ? `<iframe class="lyric-netease-embed" title="${esc(t.artist)}《${esc(t.title)}》网易云音乐播放器" src="https://music.163.com/outchain/player?type=2&id=${encodeURIComponent(t.songId)}&auto=0&height=66" width="330" height="86" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media"></iframe>`
-      : `<p class="lyric-external-hint">暂未提供可用的官方外链播放器，请在网易云音乐中收听。</p>`;
-    const discControl = hasOfficialEmbed
+      : hasQQEmbed
+        ? `<div class="lyric-qq-embed-slot" data-qq-songmid="${esc(t.qqMid)}"><p class="lyric-external-hint">QQ音乐播放器加载中……</p></div>`
+        : `<p class="lyric-external-hint">暂未提供可用的官方外链播放器，请在网易云音乐中收听。</p>`;
+    const discControl = (hasOfficialEmbed || hasQQEmbed)
       ? `<button class="lyric-disc-control" type="button" aria-pressed="false" aria-label="让${esc(t.name)}的唱片开始转动；仅控制动画，不控制音乐播放" title="手动开启或暂停唱片动画"><span class="lyric-disc"><span class="lyric-disc-center">${String(i+1).padStart(2,'0')}</span></span></button>`
       : `<div class="lyric-disc"><span class="lyric-disc-center">${String(i+1).padStart(2,'0')}</span></div>`;
-    return `<article class="lyric-track" style="--lyric-char:${esc(c.color || '#547080')}">
+    return `<article class="lyric-track${t.name==='黎奖'?' lyric-track--lijiang':''}" style="--lyric-char:${esc(c.color || '#547080')}">
       <header class="lyric-track-header"><img class="lyric-avatar" src="${esc(c.portrait||'')}" alt="${esc(t.name)}头像" loading="lazy"><div class="lyric-track-meta"><span class="lyric-track-label">CHARACTER / LYRICS</span><h3>${esc(t.name)}</h3><p>「${esc(t.quote)}」</p></div></header>
-      <div class="lyric-track-grid"><div class="lyric-player"><div class="lyric-disc-wrap">${discControl}</div><div class="lyric-player-info"><span class="lyric-song">${esc(t.title)}</span><span class="lyric-artist">${esc(t.artist)}</span></div>${player}<a class="lyric-open-link" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">在网易云音乐中打开 ↗</a>${hasOfficialEmbed?`<p class="lyric-play-note">在播放器内手动播放；点击唱片可开启／暂停旋转动画（两者暂无法自动同步）</p>`:`<p class="lyric-play-note">不自动播放</p>`}</div>
+      <div class="lyric-track-grid"><div class="lyric-player"><div class="lyric-disc-wrap">${discControl}</div><div class="lyric-player-info"><span class="lyric-song">${esc(t.title)}</span><span class="lyric-artist">${esc(t.artist)}</span></div>${player}<a class="lyric-open-link" href="${esc(t.qqUrl||t.url)}" target="_blank" rel="noopener noreferrer">在${hasQQEmbed?'QQ':'网易云'}音乐中打开 ↗</a>${hasOfficialEmbed||hasQQEmbed?`<p class="lyric-play-note">在播放器内手动播放；点击唱片可开启／暂停旋转动画（两者暂无法自动同步）</p>`:`<p class="lyric-play-note">不自动播放</p>`}</div>
       <div class="lyric-reader"><div class="lyric-reader-top"><span>LYRICS / 歌词</span><span>上下滑动阅读 ↓</span></div><div class="lyric-scroll" tabindex="0" role="region" aria-label="${esc(t.title)}歌词，可手动滚动">${rows}</div>${t.note?`<p class="lyric-source-note">${esc(t.note)}</p>`:''}</div></div></article>`;
   };
   const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据 <span>（施工中）</span></h2><p>歌曲与引用歌词暂先整理于此，出处介绍及个人解读待补充。</p></div><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
@@ -264,6 +269,34 @@ window.ARCHIVE_LYRICS = (() => {
         button.setAttribute('aria-pressed',String(!spinning));
         button.setAttribute('aria-label',!spinning?'暂停唱片转动（不会暂停音乐）':'开始唱片转动（不会播放音乐）');
       });
+    });
+    // QQ音乐分享链接只含歌曲 MID，旧版外链播放器要求数字 songid。
+    // 通过 QQ 音乐公开歌曲详情 JSONP 取得数字 ID；不可用时保留原站链接。
+    root.querySelectorAll('.lyric-qq-embed-slot').forEach(slot=>{
+      const mid=slot.dataset.qqSongmid;
+      if(!/^[A-Za-z0-9]{14}$/.test(mid||'')) return;
+      const cb='archiveQQSong'+Math.random().toString(36).slice(2);
+      const script=document.createElement('script');
+      const fail=()=>{slot.innerHTML='<p class="lyric-external-hint">QQ音乐暂时无法加载嵌入播放器，请使用下方链接收听。</p>';};
+      const cleanup=()=>{delete window[cb];script.remove();};
+      const timeout=setTimeout(()=>{cleanup();fail();},9000);
+      window[cb]=data=>{
+        clearTimeout(timeout);cleanup();
+        const song=Array.isArray(data?.data)?data.data.find(item=>item?.mid===mid):null;
+        const id=song?.id;
+        if(!Number.isSafeInteger(id)||id<=0){fail();return;}
+        const iframe=document.createElement('iframe');
+        iframe.className='lyric-qq-embed';
+        iframe.title='麦浚龙《鹤顶红》QQ音乐播放器';
+        iframe.width='330';iframe.height='80';iframe.loading='lazy';
+        iframe.referrerPolicy='strict-origin-when-cross-origin';
+        iframe.allow='encrypted-media';
+        iframe.src='https://i.y.qq.com/n2/m/outchain/player/index.html?songid='+id+'&songtype=0';
+        slot.replaceChildren(iframe);
+      };
+      script.onerror=()=>{clearTimeout(timeout);cleanup();fail();};
+      script.src='https://c.y.qq.com/v8/fcg-bin/fcg_play_single_song.fcg?songmid='+encodeURIComponent(mid)+'&tpl=yqq_song_detail&format=jsonp&callback='+cb+'&jsonpCallback='+cb+'&platform=yqq&needNewCode=0';
+      document.head.appendChild(script);
     });
     root.querySelectorAll('.lyric-scroll').forEach(scroll=>{
       const target=scroll.querySelector('[data-lyric-focus="true"]');

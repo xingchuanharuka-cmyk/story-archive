@@ -1094,3 +1094,8 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .lyric-disc-control[aria-pressed="true"] .lyric-disc{animation:lyric-record-spin 5s linear infinite}
 @keyframes lyric-record-spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.lyric-disc-control[aria-pressed="true"] .lyric-disc{animation:none}}
+
+/* V9.18: 黎奖引用的副歌取消加粗；QQ音乐播放器与原卡片布局一致 */
+.lyric-track--lijiang .lyric-line-focus{font-weight:400}
+.lyric-qq-embed-slot{width:100%;max-width:320px;min-height:80px;display:flex;align-items:center;justify-content:center}
+.lyric-qq-embed{display:block;width:100%;max-width:320px;height:80px;border:0;border-radius:5px;background:#f6f8f9}
