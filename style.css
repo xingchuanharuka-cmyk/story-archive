@@ -1200,3 +1200,46 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
     radial-gradient(ellipse at 94% 92%,rgba(237,219,235,.20),transparent 54%),
     linear-gradient(145deg,#fbf9fd,#f7f5fc 54%,#faf8fc);
 }
+
+
+/* V9.23 — 歌词考据：桌面和平板单列宽幅；歌词居中。
+   仅在宽度 >= 741px 生效，手机端（<= 740px）完全沿用 V9.21 样式。 */
+@media (min-width:741px) {
+  .research-page.research-page--lyrics {
+    max-width:1320px;
+    padding-left:clamp(24px,3.5vw,48px);
+    padding-right:clamp(24px,3.5vw,48px);
+  }
+  .research-page--lyrics .research-lyrics { max-width:1160px; }
+  .research-page--lyrics .lyric-track-list {
+    grid-template-columns:minmax(0,1fr);
+    gap:34px;
+  }
+  .research-page--lyrics .lyric-track-header { padding:25px 36px 23px;gap:22px; }
+  .research-page--lyrics .lyric-avatar { width:78px;height:78px; }
+  .research-page--lyrics .lyric-track-meta h3 { font-size:28px; }
+  .research-page--lyrics .lyric-track-meta p { font-size:17px; }
+  .research-page--lyrics .lyric-music-card { padding:30px 40px 32px; }
+  .research-page--lyrics .lyric-cover { height:420px; }
+  .research-page--lyrics .lyric-cover-top { padding:18px 28px 14px;font-size:12px; }
+  .research-page--lyrics .lyric-scroll { padding:20px 38px 28px; }
+  .research-page--lyrics .lyric-line {
+    text-align:center;
+    font-size:17px;
+    line-height:2;
+    margin-bottom:15px;
+  }
+  .research-page--lyrics .lyric-line-focus {
+    margin-left:0;
+    padding:3px 12px;
+    border-left:0;
+  }
+  .research-page--lyrics .lyric-nowplaying h4 { font-size:26px; }
+  .research-page--lyrics .lyric-copyright-note { max-width:1060px; }
+}
+@media (min-width:741px) and (max-width:900px) {
+  .research-page--lyrics .lyric-music-card { padding:25px 26px 28px; }
+  .research-page--lyrics .lyric-track-header { padding:22px 28px; }
+  .research-page--lyrics .lyric-scroll { padding:18px 20px 25px; }
+  .research-page--lyrics .lyric-line { font-size:16px; }
+}
