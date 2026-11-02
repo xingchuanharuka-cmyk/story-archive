@@ -236,6 +236,128 @@ window.ARCHIVE_LYRICS = (() => {
 如此简单`
     }
   ];
+
+  // 歌曲资料与个人解读由档案馆作者提供。两类内容独立折叠，默认关闭。
+  const studies = {
+    '黎奖': {
+      background: `## 一、歌曲基本信息
+演唱：新裤子乐队
+作词：彭磊
+作曲：彭磊
+首次发行：2013年
+收录专辑：《生命因你而火热》（2016年）
+
+## 二、创作背景
+《没有理想的人不伤心》创作于新裤子乐队事业发展不顺、彭磊个人生活面临压力的时期。
+
+2019年，彭磊在采访中回忆，2013年前后，乐队的音乐风格与市场接受程度存在落差，自己拍摄电影遭遇亏损，与张蔷合作的音乐项目迟迟没有进展，同时还面临家庭生活的压力。这些现实困境促使他重新审视音乐创作，并写下《没有理想的人不伤心》。
+
+彭磊将这一转变形容为：
+> “一塌糊涂的生活把我们打向了现实主义。”
+
+## 三、歌名考证
+值得注意的是，歌曲名称为《没有理想的人不伤心》，但实际演唱的歌词却是：
+> “没有文化的人不伤心。”
+
+2019年11月25日的专访中注明：彭磊曾提到，直接说人“没文化”似乎不太妥当，因此虽然歌词中唱的是“没有文化的人不伤心”，但最终将歌名定为《没有理想的人不伤心》。
+
+不过，“没有文化的人不伤心”仍然是乐队成员谈论这首作品时经常使用的名称。`,
+      personal: `要用“没有理想的人不伤心”去解读黎奖，我觉得是要结合宗主奖去理解的。
+
+奖并非执着于宏大理想的人，他清醒、通透，带着几分玩世不恭，但他分得清理想和现实，始终保有自己的原则与善意。不愿承担过多责任，并不意味着能够真正置身事外（谋划期为u和其他人准备处理）；看似洒脱地面对一切，也不代表不会为某些事情伤心（任务期立碑事件）。
+
+我认为对奖而言，重要的从来不是“理想”，而是即使不愿承认，心中仍然存在无法轻易放弃的东西，最后放弃抵抗去认真对待自己曾经嘴上说着不在意的事情，这就是黎奖“真香”这一核心的表达吧。`
+    },
+    '麦见海': {
+      background: `## 一、歌曲基本信息
+歌曲名称：《鹤顶红》（鶴頂紅）
+演唱：麦浚龙（Juno Mak）
+填词：林夕
+作曲：陈珊妮
+编曲：王双骏
+监制：麦浚龙、王双骏
+歌曲语言：粤语
+发行年份：2014年
+收录专辑：《柔弱的角》
+
+题外话：歌手和麦见海都姓麦诶×
+
+《鹤顶红》收录于麦浚龙2014年发行的迷你专辑《柔弱的角》，是专辑第二首歌曲。音乐平台JOOX所收录的版本标注发行日期为2014年1月28日。
+
+## 二、创作背景
+《鹤顶红》所属专辑《柔弱的角》，以人性的复杂与矛盾为主要创作主题。
+
+在HOKK fabrica刊载的专访《麦浚龙：A Young Person With An Old Soul》中，麦浚龙谈到，自己并不习惯以某种固定的音乐风格定义专辑，而是希望每张专辑都能探讨不同的人性主题。
+
+《柔弱的角》这一名称源于他对“柔弱”与“角”两种矛盾特质的思考。他认为人性并不存在绝对的善恶之分，而是具有复杂的灰色地带，因此希望通过专辑探讨人性中带有负面色彩的不同面向。
+
+在介绍专辑曲目时，麦浚龙明确指出，《鹤顶红》关注的是人性的瑕疵。同张专辑中的《畸》《门》《逆苍生》，则分别涉及人性的畸形、自闭症及宗教批判等主题。`
+    },
+    '雷止': {
+      background: `## 一、歌曲基本信息
+歌曲名称：《少女的祈祷》（少女的祈禱）
+演唱：杨千嬅
+填词：林夕
+作曲：陈辉阳
+编曲：陈辉阳
+监制：陈辉阳
+歌曲语言：粤语
+发行时间：2000年9月
+收录专辑：《Play It Loud, Kiss Me Soft》
+
+《少女的祈祷》是杨千嬅于2000年推出的粤语歌曲，也是富士魔术手FDI激光冲印的广告歌曲。作品推出后获得广泛关注，成为杨千嬅早期的代表作之一，并获得2000年度十大劲歌金曲金奖等多个音乐奖项。
+
+## 二、创作背景
+《少女的祈祷》的创作灵感来自作曲人陈辉阳的一次偶然想象。
+
+在《声音变魔术——陈辉阳钢琴作品集一》所收录的创作自述中，陈辉阳回忆，1999年圣诞节晚上，他在林夕家吃过晚饭后外出，经过交通灯时，突然构思出一个关于年轻恋人的故事。
+
+故事发生在巴士上。女孩在心中默默祈祷，希望巴士能够连续通过三盏绿灯。如果愿望实现，她便可以永远与心爱的男孩在一起。然而，巴士经过第二盏交通灯后，男孩便下车离开了。
+
+陈辉阳又回忆起自己小时候曾弹奏过一首名为《少女的祈祷》的钢琴曲，由此确定了歌曲的名称。
+
+## 三、歌名的古典音乐来源
+古典钢琴曲《少女的祈祷》（La prière d'une vierge）由波兰女作曲家泰克拉·芭达捷芙斯卡（Tekla Bądarzewska-Baranowska）创作，于19世纪中叶发表，1859年刊载于法国音乐刊物后广为流传。`
+    },
+    '纪扬': {
+      background: `## 一、歌曲基本信息
+歌曲名称：《瞬》
+演唱：郑润泽
+作词：郑润泽
+作曲：郑润泽
+编曲：朴桑松 Sunny
+制作人：苗柏杨、郑润泽
+发行日期：2023年7月17日
+收录专辑：《瞬》（Single）
+歌曲时长：4分44秒
+
+《瞬》是郑润泽于2023年7月17日发行的歌曲，由其本人包办词曲创作，朴桑松负责编曲，苗柏杨与郑润泽共同担任制作人。歌曲采用吉他、弦乐与鼓等器乐编配，国际首席爱乐乐团参与弦乐演奏。`,
+      personal: `包欠又是饺子醋环节（。）我实在是很偏心这个苦情歌大王吧（
+
+调和器老师给纪扬状态栏选的这首歌，歌词有很多关于时间、思念、错过与遗忘的内容，是非常符合纪扬简介中关于“苦情歌”这三个字的印象的。纪扬思念了四年的u，却总是云淡风轻地装作已经释怀。我觉得纪扬实际上是需要一个让他回头的契机的，但他的骄傲又没那么容易能让他放下面子，“你要让时间怎么转 刚错过的怎么换”，在某种意义上是他对自己的发问。
+
+时间不能倒转，相遇可以重演，如果不曾经历失去，纪扬的感情或许并没有办法达到现在的感情深度，他对u的感情一直都是他歌曲的养料，实际上他的歌曲和他这个人本身都是离不开u的。只有漫长的遗憾与挣扎，才能学会放下自尊，承认自己的软弱，也明白究竟什么才是不可替代的。
+
+比起回到一切尚未破碎的时候，或许更重要的是终于有勇气重新拾起那些被自己亲手打碎的东西。
+
+另外还有一个想说的，在发现状态栏的曲子是《瞬》的时候，我有想过为什么在播放界面选的又是《Bye Bye Monica》（其实我更喜欢这首，好听好听TVT）。后来觉得还是这首比较符合对纪扬性格的印象吧，比起《瞬》有些忧郁的气质，这首的旋律更轻快张扬，更纪扬一点。`
+    }
+  };
+  const renderStudyText = raw => String(raw || '').trim().split(/\n\s*\n/).map(part => {
+    const lines = part.split('\n');
+    if (lines[0].startsWith('## ')) {
+      const title = `<h5 class="lyric-study-heading">${esc(lines.shift().slice(3))}</h5>`;
+      return title + (lines.length ? `<p class="lyric-study-facts">${lines.map(esc).join('<br>')}</p>` : '');
+    }
+    if (lines.every(line => line.startsWith('> '))) return `<blockquote class="lyric-study-quote">${lines.map(line => esc(line.slice(2))).join('<br>')}</blockquote>`;
+    return `<p>${lines.map(esc).join('<br>')}</p>`;
+  }).join('');
+  const renderStudy = name => {
+    const study = studies[name];
+    if (!study) return '';
+    const fold = (label,body,type) => `<details class="lyric-study lyric-study--${type}"><summary><span>${esc(label)}</span><span class="lyric-study-toggle" aria-hidden="true">＋</span></summary><div class="lyric-study-body">${renderStudyText(body)}</div></details>`;
+    return `<div class="lyric-study-list">${study.background ? fold(name==='纪扬'?'歌曲基本信息':'歌曲资料与创作背景',study.background,'background') : ''}${study.personal ? fold('个人解读',study.personal,'personal') : ''}</div>`;
+  };
   const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm = s => String(s).replace(/\s/g,'').replace(/[，。！!？?、·]/g,'');
   const charByName = name => window.ARCHIVE_DATA.characters.find(c=>c.kind==='char' && c.name===name);
@@ -271,9 +393,10 @@ window.ARCHIVE_LYRICS = (() => {
         <a class="lyric-open-link" href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">在${sourceLabel}中打开 ↗</a>
         ${t.note?`<p class="lyric-source-note">${esc(t.note)}</p>`:''}
       </div>
+      ${renderStudy(t.name)}
     </article>`;
   };
-  const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据 <span>（施工中）</span></h2><p>歌曲与引用歌词暂先整理于此，出处介绍及个人解读待补充。</p></div><p class="lyric-copyright-note">因为版权问题，目前可在 Web 内播放的只有<span style="color:var(--lyric-lei)">《少女的祈祷》</span>和<span style="color:var(--lyric-mai)">《鹤顶红》</span>，<span style="color:var(--lyric-li)">《没有理想的人不伤心》</span>和<span style="color:var(--lyric-ji)">《瞬》</span>提供外链跳转。我默认使用网易云音乐，所以外链是网易云链接。<br>只能在嵌入的外链播放器内点击播放，歌词下方的播放键仅作美化装饰。</p><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
+  const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据 <span>（施工中）</span></h2><p>歌曲资料、创作背景及个人解读已按曲目整理，可展开下方栏目阅读。</p></div><p class="lyric-copyright-note">因为版权问题，目前可在 Web 内播放的只有<span style="color:var(--lyric-lei)">《少女的祈祷》</span>和<span style="color:var(--lyric-mai)">《鹤顶红》</span>，<span style="color:var(--lyric-li)">《没有理想的人不伤心》</span>和<span style="color:var(--lyric-ji)">《瞬》</span>提供外链跳转。我默认使用网易云音乐，所以外链是网易云链接。<br>只能在嵌入的外链播放器内点击播放，歌词下方的播放键仅作美化装饰。</p><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
   const align = root => {
     if(!root) return;
     const colorFor = name => (charByName(name)||{}).color || '#547080';

@@ -1243,3 +1243,24 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
   .research-page--lyrics .lyric-scroll { padding:18px 20px 25px; }
   .research-page--lyrics .lyric-line { font-size:16px; }
 }
+
+
+/* V9.24 — 歌词考据补充：歌曲资料/创作背景与个人解读独立折叠，默认关闭。 */
+.research-lyrics .lyric-study-list{padding:0 24px 24px;display:grid;gap:12px}
+.research-lyrics .lyric-study{border:1px solid #e0e7e9;border-radius:7px;overflow:hidden;background:#fff}
+.research-lyrics .lyric-study>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;list-style:none;cursor:pointer;padding:17px 22px;background:linear-gradient(115deg,#f8faf9,#fafafa);font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;font-size:18px;font-weight:700;color:#536b78}
+.research-lyrics .lyric-study>summary::-webkit-details-marker{display:none}
+.research-lyrics .lyric-study>summary:hover{background:#f1f6f6}
+.research-lyrics .lyric-study>summary:focus-visible{outline:2px solid #9fb6c2;outline-offset:-3px}
+.research-lyrics .lyric-study-toggle{font:24px Georgia,serif;color:var(--lyric-char);transition:transform .2s}
+.research-lyrics .lyric-study[open] .lyric-study-toggle{transform:rotate(45deg)}
+.research-lyrics .lyric-study--personal>summary{background:linear-gradient(115deg,color-mix(in srgb,var(--lyric-char) 7%,#fff),#fcfcfc)}
+.research-lyrics .lyric-study-body{padding:20px 27px 26px;color:#34434b;font-size:15px;line-height:2;overflow-wrap:anywhere}
+.research-lyrics .lyric-study-body p{margin:0 0 14px;line-height:2}
+.research-lyrics .lyric-study-body p:last-child{margin-bottom:0}
+.research-lyrics .lyric-study-heading{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;color:var(--lyric-char);font-size:18px;font-weight:700;line-height:1.6;margin:7px 0 14px;padding-bottom:9px;border-bottom:1px solid #e7ebed}
+.research-lyrics .lyric-study-heading:not(:first-child){margin-top:24px}
+.research-lyrics .lyric-study-facts{line-height:2.1}
+.research-lyrics .lyric-study-quote{margin:12px 0 19px;padding:13px 18px;background:color-mix(in srgb,var(--lyric-char) 5%,#f9faf9);border-left:3px solid var(--lyric-char);color:#4c606b;font-family:'STZhongsong','华文中宋','Noto Serif SC',serif}
+@media(min-width:741px){.research-page--lyrics .lyric-study-list{padding:0 40px 35px}.research-page--lyrics .lyric-study-body{padding:26px 36px 32px;font-size:16px}}
+@media(max-width:740px){.research-lyrics .lyric-study-list{padding:0 17px 22px;gap:10px}.research-lyrics .lyric-study>summary{padding:14px 16px;font-size:16px}.research-lyrics .lyric-study-body{padding:17px 17px 21px;font-size:14px}.research-lyrics .lyric-study-heading{font-size:16px}}
