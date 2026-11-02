@@ -1033,3 +1033,56 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .intro-erratum-tag{flex:none;display:inline-block;border:1px solid #aebdc5;border-radius:3px;padding:0 6px;color:#4d6776;font-size:11px;font-weight:700;line-height:1.8;letter-spacing:.06em}
 .intro-erratum-text{flex:1;min-width:0}
 @media(max-width:680px){.intro-erratum{padding:10px 11px;gap:8px;font-size:12px}}
+
+/* V9.16 — 歌词考据：唱片展示 + 网易云官方嵌入 + 手动滚动歌词 */
+.research-lyrics{max-width:950px;margin:0 auto 72px}
+.lyric-section-heading{text-align:center;margin:7px auto 34px}
+.lyric-section-heading h2{font-family:'STZhongsong','华文中宋','Songti SC','Noto Serif SC',serif;font-size:clamp(27px,4vw,38px);font-weight:700;color:#354f61;letter-spacing:.07em;margin:12px 0 9px}
+.lyric-section-heading h2 span{font-size:.44em;font-weight:500;color:#8496a0;letter-spacing:0;vertical-align:middle;white-space:nowrap}
+.lyric-section-heading>p{font-size:13px;color:#8798a2;margin:0;line-height:1.8}
+.lyric-track-list{display:grid;gap:28px}
+.lyric-track{background:#fff;border:1px solid #e0e7e9;border-radius:10px;overflow:hidden;box-shadow:0 7px 30px rgba(62,83,95,.045)}
+.lyric-track-header{display:flex;align-items:center;gap:19px;padding:22px 29px 18px;border-bottom:1px solid #e8ecee;background:linear-gradient(115deg,#f8faf9,#fbfaf9 64%,#f9f8fb)}
+.lyric-avatar{width:79px;height:79px;object-fit:cover;object-position:center top;border-radius:16px;border:3px solid #fff;outline:1px solid color-mix(in srgb,var(--lyric-char) 43%,#e1e8e9);box-shadow:0 5px 16px #33495618;flex:none}
+.lyric-track-label{font:10px Georgia,serif;letter-spacing:1.7px;color:#92a2ac}
+.lyric-track-meta{min-width:0}
+.lyric-track-meta h3{font-family:'STZhongsong','华文中宋','Songti SC','Noto Serif SC',serif;font-size:28px;font-weight:700;color:var(--lyric-char);margin:4px 0 5px}
+.lyric-track-meta p{font-family:'STZhongsong','华文中宋','Songti SC','Noto Serif SC',serif;font-size:17px;font-weight:700;line-height:1.6;color:var(--lyric-char);margin:0}
+.lyric-track-grid{display:grid;grid-template-columns:minmax(210px,.85fr) minmax(0,1.4fr);gap:30px;padding:25px 28px 30px}
+.lyric-player{min-width:0;display:flex;align-items:center;flex-direction:column;justify-content:flex-start}
+.lyric-disc-wrap{width:min(100%,195px);aspect-ratio:1;display:grid;place-items:center;padding:7px;background:linear-gradient(140deg,#e9eef0,#fff 47%,#e5eaed);border-radius:50%;box-shadow:0 12px 22px #263b4c15}
+.lyric-disc{width:100%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(circle at center,transparent 0px,transparent 4px,#ffffff0d 5px,#00000016 6px),conic-gradient(from 25deg,#27343e 0deg,#4b5963 20deg,#1e2c36 50deg,#52616a 74deg,#26333d 108deg,#47555e 135deg,#17242d 175deg,#3e4b55 215deg,#1d2b35 260deg,#53626b 310deg,#27343e 360deg);border:1px solid #43515c}
+.lyric-disc-center{width:36%;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;border:4px solid #29353d;background:radial-gradient(circle at 50% 50%,#f9faf8 0 8%,var(--lyric-char) 9% 100%);color:#fff;font:600 19px Georgia,serif;letter-spacing:1px;text-shadow:0 1px 3px #0005}
+.lyric-player-info{display:flex;flex-direction:column;align-items:center;text-align:center;margin:16px 0 12px;gap:4px}
+.lyric-song{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;font-size:20px;font-weight:700;color:#3e5664}
+.lyric-artist{font-size:13px;color:#82949e}
+.lyric-netease-embed{display:block;width:100%;max-width:280px;height:86px;border:0;background:#f6f8f9;border-radius:5px}
+.lyric-external-hint{max-width:260px;font-size:12px;line-height:1.7;text-align:center;color:#7d909a;margin:8px 0 13px}
+.lyric-open-link{display:block;margin-top:12px;padding:8px 14px;border:1px solid #cbd9df;border-radius:5px;font-size:12px;text-align:center;color:#4c7082;text-decoration:none;transition:background .2s}
+.lyric-open-link:hover{background:#edf3f6}
+.lyric-play-note{font-size:11px;color:#9aa8b0;margin:9px 0 0;text-align:center}
+.lyric-reader{min-width:0;display:flex;flex-direction:column}
+.lyric-reader-top{display:flex;justify-content:space-between;gap:12px;padding:0 2px 12px;border-bottom:1px solid #e4e9eb;color:#8c9ca6;font-size:11px;letter-spacing:.04em}
+.lyric-reader-top span:first-child{font:11px Georgia,'Noto Sans SC',serif;letter-spacing:1px}
+.lyric-scroll{height:340px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b7c6ce #f0f4f5;outline-offset:3px;padding:18px 12px 18px 6px;scroll-behavior:auto}
+.lyric-line{font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;color:#586b76;font-size:15px;font-weight:400;line-height:1.9;margin:0 0 9px;white-space:pre-wrap;overflow-wrap:anywhere}
+.lyric-line-focus{font-weight:700;color:var(--lyric-char);border-left:2px solid var(--lyric-char);padding-left:10px;margin-left:-12px;background:color-mix(in srgb,var(--lyric-char) 6%,transparent)}
+.lyric-source-note{margin:12px 0 0;font-size:11px;line-height:1.65;color:#8496a0}
+@media(max-width:680px){
+ .research-main-tabs{overflow-x:auto;justify-content:flex-start;scrollbar-width:thin}
+ .research-main-tabs .tabs{width:max-content;min-width:100%;justify-content:center;flex-wrap:nowrap}
+ .research-main-tabs .tab{white-space:nowrap;flex:none;padding:11px 10px;font-size:13px}
+ .lyric-section-heading{margin:4px 0 23px}
+ .lyric-track-list{gap:20px}
+ .lyric-track-header{padding:16px 17px;gap:14px}
+ .lyric-avatar{width:65px;height:65px;border-radius:13px}
+ .lyric-track-meta h3{font-size:24px}
+ .lyric-track-meta p{font-size:15px}
+ .lyric-track-grid{grid-template-columns:1fr;gap:20px;padding:21px 17px 24px}
+ .lyric-disc-wrap{width:148px}
+ .lyric-player-info{margin:11px 0 9px}
+ .lyric-netease-embed{max-width:320px}
+ .lyric-scroll{height:290px;padding:16px 8px 16px 7px}
+ .lyric-line{font-size:15px;line-height:1.85}
+}
+@media(prefers-reduced-motion:reduce){.lyric-open-link{transition:none}}
