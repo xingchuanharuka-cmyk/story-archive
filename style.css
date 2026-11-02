@@ -1158,3 +1158,45 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
   background:transparent;
   border-left:0;
 }
+
+
+/* V9.21 — 四张歌词卡片采用角色专属的浅色珠光镭射底。
+   纯 CSS 渐变，无需图片；保留滚动、正文、引用句和播放器布局。 */
+.research-lyrics .lyric-cover{
+  background-color:#fbfafb;
+  background-size:cover;
+  border-color:color-mix(in srgb,var(--lyric-char) 12%,#e8e9eb);
+}
+/* 细腻的斜向珠光反射，保持歌词对比度，避免明显的彩虹色块。 */
+.research-lyrics .lyric-track:nth-child(1) .lyric-cover{
+  background-image:
+    linear-gradient(123deg,transparent 17%,rgba(255,255,255,.57) 31%,transparent 46%,rgba(255,255,255,.30) 70%,transparent 83%),
+    radial-gradient(ellipse at 84% 21%,rgba(245,221,167,.27),transparent 62%),
+    radial-gradient(ellipse at 12% 83%,rgba(219,203,241,.23),transparent 60%),
+    radial-gradient(ellipse at 94% 94%,rgba(204,233,225,.23),transparent 52%),
+    linear-gradient(150deg,#fbfaf8,#faf7f1 50%,#f6f8f8);
+}
+.research-lyrics .lyric-track:nth-child(2) .lyric-cover{
+  background-image:
+    linear-gradient(126deg,transparent 16%,rgba(255,255,255,.55) 33%,transparent 50%,rgba(255,255,255,.29) 74%,transparent 89%),
+    radial-gradient(ellipse at 86% 19%,rgba(240,218,163,.27),transparent 62%),
+    radial-gradient(ellipse at 14% 84%,rgba(216,225,200,.27),transparent 63%),
+    radial-gradient(ellipse at 90% 92%,rgba(224,214,237,.20),transparent 55%),
+    linear-gradient(145deg,#fbfaf6,#f8f8f2 52%,#f9f8f5);
+}
+.research-lyrics .lyric-track:nth-child(3) .lyric-cover{
+  background-image:
+    linear-gradient(126deg,transparent 18%,rgba(255,255,255,.58) 32%,transparent 49%,rgba(255,255,255,.34) 74%,transparent 87%),
+    radial-gradient(ellipse at 88% 17%,rgba(188,218,246,.29),transparent 62%),
+    radial-gradient(ellipse at 13% 81%,rgba(211,220,246,.24),transparent 62%),
+    radial-gradient(ellipse at 93% 90%,rgba(206,234,229,.21),transparent 57%),
+    linear-gradient(145deg,#f9fbfd,#f4f8fc 54%,#f7f9fb);
+}
+.research-lyrics .lyric-track:nth-child(4) .lyric-cover{
+  background-image:
+    linear-gradient(126deg,transparent 17%,rgba(255,255,255,.56) 33%,transparent 49%,rgba(255,255,255,.31) 72%,transparent 88%),
+    radial-gradient(ellipse at 84% 17%,rgba(224,206,242,.31),transparent 63%),
+    radial-gradient(ellipse at 12% 84%,rgba(211,218,247,.25),transparent 61%),
+    radial-gradient(ellipse at 94% 92%,rgba(237,219,235,.20),transparent 54%),
+    linear-gradient(145deg,#fbf9fd,#f7f5fc 54%,#faf8fc);
+}
