@@ -243,7 +243,9 @@ window.ARCHIVE_LYRICS = (() => {
     const c = charByName(t.name) || {};
     const rows = t.lyrics.split('\n').map((line,j)=>{
       const active = norm(line).includes(norm(t.focus));
-      return `<p class="lyric-line${active?' lyric-line-focus':''}"${active?' data-lyric-focus="true"':''} data-line="${j}">${esc(line)}</p>`;
+      // 黎奖：仅将该行作为歌词滚动定位点，不再加粗、标色或高亮。
+      const highlight = active && t.name !== '黎奖';
+      return `<p class="lyric-line${highlight?' lyric-line-focus':''}"${active?' data-lyric-focus="true"':''} data-line="${j}">${esc(line)}</p>`;
     }).join('');
     // 仅《少女的祈祷》和《鹤顶红》保留官方外链嵌入播放器；其他两首仅跳转网易云。
     const hasNetease = t.name==='雷止';

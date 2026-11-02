@@ -1134,3 +1134,27 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .lyric-open-link{margin:13px auto 0;max-width:330px}
 .lyric-source-note{margin-top:13px}
 @media(max-width:740px){.lyric-track-list{grid-template-columns:1fr;gap:24px}.lyric-music-card{padding:17px 17px 22px}.lyric-cover{height:340px}.lyric-scroll{padding:15px 17px 20px}.lyric-nowplaying h4{font-size:21px}.lyric-copyright-note{font-size:12px;padding:14px 15px;margin-bottom:22px}.lyric-transport .lyric-play-decor{width:64px;height:64px;min-width:64px}}
+
+
+/* V9.20 — 歌词封面使用独立的冷调珠光镭射底，与引言的暖粉彩虹底区分。
+   保持歌词清晰可读；仅改变歌词区域背景，不改角色引言与文字内容。 */
+.research-lyrics .lyric-cover {
+  background-color:#f4f7f9;
+  background-image:
+    radial-gradient(ellipse at 7% 8%, rgba(184,220,245,.45) 0%, transparent 55%),
+    radial-gradient(ellipse at 91% 18%, rgba(201,193,242,.35) 0%, transparent 54%),
+    radial-gradient(ellipse at 79% 83%, rgba(184,229,226,.38) 0%, transparent 58%),
+    radial-gradient(ellipse at 13% 94%, rgba(218,207,245,.34) 0%, transparent 57%),
+    linear-gradient(135deg,#f5f9fb 0%,#f7f6fc 36%,#f0f8f8 68%,#f8f7fb 100%);
+  border-color:#dfe8ee;
+}
+.research-lyrics .lyric-cover-top,
+.research-lyrics .lyric-scroll { background:transparent; }
+/* 黎奖的歌词原文全部使用常规字重、常规颜色（不高亮）。 */
+.research-lyrics .lyric-track--lijiang .lyric-line,
+.research-lyrics .lyric-track--lijiang .lyric-line-focus {
+  color:#586b76;
+  font-weight:400;
+  background:transparent;
+  border-left:0;
+}
