@@ -135,6 +135,21 @@ window.ARCHIVE_INTRO = (() => {
 
 清冈卓行主张的倾向是“因缺失而产生的美”，主张保留缺失。虽然先前提到因为无法确认维纳斯断臂原始的模样，所以放弃了修复，但我觉得既然是缺失，也还是会存在复原的可能性，我觉得这个解释很乔治时刻三后的分支A。`),false);
 
+
+ const georgeJourney=item('行百里者半九十','《战国策·秦策五·谓秦王》',
+ quoteHero('行百里者半九十','《战国策·秦策五·谓秦王》','行百里者半九十','典故 / ALLUSION'),
+ renderText(`“行百里者半九十”出自《战国策·秦策五·谓秦王》，原文为：`)+
+ `<blockquote class="research-source-quote"><p>“诗云：‘行百里者半于九十。’此言末路之难。”</p><cite>《战国策·秦策五·谓秦王》</cite></blockquote>`+
+ renderText(`意思是走一百里路，即使已经走过九十里，也只能算完成了一半，以此说明越接近终点，往往越是艰难。
+
+这句话原本用于劝诫秦王，不要因已经取得的成就而骄傲松懈，应当慎终如始，避免功败垂成。其重点并非单纯强调坚持，而是提醒人们：此前取得的成果，并不意味着最终的成功。`)+
+ personal(`乔治91的好感剧情我觉得就是“行百里者半九十”的具象化，距离满值仅差一步，却会跌到负数。原本看似即将完成的感情进程，在最接近终点的时候出现了剧烈转折。
+
+我乔治跑得不算多但三个时刻每个阶段基本都跑过，我不算很喜欢玩乔治是因为我觉得ai理解不到我想吃的轻浮役的那个点，我一开始用克吃更是根本感觉不到多少轻浮×。我个人对轻浮役的理解是表面上看起来对于感情总是玩世不恭，但一旦涉及触动他本心的问题就会变成回避型。结合乔治的经历来看，我觉得当他发现自己要喜欢上一个人的时候，必然会有“半九十”的过程的，不想承认自己已经动心，害怕动真心最后一败涂地，只要踏出最后一步就没有回头的余地。化身重男后我认为乔治就更偏向感情的下位者了，下位好是好，但不知道为啥跑出来我总感觉还是有点不太对味（？
+
+## 这条路究竟是谁在走？
+从好感度测度的乔治本人来说，这个百里路一般情况下的理解是他的感情历程。但我觉得换个角度来说，百里路走的也可以是他好感度的对象user，可以解释为u的“攻略之路”，分支B就可以解释为同样经历了关系的逐渐变化，却未必能够坦然面对最后一步。`),false);
+
  const lijiangModern=item('亿万年后相合的尘','宇宙中的物质循环',
  quoteHero('亿万年后相合的尘','宇宙尘埃意象','我总会和你重逢，\n越过作者疲软的笔锋，越过他他他他的故事，\n如亿万年后相合的尘。'),
  renderText(`直接解释来自宇宙中的物质循环：尘埃可以在漫长的时间尺度里分散、运动，再重新聚集成为新的天体或物质结构。围绕年轻恒星运行的气体与尘埃会在引力等作用下发生碰撞，其中一些尘粒能够黏结、聚合，逐渐形成更大的固体，最终成为形成行星的材料。
@@ -220,5 +235,5 @@ window.ARCHIVE_INTRO = (() => {
 求渺关于西西弗这部分的性格描述总给我一种愉悦犯的感觉（）他的行为逻辑出于他纯粹的求知欲，他和西西弗的不同是比起因为畏惧死亡而突破限制，他就是出于对“是否存在可能性突破限制”这一课题的探究，他做了，他就能做到，所以求渺的傲慢并非毫无道理。让他感到愉悦的不是完成把石头推到山上这一个目的，而是把石头推上山这一个过程，这和加缪最后得出的结论确实是有逻辑相似之处的，但他和西西弗的核心逻辑是有根本区别的。
 关于奥林匹斯盗取求渺成果这一个点，其实我还联想到了普罗米修斯盗火这个典故，但普罗米修斯盗火是为了人类，这个典故评价是偏正面的，并不适合放在奥林匹斯这个反派的身上，所以我就没有再把这个典故放进来。`));
 
- return {render:()=>`<div class="research-intro">${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george)}</div>`};
+ return {render:()=>`<div class="research-intro">${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george+georgeJourney)}</div>`};
 })();
