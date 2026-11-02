@@ -171,7 +171,7 @@ window.ARCHIVE_LYRICS = (() => {
       name:'纪扬', title:'瞬', artist:'郑润泽',
       quote:'你要让时间怎么转',
       url:'https://music.163.com/song?id=2063864551&uct2=U2FsdGVkX19okC75S2tTy3xKOE2/Ek8H0vsYjYl8xxc=',
-      songId:'2063864551',
+      songId:null,
       focus:'你要让时间怎么转',
       lyrics:`我想 说不清哪天
 你就会回来
@@ -243,17 +243,28 @@ window.ARCHIVE_LYRICS = (() => {
       const active = norm(line).includes(norm(t.focus));
       return `<p class="lyric-line${active?' lyric-line-focus':''}"${active?' data-lyric-focus="true"':''} data-line="${j}">${esc(line)}</p>`;
     }).join('');
-    const player = t.songId
-      ? `<iframe class="lyric-netease-embed" title="${esc(t.artist)}《${esc(t.title)}》网易云音乐播放器" src="https://music.163.com/outchain/player?type=2&id=${t.songId}&auto=0&height=66" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media"></iframe>`
-      : `<p class="lyric-external-hint">此链接为网易云电台节目，请在网易云音乐中播放。</p>`;
+    const hasOfficialEmbed = t.name==='黎奖' || t.name==='雷止';
+    const player = hasOfficialEmbed && t.songId
+      ? `<iframe class="lyric-netease-embed" title="${esc(t.artist)}《${esc(t.title)}》网易云音乐播放器" src="https://music.163.com/outchain/player?type=2&id=${encodeURIComponent(t.songId)}&auto=0&height=66" width="330" height="86" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media"></iframe>`
+      : `<p class="lyric-external-hint">暂未提供可用的官方外链播放器，请在网易云音乐中收听。</p>`;
+    const discControl = hasOfficialEmbed
+      ? `<button class="lyric-disc-control" type="button" aria-pressed="false" aria-label="让${esc(t.name)}的唱片开始转动；仅控制动画，不控制音乐播放" title="手动开启或暂停唱片动画"><span class="lyric-disc"><span class="lyric-disc-center">${String(i+1).padStart(2,'0')}</span></span></button>`
+      : `<div class="lyric-disc"><span class="lyric-disc-center">${String(i+1).padStart(2,'0')}</span></div>`;
     return `<article class="lyric-track" style="--lyric-char:${esc(c.color || '#547080')}">
       <header class="lyric-track-header"><img class="lyric-avatar" src="${esc(c.portrait||'')}" alt="${esc(t.name)}头像" loading="lazy"><div class="lyric-track-meta"><span class="lyric-track-label">CHARACTER / LYRICS</span><h3>${esc(t.name)}</h3><p>「${esc(t.quote)}」</p></div></header>
-      <div class="lyric-track-grid"><div class="lyric-player"><div class="lyric-disc-wrap" aria-hidden="true"><div class="lyric-disc"><span class="lyric-disc-center">${String(i+1).padStart(2,'0')}</span></div></div><div class="lyric-player-info"><span class="lyric-song">${esc(t.title)}</span><span class="lyric-artist">${esc(t.artist)}</span></div>${player}<a class="lyric-open-link" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">在网易云音乐中打开 ↗</a><p class="lyric-play-note">手动播放 · 不会自动播放</p></div>
+      <div class="lyric-track-grid"><div class="lyric-player"><div class="lyric-disc-wrap">${discControl}</div><div class="lyric-player-info"><span class="lyric-song">${esc(t.title)}</span><span class="lyric-artist">${esc(t.artist)}</span></div>${player}<a class="lyric-open-link" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer">在网易云音乐中打开 ↗</a>${hasOfficialEmbed?`<p class="lyric-play-note">在播放器内手动播放；点击唱片可开启／暂停旋转动画（两者暂无法自动同步）</p>`:`<p class="lyric-play-note">不自动播放</p>`}</div>
       <div class="lyric-reader"><div class="lyric-reader-top"><span>LYRICS / 歌词</span><span>上下滑动阅读 ↓</span></div><div class="lyric-scroll" tabindex="0" role="region" aria-label="${esc(t.title)}歌词，可手动滚动">${rows}</div>${t.note?`<p class="lyric-source-note">${esc(t.note)}</p>`:''}</div></div></article>`;
   };
   const render = () => `<section class="research-lyrics"><div class="lyric-section-heading"><div class="research-topic-eyebrow">04 / LYRICS STUDIES</div><h2>歌词考据 <span>（施工中）</span></h2><p>歌曲与引用歌词暂先整理于此，出处介绍及个人解读待补充。</p></div><div class="lyric-track-list">${tracks.map(renderTrack).join('')}</div></section>`;
   const align = root => {
     if(!root) return;
+    root.querySelectorAll('.lyric-disc-control').forEach(button=>{
+      button.addEventListener('click',()=>{
+        const spinning=button.getAttribute('aria-pressed')==='true';
+        button.setAttribute('aria-pressed',String(!spinning));
+        button.setAttribute('aria-label',!spinning?'暂停唱片转动（不会暂停音乐）':'开始唱片转动（不会播放音乐）');
+      });
+    });
     root.querySelectorAll('.lyric-scroll').forEach(scroll=>{
       const target=scroll.querySelector('[data-lyric-focus="true"]');
       if(target){scroll.scrollTop=Math.max(0,target.getBoundingClientRect().top-scroll.getBoundingClientRect().top+scroll.scrollTop-scroll.clientHeight/2+target.clientHeight/2);}
