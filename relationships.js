@@ -444,7 +444,7 @@ window.ARCHIVE_GRAPH = {
     },
     "末世": {
       "width": 1080,
-      "height": 600,
+      "height": 900,
       "clusters": [],
       "nodes": [
         {
@@ -461,6 +461,16 @@ window.ARCHIVE_GRAPH = {
           "name": "宋知世",
           "x": 770,
           "y": 485
+        },
+        {
+          "name": "黎奖",
+          "x": 320,
+          "y": 745
+        },
+        {
+          "name": "辜琳琅",
+          "x": 770,
+          "y": 745
         }
       ],
       "edges": [
@@ -479,6 +489,14 @@ window.ARCHIVE_GRAPH = {
           "direction": "mutual",
           "labelDx": 80,
           "labelDy": 0
+        },
+        {
+          "fromName": "黎奖",
+          "toName": "辜琳琅",
+          "label": "上司",
+          "direction": "single",
+          "labelDx": 0,
+          "labelDy": -15
         }
       ]
     }
