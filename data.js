@@ -59,6 +59,9 @@ window.ARCHIVE_DATA = {
         "现代": [
           "images/modern/gulinlang.jpg",
           "images/historical/gulinlang.jpg"
+        ],
+        "末世": [
+          "images/modern/gulinlang.jpg"
         ]
       }
     },

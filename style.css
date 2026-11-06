@@ -1268,3 +1268,7 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 /* V9.25: compact personal interpretation fold header only. */
 .research-lyrics .lyric-study--personal>summary{padding-top:11px;padding-bottom:11px}
 @media(max-width:740px){.research-lyrics .lyric-study--personal>summary{padding-top:10px;padding-bottom:10px}}
+
+/* 历史考据：改名考据分级小标题 */
+.research-history .history-section h4 {font-size:1.04em;font-weight:700;margin:1.25em 0 .6em;color:#34424b;}
+.research-history .history-section h5 {font-size:1em;font-weight:650;margin:1em 0 .45em;color:#34424b;}
