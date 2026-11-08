@@ -242,13 +242,13 @@ window.ARCHIVE_INTRO = (() => {
 出版时间：1985年
 
 西班牙语原文：
-> «Sólo Dios sabe cuánto te quise.»
+> Sólo Dios sabe cuánto te quise.
 
 英文译文：
-> «Only God knows how much I loved you.»
+> Only God knows how much I loved you.
 
 中文可译为：
-> «只有上帝知道我有多爱你。»
+> 只有上帝知道我有多爱你。
 
 值得注意的是，西班牙语原文中的 quise 是动词 querer（爱）的简单过去时，英文译文也使用了过去时 loved（爱过）。
 
