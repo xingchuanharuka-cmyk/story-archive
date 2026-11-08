@@ -235,5 +235,42 @@ window.ARCHIVE_INTRO = (() => {
 求渺关于西西弗这部分的性格描述总给我一种愉悦犯的感觉（）他的行为逻辑出于他纯粹的求知欲，他和西西弗的不同是比起因为畏惧死亡而突破限制，他就是出于对“是否存在可能性突破限制”这一课题的探究，他做了，他就能做到，所以求渺的傲慢并非毫无道理。让他感到愉悦的不是完成把石头推到山上这一个目的，而是把石头推上山这一个过程，这和加缪最后得出的结论确实是有逻辑相似之处的，但他和西西弗的核心逻辑是有根本区别的。
 关于奥林匹斯盗取求渺成果这一个点，其实我还联想到了普罗米修斯盗火这个典故，但普罗米修斯盗火是为了人类，这个典故评价是偏正面的，并不适合放在奥林匹斯这个反派的身上，所以我就没有再把这个典故放进来。`));
 
- return {render:()=>`<div class="research-intro">${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george+georgeJourney)}</div>`};
+ const qiumiaoLove=item('只有上帝知道我有多爱你','加西亚·马尔克斯《霍乱时期的爱情》',
+ quoteHero('只有上帝知道我有多爱你','加西亚·马尔克斯《霍乱时期的爱情》','只有上帝知道我有多爱你。'),
+ section('一、原文出处',`作品：《霍乱时期的爱情》
+作者：加西亚·马尔克斯（Gabriel García Márquez）
+出版时间：1985年
+
+西班牙语原文：
+> «Sólo Dios sabe cuánto te quise.»
+
+英文译文：
+> «Only God knows how much I loved you.»
+
+中文可译为：
+> «只有上帝知道我有多爱你。»
+
+值得注意的是，西班牙语原文中的 quise 是动词 querer（爱）的简单过去时，英文译文也使用了过去时 loved（爱过）。
+
+但这里的过去时更多是乌尔比诺在生命即将结束时，对过去漫长婚姻中所怀有的爱情作出回顾。`)+
+ section('二、原著中的语境',`这句话并非出自小说主人公弗洛伦蒂诺·阿里萨，而是费尔明娜·达萨的丈夫胡维纳尔·乌尔比诺医生临终前对妻子说的话。
+
+乌尔比诺为了捉回家中逃走的鹦鹉，爬上梯子，却不慎跌落。在生命的最后时刻，他望着相伴多年的妻子，向她表达自己的爱意。
+
+原著描写，他在弥留之际认出了妻子，眼中满含泪水、悲伤与感激，最终用尽最后一口气说出了这句话。
+
+乌尔比诺与费尔明娜经历了漫长的婚姻生活，其中既有爱情，也有争执、误解与失望，这句话却出现在他即将死去、再也没有机会向妻子解释自己感情的时刻。
+
+因此，“只有上帝知道”可以理解为一种强调：他对妻子的爱，深到难以通过语言完全表达，唯有上帝能够知晓。`)+
+ section('三、再看求渺',`求渺的性格描写里可以看得出来这句话就是出自《霍乱时期的爱情》`)+
+ `<blockquote class="research-source-quote"><p>${fmt(`对喜欢的人：主动找各种话题，话多，意外的是钓系，一点也不理工科死脑筋，吃醋会引导user：“那你会xx吗？”，偶尔说出的话会令所有认识他的人震惊——那种浓烈而炽热的坦白，像是一个不信神的人忽然开口祷告。会很安静地说“只有上帝知道我有多爱你”。乌尔比诺说这句话时，是一个老人回望五十年的婚姻，在世俗习惯与死亡面前终于承认了爱的存在。而求渺说这句话时，是一个不信上帝的人，借了上帝的名号来丈量自己无法丈量的感情——这句话本身就是悖论，本身就是一种笨拙到近乎痛苦的坦白。一个把情感压缩到高密度的人，在开口的瞬间被自己泄露的压强烫伤。`)}</p><cite>求渺 · 性格描写</cite></blockquote>`+
+ personal(`原著并不是说乌尔比诺直到临终才第一次意识到自己爱着妻子，这句话是他在生命最后一刻作出的最终表白。
+
+而求渺是一个崇尚理性、蔑视神的人，因为他有能力去推翻所谓的天道。在他的世界观里，神并不是解释世界的必要条件，也不应当成为决定人类命运的权威。可他在面对自己炙热滚烫的感情时，却借用上帝的名义来表达自己的爱意。
+
+他不是因为不善言辞说不出爱，我觉得更多是这个平日能够用科学术语理性表达自己的想法的M博士，在发现科学系统里没有任何精确的语言可以表达爱意时，只能借用他本认为虚无缥缈的存在去释放感情的浓度，却又反过来被自己感情的热度烫伤。
+
+这种明明不信上帝却还是借用上帝去表达爱意的行为，怎么不能说也是一种傲慢呢？`));
+
+ return {render:()=>`<div class="research-intro">${group('辜麒','images/modern/guqi.jpg',guqiDujuan+guqiPyg)}${group('黎奖','images/cultivation/lijiang.jpg',lijiang+lijiangModern)}${group('求渺','images/apocalypse/qiumiao.jpg',qiumiaoOrpheus+qiumiaoOlympus+qiumiaoSisyphus+qiumiaoLove)}${group('麦见海','images/modern/maijianhai.jpg',maijianhai)}${group('乔治','images/modern/qiaozhi.jpg',george+georgeJourney)}</div>`};
 })();
