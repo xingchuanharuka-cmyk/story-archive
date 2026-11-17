@@ -186,7 +186,7 @@ function researchWarning(){
 }
 function research(){
  nav('research');
- const choices=['典故考据','引言考据','历史考据','歌词考据','状态栏考据'];
+ const choices=['典故考据','引言考据','历史考据','状态栏考据','歌词考据'];
  const content=researchTab==='典故考据'?window.ARCHIVE_RESEARCH.renderAllusions():researchTab==='历史考据'?window.ARCHIVE_HISTORY.render():researchTab==='引言考据'?window.ARCHIVE_INTRO.render():researchTab==='歌词考据'?window.ARCHIVE_LYRICS.render():researchTab==='状态栏考据'?window.ARCHIVE_STATUS.render():`<div class="research-coming"><span class="research-coming-star">✦</span><h2>${esc(researchTab)}</h2><p>施工中 · 内容正在整理</p></div>`;
  app.innerHTML=`<div class="page research-page${researchTab==='歌词考据'?' research-page--lyrics':''}"><div class="breadcrumb"><a href="#/">HOME</a> / RESEARCH NOTES</div><div class="research-page-head"><span class="small-label">04 / RESEARCH NOTES</span><h1>设定考据</h1><p>从文本出发，追溯典故与设定的可能来源。</p></div><div class="research-main-tabs">${tabs(choices,researchTab,'researchtab')}</div>${content}</div>`;
  if(researchTab==='歌词考据')window.ARCHIVE_LYRICS.align(app);

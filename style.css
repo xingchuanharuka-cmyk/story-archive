@@ -1301,3 +1301,6 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 /* V9.37: 状态栏头像与人际关系图统一：方形铺满、面部优先，不使用 contain 留白。 */
 .status-person-head img{display:block;width:100px;height:100px;object-fit:cover;object-position:center 16%;background:#fff;border-radius:19px}
 @media(max-width:600px){.status-person-head img{width:90px;height:90px}}
+
+/* V9.38: 状态栏世界观标题增强字重，保持其余样式不变 */
+.research-status .status-world-heading > span{font-weight:700}
