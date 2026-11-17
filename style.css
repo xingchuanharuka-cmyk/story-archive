@@ -1332,3 +1332,13 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
     text-align:center;
   }
 }
+
+/* V9.40: 手机端五个考据标签保持上三下二，下排两项整体居中。 */
+@media (max-width:680px) {
+  .research-page .research-main-tabs .tabs {
+    grid-template-columns:repeat(6,minmax(0,1fr));
+  }
+  .research-page .research-main-tabs .tab { grid-column:span 2; }
+  .research-page .research-main-tabs .tab:nth-child(4) { grid-column:2 / span 2; }
+  .research-page .research-main-tabs .tab:nth-child(5) { grid-column:4 / span 2; }
+}
