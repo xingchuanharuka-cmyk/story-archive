@@ -1304,3 +1304,31 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* V9.38: 状态栏世界观标题增强字重，保持其余样式不变 */
 .research-status .status-world-heading > span{font-weight:700}
+
+/* V9.39: 手机端考据导航固定为两行（上三、下二），避免横向滚动容器截断标签。 */
+@media (max-width: 680px) {
+  .research-page .research-main-tabs {
+    display:block;
+    overflow:visible;
+    width:100%;
+    margin:17px auto 30px;
+  }
+  .research-page .research-main-tabs .tabs {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:0;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    flex-wrap:initial;
+    justify-content:initial;
+  }
+  .research-page .research-main-tabs .tab {
+    width:100%;
+    min-width:0;
+    white-space:nowrap;
+    padding:12px 2px;
+    font-size:clamp(12px,3.4vw,14px);
+    text-align:center;
+  }
+}
