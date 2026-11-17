@@ -1272,3 +1272,21 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 /* 历史考据：改名考据分级小标题 */
 .research-history .history-section h4 {font-size:1.04em;font-weight:700;margin:1.25em 0 .6em;color:#34424b;}
 .research-history .history-section h5 {font-size:1em;font-weight:650;margin:1em 0 .45em;color:#34424b;}
+
+/* V9.34 / 状态栏考据 */
+.research-status{max-width:900px;margin:0 auto 80px;color:#354b56}
+.status-heading{text-align:center;margin:14px 0 40px}
+.status-heading h2{font-family:'STZhongsong','华文中宋',serif;font-size:30px;color:#3c5663;margin:12px 0}
+.status-world{margin:0 0 60px}
+.status-world-heading{display:flex;align-items:baseline;justify-content:center;gap:12px;border-bottom:1px solid #dbe3e6;padding:0 0 14px;margin:0 0 35px;font-size:23px;font-family:'STZhongsong','华文中宋',serif}
+.status-world-heading small{font:11px Georgia,serif;letter-spacing:2px;color:#a0afb6}
+.status-people{display:grid;grid-template-columns:1fr;gap:42px}
+.status-person{text-align:center;padding:30px 30px 34px;border:1px solid #e0e5e6;border-radius:14px;background:linear-gradient(140deg,#fff,#fcfcfc);box-shadow:0 9px 30px rgba(53,73,81,.035)}
+.status-person-head{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:23px}
+.status-person-head img{height:88px;width:88px;object-fit:cover;border-radius:18px;border:3px solid #fff;outline:1px solid color-mix(in srgb,var(--status-color) 48%,white);box-shadow:0 5px 18px #24313a12}
+.status-person-head h3{font-size:23px;color:var(--status-color);margin:0;font-family:'STZhongsong','华文中宋',serif}
+.status-quote-list{display:flex;flex-direction:column;gap:14px;max-width:690px;margin:0 auto}
+.status-quote{border:1px solid color-mix(in srgb,var(--status-color) 18%,#e2e8ea);background:linear-gradient(120deg,color-mix(in srgb,var(--status-color) 5%,white),#fff 70%);border-radius:8px;padding:19px 22px}
+.status-quote-text{font-family:'STZhongsong','华文中宋',serif;color:var(--status-color);font-size:20px;line-height:1.7;overflow-wrap:anywhere}
+.status-quote-source{margin:10px 0 0;font-size:13px;line-height:1.8;color:#71838d;white-space:normal}
+@media(max-width:600px){.research-status{padding:0 2px}.status-heading h2{font-size:26px}.status-person{padding:24px 15px}.status-person-head img{height:78px;width:78px}.status-quote{padding:16px 12px}.status-quote-text{font-size:18px}.status-quote-source{font-size:12px}.status-people{gap:24px}}
