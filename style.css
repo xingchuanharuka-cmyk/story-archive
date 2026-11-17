@@ -1290,3 +1290,10 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .status-quote-text{font-family:'STZhongsong','华文中宋',serif;color:var(--status-color);font-size:20px;line-height:1.7;overflow-wrap:anywhere}
 .status-quote-source{margin:10px 0 0;font-size:13px;line-height:1.8;color:#71838d;white-space:normal}
 @media(max-width:600px){.research-status{padding:0 2px}.status-heading h2{font-size:26px}.status-person{padding:24px 15px}.status-person-head img{height:78px;width:78px}.status-quote{padding:16px 12px}.status-quote-text{font-size:18px}.status-quote-source{font-size:12px}.status-people{gap:24px}}
+
+/* V9.35: 状态栏头像保留完整原图，不再用 cover 裁切面部。仅作用于状态栏。 */
+.status-person-head img{object-fit:contain;object-position:center center;background:color-mix(in srgb,var(--status-color) 5%,white)}
+
+/* V9.36: 状态栏文字参考引言考据的引言字形与字重；保留各角色现有颜色。 */
+.research-page .status-quote-text{font-family:'STZhongsong','华文中宋','Noto Serif SC',serif;font-weight:600;letter-spacing:.07em;line-height:2.1;color:var(--status-color);font-size:clamp(18px,2.5vw,25px)}
+@media(max-width:680px){.research-page .status-quote-text{font-size:18px;line-height:1.95}}
