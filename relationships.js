@@ -47,6 +47,11 @@ window.ARCHIVE_GRAPH = {
           "y": 195
         },
         {
+          "name": "赵飞光",
+          "x": 105,
+          "y": 405
+        },
+        {
           "name": "麦见海",
           "x": 440,
           "y": 195
@@ -286,6 +291,14 @@ window.ARCHIVE_GRAPH = {
           "direction": "mutual",
           "labelDx": 0,
           "labelDy": -20
+        },
+        {
+          "fromName": "赵飞光",
+          "toName": "乔治",
+          "label": "舅舅",
+          "direction": "single",
+          "labelDx": -18,
+          "labelDy": 0
         }
       ]
     },
