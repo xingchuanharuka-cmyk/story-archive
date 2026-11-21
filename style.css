@@ -1344,4 +1344,4 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 }
 
 /* 赵氏人物：NPC 索引相邻展示，原始出处仍保留在各自卡片中 */
-.npc-adjacent-pair{display:flex;gap:16px;align-items:center;margin:10px 0 18px;color:#527b68;font-family:inherit;font-weight:600}.npc-adjacent-pair span{padding:8px 14px;border:1px solid #d5e2d8;border-radius:8px;background:#f7faf7}
+.npc-adjacent-pair span{padding:8px 14px;border:1px solid #d5e2d8;border-radius:8px;background:#f7faf7}

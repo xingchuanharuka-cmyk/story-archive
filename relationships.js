@@ -405,6 +405,16 @@ window.ARCHIVE_GRAPH = {
           "name": "辜麒",
           "x": 800,
           "y": 615
+        },
+        {
+          "name": "乔治",
+          "x": 160,
+          "y": 615
+        },
+        {
+          "name": "赵飞光",
+          "x": 455,
+          "y": 615
         }
       ],
       "edges": [
@@ -439,6 +449,14 @@ window.ARCHIVE_GRAPH = {
           "direction": "single",
           "labelDx": 0,
           "labelDy": -15
+        },
+        {
+          "fromName": "赵飞光",
+          "toName": "乔治",
+          "label": "舅舅",
+          "direction": "single",
+          "labelDx": 0,
+          "labelDy": -16
         }
       ]
     },
