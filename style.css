@@ -1345,3 +1345,6 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* 赵氏人物：NPC 索引相邻展示，原始出处仍保留在各自卡片中 */
 .npc-adjacent-pair span{padding:8px 14px;border:1px solid #d5e2d8;border-radius:8px;background:#f7faf7}
+
+/* Distinguish reign-period labels from the existing setting keywords. */
+.worldbuilding-year-label{color:#a174a2;font-weight:700;}
