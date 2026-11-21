@@ -2879,7 +2879,7 @@ window.ARCHIVE_DATA = {
       "id": "h-zhaofeiguang-chongming34",
       "world": "古代",
       "year": "崇明三十四年",
-      "text": "赵飞光开场。（推测：崇明是永安之前的年号。）",
+      "text": "赵飞光（18）开场。（推测：崇明是永安之前的年号。）",
       "people": [
         "char-zhaofeiguang"
       ],
