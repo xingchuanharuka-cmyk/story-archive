@@ -1371,3 +1371,15 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .wt-worldbuilding-content{min-width:0;}
 .wt-worldbuilding-content .worldbuilding-view{margin-top:0;}
 @media(max-width:600px){.wt-section-tabs{gap:0}.wt-section-tab{flex:1;padding:12px 6px;font-size:14px;white-space:nowrap;}}
+
+/* v9.69 | 世界树：已发布角色卡所属世界节点标记（方案 C） */
+.wt-node.wt-own-card{
+  background:color-mix(in srgb,var(--wt-color) 9%,#fafbf9);
+  border-color:color-mix(in srgb,var(--wt-color) 65%,#e1e6e5);
+  box-shadow:0 2px 8px #40556209;
+}
+.wt-node.wt-own-card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:5px;
+  background:var(--wt-color);border-radius:2px 0 0 2px;
+}
+.wt-node.wt-own-card:hover{background:color-mix(in srgb,var(--wt-color) 14%,#fff);}
