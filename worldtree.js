@@ -5,7 +5,7 @@ window.renderWorldTree=function(app,D,esc,href,characterOrder){
  const appearances=c=> (c.appearances||[]).filter(a=>worlds.includes(a.source.split('·')[0]));
  const cross=chars.filter(c=>new Set(appearances(c).map(a=>a.source.split('·')[0])).size>1);
  cross.sort((a,b)=>(a.name==='黎奖'?-1:b.name==='黎奖'?1:0));
- const roleOverrides={'宋知世@修真':'原书男主','宋知世@末世':'七杀','水俱雅@修真':'妖王','乔治@现代':'暮城职员/偶像练习生','乔治@古代':'赵飞光外甥','乔治@修真':'合欢宗修士','赵飞光@现代':'空军少校','赵飞光@古代':'燕世子',
+ const roleOverrides={'宋知世@修真':'原书男主','宋知世@末世':'七杀','水俱雅@修真':'妖王','乔治@现代':'暮城职员/偶像练习生','乔治@古代':'赵飞光外甥','乔治@修真':'合欢宗修士','赵飞光@现代':'空军少校','赵飞光@古代':'大梁燕世子',
  '邢怀戎@古代':'大梁朝镇北军统帅',
  '阿史那信@古代':'承梁马奴/北塞皇子（下毒哥）',
  '雷止@现代':'赛车手',
