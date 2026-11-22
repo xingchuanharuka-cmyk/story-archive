@@ -24,6 +24,7 @@ window.renderWorldTree=function(app,D,esc,href,characterOrder){
  '阴琢@现代':'大学生/继承人',
  '楼宴宁@修真':'青云宗首席',
  '黎奖@现代':'港城大学土木系大三',
+ '黎奖@修真':'藏鹤楼宗主',
  '求渺@现代':'天体物理专业学生',
  '宋知世@修真':'原书男主、藏鹤楼外门弟子、鬼修',
  '辜麒@现代':'辜家假少爷（奢侈品哥）'};
@@ -33,6 +34,10 @@ window.renderWorldTree=function(app,D,esc,href,characterOrder){
  cross.forEach((c,i)=>{let prev=null;worlds.forEach((w,j)=>{const records=appearances(c).filter(a=>a.source.startsWith(w+'·'));if(!records.length)return;const n={id:key(c,w),c,w,records,x:125+j*250,y:115+i*106};nodes.push(n);if(prev)edges.push({a:prev.id,b:n.id,type:'cross',label:'跨世界登场'});prev=n;});});
  for(const w of worlds){for(const e of window.ARCHIVE_GRAPH?.worlds?.[w]?.edges||[]){const a=nodes.find(n=>n.w===w&&n.c.name===e.fromName),b=nodes.find(n=>n.w===w&&n.c.name===e.toName);if(a&&b)edges.push({a:a.id,b:b.id,type:'local',label:e.label,direction:e.direction});}}
  const single=['古代','现代','修真','末世'].flatMap(w=>(characterOrder[w]||[]).map(name=>chars.find(c=>c.name===name)).filter(c=>c&&!cross.includes(c)).map(c=>({c,w}))).filter((item,i,arr)=>arr.findIndex(x=>x.c.id===item.c.id)===i);
+ // 楼宴宁排在阿史那信之后，仍归属修真列。
+ const louIndex=single.findIndex(item=>item.c.name==='楼宴宁');
+ const ashiIndex=single.findIndex(item=>item.c.name==='阿史那信');
+ if(louIndex>=0&&ashiIndex>=0){const [lou]=single.splice(louIndex,1);single.splice(single.findIndex(item=>item.c.name==='阿史那信')+1,0,lou);}
  single.forEach(({c,w},i)=>{const j=worlds.indexOf(w);nodes.push({id:key(c,w),c,w,records:appearances(c).filter(a=>a.source.startsWith(w+'·')),x:125+j*250,y:115+(cross.length+i)*106});});
  const allNodes=chars.flatMap(c=>worlds.filter(w=>w===c.world||appearances(c).some(a=>a.source.startsWith(w+'·'))||(window.ARCHIVE_GRAPH?.worlds?.[w]?.edges||[]).some(e=>e.fromName===c.name||e.toName===c.name)).map(w=>({id:key(c,w),c,w,records:appearances(c).filter(a=>a.source.startsWith(w+'·'))})));
  const get=id=>nodes.find(n=>n.id===id)||allNodes.find(n=>n.id===id);let focus=null;const height=155+(cross.length+single.length)*106;
