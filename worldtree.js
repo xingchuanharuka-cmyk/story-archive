@@ -29,7 +29,7 @@ window.renderWorldTree=function(app,D,esc,href,characterOrder){
  '辜麒@现代':'辜家假少爷（奢侈品哥）'};
  const nodes=[], edges=[]; const key=(c,w)=>c.id+'@'+w;
  // 仅依据档案中本人已出的角色卡（主场）标注所属世界；同一 char 可能有多张卡。
- const hasOwnCard=(c,w)=>appearances(c).some(a=>a.source===w+'·'+c.name && a.role?.includes('主场'));
+ const hasOwnCard=(c,w)=>!cross.includes(c) || appearances(c).some(a=>a.source===w+'·'+c.name && a.role?.includes('主场'));
  cross.forEach((c,i)=>{let prev=null;worlds.forEach((w,j)=>{const records=appearances(c).filter(a=>a.source.startsWith(w+'·'));if(!records.length)return;const n={id:key(c,w),c,w,records,x:125+j*250,y:115+i*106};nodes.push(n);if(prev)edges.push({a:prev.id,b:n.id,type:'cross',label:'跨世界登场'});prev=n;});});
  for(const w of worlds){for(const e of window.ARCHIVE_GRAPH?.worlds?.[w]?.edges||[]){const a=nodes.find(n=>n.w===w&&n.c.name===e.fromName),b=nodes.find(n=>n.w===w&&n.c.name===e.toName);if(a&&b)edges.push({a:a.id,b:b.id,type:'local',label:e.label,direction:e.direction});}}
  const single=['古代','现代','修真','末世'].flatMap(w=>(characterOrder[w]||[]).map(name=>chars.find(c=>c.name===name)).filter(c=>c&&!cross.includes(c)).map(c=>({c,w}))).filter((item,i,arr)=>arr.findIndex(x=>x.c.id===item.c.id)===i);
