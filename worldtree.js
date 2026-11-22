@@ -5,7 +5,28 @@ window.renderWorldTree=function(app,D,esc,href,characterOrder){
  const appearances=c=> (c.appearances||[]).filter(a=>worlds.includes(a.source.split('·')[0]));
  const cross=chars.filter(c=>new Set(appearances(c).map(a=>a.source.split('·')[0])).size>1);
  cross.sort((a,b)=>(a.name==='黎奖'?-1:b.name==='黎奖'?1:0));
- const roleOverrides={'宋知世@修真':'原书男主','宋知世@末世':'七杀','水俱雅@修真':'妖王','乔治@现代':'暮城职员/偶像练习生','乔治@古代':'赵飞光外甥','乔治@修真':'合欢宗修士','赵飞光@现代':'空军少校','赵飞光@古代':'燕世子'};
+ const roleOverrides={'宋知世@修真':'原书男主','宋知世@末世':'七杀','水俱雅@修真':'妖王','乔治@现代':'暮城职员/偶像练习生','乔治@古代':'赵飞光外甥','乔治@修真':'合欢宗修士','赵飞光@现代':'空军少校','赵飞光@古代':'燕世子',
+ '邢怀戎@古代':'大梁朝镇北军统帅',
+ '阿史那信@古代':'承梁马奴/北塞皇子（下毒哥）',
+ '雷止@现代':'赛车手',
+ '贝瑞旻@现代':'港城贝家长子（金主哥）',
+ '贝瑞恩@现代':'港城贝家二少',
+ '宋潮@现代':'港城船王',
+ '达一别@现代':'音乐制作人+歌手',
+ '麦见海@现代':'港城大学建筑系大二、学生会会长',
+ '纪扬@现代':'唱作歌手、乐坛天王',
+ '柊尘@现代':'游戏主美',
+ '谢满@现代':'一中学生',
+ '北向南@现代':'华海大学海洋科学系大三',
+ '荀逸伦@现代':'华海大学海洋科学系大三',
+ '车以弦@现代':'Lunaris香水公司创始人',
+ '西杀@现代':'财阀继承人',
+ '阴琢@现代':'大学生/继承人',
+ '楼宴宁@修真':'青云宗首席',
+ '黎奖@现代':'港城大学土木系大三',
+ '求渺@现代':'天体物理专业学生',
+ '宋知世@修真':'原书男主、藏鹤楼外门弟子、鬼修',
+ '辜麒@现代':'辜家假少爷（奢侈品哥）'};
  const nodes=[], edges=[]; const key=(c,w)=>c.id+'@'+w;
  cross.forEach((c,i)=>{let prev=null;worlds.forEach((w,j)=>{const records=appearances(c).filter(a=>a.source.startsWith(w+'·'));if(!records.length)return;const n={id:key(c,w),c,w,records,x:125+j*250,y:115+i*106};nodes.push(n);if(prev)edges.push({a:prev.id,b:n.id,type:'cross',label:'跨世界登场'});prev=n;});});
  for(const w of worlds){for(const e of window.ARCHIVE_GRAPH?.worlds?.[w]?.edges||[]){const a=nodes.find(n=>n.w===w&&n.c.name===e.fromName),b=nodes.find(n=>n.w===w&&n.c.name===e.toName);if(a&&b)edges.push({a:a.id,b:b.id,type:'local',label:e.label,direction:e.direction});}}
