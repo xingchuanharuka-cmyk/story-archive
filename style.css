@@ -1360,3 +1360,14 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* V9.65 / independent graph zoom with layout-sized scroll stages */
 .wt-zoom{display:flex;align-items:center;gap:6px;flex-wrap:wrap;color:var(--muted);font-size:12px}.wt-zoom button{font:inherit;color:var(--ink);background:#fafbf9;border:1px solid var(--line);border-radius:3px;min-height:34px;min-width:34px;padding:5px 9px;cursor:pointer}.wt-zoom button:hover{background:#edf1f0}.wt-zoom span{min-width:42px;text-align:center;font-variant-numeric:tabular-nums}.wt-zoom-stage{position:relative;margin:0 auto;flex-shrink:0}.wt-zoom-stage>.wt-canvas,.wt-zoom-stage>.wt-star{position:absolute;inset:0;min-width:0;max-width:none;margin:0;transform-origin:top left}.wt-scroll{padding:0;overflow:auto;max-height:78vh}.wt-star-section{min-width:0}.wt-star-section>.wt-zoom{justify-content:center;margin:0 0 12px}.wt-star-wrap{min-width:0;max-height:65vh;overflow:auto}.wt-star-center .wt-avatar,.wt-star-dense .wt-star-center .wt-avatar{width:100%;height:100%}.wt-node strong{font-size:19px}.wt-world{font-size:19px}.wt-world small{font-size:10px}@media(max-width:800px){.wt-dialog{box-sizing:border-box;width:calc(100vw - 20px);max-height:90dvh;padding:14px}.wt-modal-content{gap:14px;padding-top:12px}.wt-star-wrap{max-height:60dvh}.wt-scroll{max-height:75dvh}.wt-zoom button{min-height:38px;min-width:38px}.wt-toolbar{gap:8px}.wt-modal-head h2{font-size:22px}}
+
+.dynasty-label{font-size:14px;font-weight:700;letter-spacing:.14em;color:#526b70;margin:0 0 22px -6px}.dynasty-divider{display:flex;align-items:center;gap:14px;margin:4px 0 30px -26px;color:#526b70;font-size:14px;font-weight:700;letter-spacing:.14em}.dynasty-divider:before,.dynasty-divider:after{content:"";height:1px;background:#b6c8c7;flex:1}.dynasty-divider:before{flex:0 0 18px}
+
+/* 世界树双板块：原有角色长卷和原世界观设定正文互不改动 */
+.wt-section-tabs{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid #b8c7ca;margin:0 0 30px;}
+.wt-section-tab{appearance:none;background:transparent;border:0;border-bottom:2px solid transparent;cursor:pointer;color:#78898f;padding:14px 22px;font:inherit;font-size:clamp(15px,1.6vw,18px);margin-bottom:-1px;transition:color .2s,border-color .2s;}
+.wt-section-tab:hover,.wt-section-tab:focus-visible{color:#263e4b;}
+.wt-section-tab.active{color:#263e4b;border-bottom-color:#8c8069;font-weight:600;}
+.wt-worldbuilding-content{min-width:0;}
+.wt-worldbuilding-content .worldbuilding-view{margin-top:0;}
+@media(max-width:600px){.wt-section-tabs{gap:0}.wt-section-tab{flex:1;padding:12px 6px;font-size:14px;white-space:nowrap;}}
