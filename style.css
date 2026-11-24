@@ -1403,3 +1403,18 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 @media(max-width:560px){.dl-hero{min-height:460px;display:block;padding-top:118px}.dl-hero-center{max-width:100%;padding:62px 14px 55px}.dl-hero-center h2{font-size:32px;letter-spacing:.05em;margin:12px 0}.dl-hero-center>span{font-size:8px;letter-spacing:1.4px}.dl-hero-center p{font-size:11px}.dl-hero-portrait{width:auto;gap:5px;display:flex;flex-direction:column;align-items:center;text-align:center}.dl-hero-portrait img{width:52px;height:59px}.dl-hero-portrait strong{font-size:12px}.dl-hero-portrait small{font-size:10px}.dl-upper-left{top:32px;left:24px}.dl-upper-right{top:32px;right:20px;flex-direction:column}.dl-lower-left{bottom:24px;left:24px}.dl-lower-right{bottom:24px;right:20px;flex-direction:column}.dl-era-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:36px}.dl-chapter-title{flex-direction:column;align-items:center;gap:4px}.dl-chapter-title h2{font-size:35px}.dl-chapter{margin-bottom:65px}.dl-board{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,118px);gap:6px;padding:12px}.dl-board-cell strong{font-size:14px}.dl-board-mark{font-size:23px}.dl-map-wrap{padding:12px}.dl-map-header{display:block}.dl-map-header p{max-width:none;text-align:left;margin-top:8px}.dl-board-detail-people,.dl-index-people,.dl-court-grid,.dl-court-three,.dl-shunning-row{grid-template-columns:1fr}.dl-court-panel{padding:13px}.dl-qa{padding:14px}.dl-prose{font-size:14px;line-height:1.95}.dl-part-head h3{font-size:21px}.dl-index-count{font-size:9px}.dl-story-head{flex-wrap:wrap;gap:8px}.dl-chapter-head{padding-inline:8px}}
 
 .dl-portrait-placeholder{display:flex;align-items:center;justify-content:center;width:89px;height:103px;box-sizing:border-box;border:2px double #cab99f;background:#ede3d2;color:#856d50;font:700 33px "STKaiti","KaiTi",serif}@media(max-width:800px){.dl-portrait-placeholder{width:65px;height:80px}}@media(max-width:560px){.dl-portrait-placeholder{width:52px;height:59px;font-size:24px}}
+
+/* v9.77: 四年号折叠，移除旧年号导航卡片；沿用原正文内容 */
+.dl-era-fold{border:1px solid #d6c6ad;background:#fffdf8;margin:18px 0 22px;min-width:0;overflow:hidden}
+.dl-era-summary{cursor:pointer;display:flex;align-items:center;gap:18px;list-style:none;padding:19px 27px;background:#f5f0e6;color:#594734;font-family:"STKaiti","KaiTi","Songti SC",serif;user-select:none}
+.dl-era-summary::-webkit-details-marker{display:none}
+.dl-era-summary:focus-visible{outline:2px solid #927c5b;outline-offset:-3px}
+.dl-era-summary-dynasty{color:#927f66;font-size:13px;min-width:76px}
+.dl-era-summary strong{font-size:clamp(25px,3vw,34px);font-weight:800;letter-spacing:.13em}
+.dl-era-summary-toggle{margin-left:auto;width:12px;height:12px;border-right:2px solid #927f66;border-bottom:2px solid #927f66;transform:rotate(45deg);transition:transform .2s}
+.dl-era-fold[open]>.dl-era-summary .dl-era-summary-toggle{transform:rotate(225deg)}
+.dl-era-fold>.dl-chapter{margin:0 0 22px;padding:0 25px}
+.dl-era-fold>.dl-chapter>.dl-chapter-head{margin:0 -25px}
+.dl-hero-center{padding-top:35px;padding-bottom:35px}
+.dl-hero-center h2{margin:12px 0}
+@media(max-width:560px){.dl-era-summary{padding:16px 15px;gap:10px}.dl-era-summary-dynasty{min-width:54px;font-size:12px}.dl-era-summary strong{font-size:26px}.dl-era-fold>.dl-chapter{padding:0 12px}.dl-era-fold>.dl-chapter>.dl-chapter-head{margin:0 -12px}}
