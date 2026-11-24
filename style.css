@@ -1786,3 +1786,29 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-page .dl-intro-label{display:inline-flex;vertical-align:baseline;align-items:center;justify-content:center;margin-right:10px;padding:1px 8px;border-radius:3px;background:#e7eeea;border:1px solid #cfddd3;color:#526d5e;font:500 12px/1.6 'Noto Sans SC','Source Han Sans SC','PingFang SC',sans-serif;white-space:nowrap;}
 .dl-page .dl-person-description{display:block;}
 .dl-page .dl-quote-emphasis{font-weight:700;color:#304940;}
+
+/* v9.89 — 两朝标题 / 四年号统一的低饱和古典配色 */
+.dl-page .dl-dynasty-heading{font:800 clamp(26px,3.2vw,35px) "FZCuJinLJW","STKaiti","KaiTi",serif;color:#334c43;letter-spacing:.14em;margin:38px auto 16px;padding:0 10px;max-width:700px;text-align:center;}
+.dl-page .dl-era-summary-dynasty{visibility:hidden;}
+.dl-page .dl-era-fold{--era-ink:#314c46;--era-bg:#e8eeea;--era-border:#cfddd3;--era-panel:#f7f9f6;--era-side:#b3c3b5;}
+.dl-page .dl-era-yongan{--era-ink:#8b4c4b;--era-bg:#f4e9e8;--era-border:#e6d1cf;--era-panel:#fcf7f6;--era-side:#d1a6a2;}
+.dl-page .dl-era-chengan{--era-ink:#906f30;--era-bg:#f6f0df;--era-border:#e7d9b7;--era-panel:#fcfaf2;--era-side:#c7b27c;}
+.dl-page .dl-era-shunning{--era-ink:#736184;--era-bg:#f0ebf3;--era-border:#dcd2e5;--era-panel:#faf8fc;--era-side:#b8a8c7;}
+.dl-page .dl-era-fold>.dl-era-summary{background:var(--era-bg);color:var(--era-ink);}
+.dl-page .dl-era-summary strong{color:var(--era-ink);}
+.dl-page .dl-era-summary-toggle{border-color:var(--era-ink);}
+.dl-page .dl-era-fold>.dl-chapter>.dl-chapter-head{background:var(--era-panel);border-color:var(--era-border);}
+.dl-page .dl-era-fold .dl-chapter-title h2,.dl-page .dl-era-fold .dl-part-head h3,.dl-page .dl-era-fold .dl-story-head h4,.dl-page .dl-era-fold .dl-person h5{color:var(--era-ink);}
+.dl-page .dl-era-fold .dl-part-head{border-color:var(--era-border);}
+.dl-page .dl-era-fold .dl-group-index,.dl-page .dl-era-fold .dl-court-panel{background:var(--era-panel);border-color:var(--era-border);}
+.dl-page .dl-era-fold .dl-group-index-head h4,.dl-page .dl-era-fold .dl-court-panel h4{background:var(--era-bg);border-color:var(--era-border);color:var(--era-ink);}
+.dl-page .dl-era-fold .dl-person{border-left-color:var(--era-side);}
+.dl-page .dl-era-fold .dl-court-people span{border-color:var(--era-border);}
+.dl-page .dl-era-fold .dl-stories-fold,.dl-page .dl-era-fold .dl-qa{background:var(--era-panel);border-color:var(--era-border);}
+.dl-page .dl-era-fold .dl-stories-summary{background:var(--era-bg);color:var(--era-ink);}
+.dl-page .dl-era-fold .dl-stories-toggle{border-color:var(--era-ink);}
+.dl-page .dl-era-fold .dl-question,.dl-page .dl-era-fold .dl-qa-head{border-color:var(--era-border);}
+.dl-page .dl-era-fold .dl-question .dl-prose{border-left-color:var(--era-side);}
+.dl-page .dl-era-fold .dl-intro-label{background:var(--era-bg);border-color:var(--era-border);color:var(--era-ink);}
+.dl-page .dl-era-fold .dl-quote-emphasis{color:var(--era-ink);}
+@media(max-width:560px){.dl-page .dl-dynasty-heading{font-size:28px;margin:28px auto 12px;}}
