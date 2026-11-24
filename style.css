@@ -1555,3 +1555,39 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .dl-board-spot.r3a{left:18%;top:74%;}
  .dl-board-spot.r3b{left:50%;top:74%;}
 }
+
+/* v9.82 仅保留原文标题与文字；取消额外标签框、装饰线和附加英文 */
+.dl-page .dl-hero-center h2{margin:0}
+.dl-page .dl-era-fold>.dl-chapter{padding:0 clamp(12px,3vw,26px) 25px;margin:0}
+.dl-page .dl-chapter-head{background:none;border:0;padding:22px 0 12px;margin:0;text-align:left}
+.dl-page .dl-chapter-head h2{margin:0 0 8px;font:700 29px 'STKaiti','KaiTi',serif}
+.dl-page .dl-chapter-head p{margin:5px 0;text-align:left;color:#594c3e;font-size:14px}
+.dl-page .dl-plain-part{font:700 24px 'STKaiti','KaiTi',serif;margin:24px 0 18px}
+.dl-page .dl-map-wrap{border:0;background:transparent;padding:0}
+.dl-page .dl-board-map{border:0;box-shadow:none;margin:12px 0 20px}
+.dl-page .dl-board-detail{border:0;background:transparent;padding:0 0 17px;margin-bottom:14px;border-bottom:1px solid #ddd1bc}
+.dl-page .dl-board-detail h4{font:700 22px 'STKaiti','KaiTi',serif;margin:0 0 12px}
+.dl-page .dl-plain-index{margin-top:14px}
+.dl-page .dl-plain-group{margin:0 0 25px;padding:0;border:0}
+.dl-page .dl-plain-group h4{font:700 22px 'STKaiti','KaiTi',serif;margin:0 0 10px}
+.dl-page .dl-plain-people{display:block}
+.dl-page .dl-plain-person{border:0;padding:0;margin:0 0 15px}
+.dl-page .dl-plain-person h5{font:700 18px 'STKaiti','KaiTi',serif;margin:0 0 4px}
+.dl-page .dl-plain-person p{font-size:14px;line-height:1.62;margin:2px 0;color:#594e43;overflow-wrap:anywhere}
+.dl-page .dl-stories-fold{margin:30px 0 15px;border:0;border-top:1px solid #d8cbb6;background:transparent}
+.dl-page .dl-stories-summary{background:transparent;padding:15px 0;border:0}
+.dl-page .dl-stories-summary strong{font:700 23px 'STKaiti','KaiTi',serif}
+.dl-page .dl-stories-body{padding:0}
+.dl-page .dl-plain-story{margin:14px 0 20px}
+.dl-page .dl-plain-story h4{font:700 20px 'STKaiti','KaiTi',serif;margin:0 0 10px}
+.dl-page .dl-plain-prose{font-size:14px;line-height:1.68}
+.dl-page .dl-plain-prose p{margin:0 0 .72em;text-indent:2em}
+.dl-page .dl-qa{border:0;background:transparent;padding:0;margin:24px 0}
+.dl-page .dl-qa h3{font:700 23px 'STKaiti','KaiTi',serif;margin:0 0 9px}
+.dl-page .dl-qa-intro{font-size:14px;line-height:1.65;margin:0 0 13px}
+.dl-page .dl-question{border:0;border-top:1px solid #e3d9c9;padding:12px 0}
+.dl-page .dl-question summary{font-size:14px}
+.dl-page .dl-question .dl-plain-prose{padding:12px 0 0;border:0;background:transparent}
+.dl-page .dl-plain-footnotes{padding:8px 0;margin:10px 0;border:0;background:transparent;font-size:14px;line-height:1.65}
+.dl-page .dl-plain-footnotes p{margin:0}
+@media(max-width:560px){.dl-page .dl-plain-person p,.dl-page .dl-plain-prose,.dl-page .dl-qa-intro{font-size:13.5px;line-height:1.63}.dl-page .dl-board-map{height:205px}}
