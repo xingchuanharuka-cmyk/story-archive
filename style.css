@@ -1971,3 +1971,116 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
   .dl-page .dl-era-summary strong {font-size:23px;}
   .dl-page .dl-chapter-title h2 {font-size:22px;}
 }
+
+
+/* v9.94：加入克制的古书风小装饰，只增强题头与分节层次，不改正文内容。 */
+.dl-page{
+  --dl-orn:#b59c72;
+  --dl-orn-soft:#d8cbb3;
+}
+.dl-page .dl-hero-center{
+  position:relative;
+}
+.dl-page .dl-hero-center::before,
+.dl-page .dl-hero-center::after{
+  content:"";
+  display:block;
+  width:96px;
+  height:12px;
+  margin-inline:auto;
+  opacity:.92;
+  background:
+    radial-gradient(circle at 50% 50%, var(--dl-orn) 0 2px, transparent 2.2px),
+    linear-gradient(var(--dl-orn-soft),var(--dl-orn-soft)) left center/30px 1px no-repeat,
+    linear-gradient(var(--dl-orn-soft),var(--dl-orn-soft)) right center/30px 1px no-repeat;
+}
+.dl-page .dl-hero-center::before{margin-bottom:20px;}
+.dl-page .dl-hero-center::after{margin-top:20px;}
+.dl-page .dl-dynasty-heading{
+  position:relative;
+  padding-top:18px;
+}
+.dl-page .dl-dynasty-heading::before{
+  content:"";
+  position:absolute;
+  left:50%; top:0;
+  width:10px; height:10px;
+  transform:translateX(-50%) rotate(45deg);
+  border:1px solid var(--dl-orn-soft);
+  background:#fcfbf7;
+  box-shadow:-24px 0 0 -3px #fcfbf7, -24px 0 0 -2px var(--dl-orn-soft), 24px 0 0 -3px #fcfbf7, 24px 0 0 -2px var(--dl-orn-soft);
+}
+.dl-page .dl-era-summary{
+  position:relative;
+  overflow:hidden;
+}
+.dl-page .dl-era-summary::before,
+.dl-page .dl-era-summary::after{
+  content:"";
+  position:absolute;
+  top:10px;
+  width:14px;
+  height:14px;
+  border-top:1px solid color-mix(in srgb, currentColor 30%, transparent);
+  opacity:.55;
+}
+.dl-page .dl-era-summary::before{
+  left:12px;
+  border-left:1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+.dl-page .dl-era-summary::after{
+  right:12px;
+  border-right:1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+.dl-page .dl-part-head h3,
+.dl-page .dl-stories-summary strong,
+.dl-page .dl-qa-head h4,
+.dl-page .dl-group-index-head h4,
+.dl-page .dl-court-panel h4{
+  position:relative;
+}
+.dl-page .dl-part-head h3::before,
+.dl-page .dl-part-head h3::after,
+.dl-page .dl-stories-summary strong::before,
+.dl-page .dl-stories-summary strong::after,
+.dl-page .dl-qa-head h4::before,
+.dl-page .dl-qa-head h4::after{
+  content:"";
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border:1px solid var(--dl-orn);
+  transform:rotate(45deg);
+  vertical-align:middle;
+  margin:0 .55em;
+  opacity:.78;
+}
+.dl-page .dl-group-index-head h4::before,
+.dl-page .dl-court-panel h4::before{
+  content:"";
+  display:inline-block;
+  width:6px;height:6px;
+  margin-right:.5em;
+  border-radius:50%;
+  background:var(--dl-orn);
+  box-shadow:0 0 0 3px rgba(181,156,114,.12);
+  vertical-align:middle;
+}
+@supports not (color: color-mix(in srgb, black 50%, white)) {
+  .dl-page .dl-era-summary::before,
+  .dl-page .dl-era-summary::after{border-color:rgba(53,72,63,.22);}
+}
+@media(max-width:560px){
+  .dl-page .dl-hero-center::before,
+  .dl-page .dl-hero-center::after{width:78px;background:
+    radial-gradient(circle at 50% 50%, var(--dl-orn) 0 1.8px, transparent 2px),
+    linear-gradient(var(--dl-orn-soft),var(--dl-orn-soft)) left center/22px 1px no-repeat,
+    linear-gradient(var(--dl-orn-soft),var(--dl-orn-soft)) right center/22px 1px no-repeat;}
+  .dl-page .dl-hero-center::before{margin-bottom:14px;}
+  .dl-page .dl-hero-center::after{margin-top:14px;}
+  .dl-page .dl-dynasty-heading{padding-top:14px;}
+  .dl-page .dl-dynasty-heading::before{width:8px;height:8px;box-shadow:-18px 0 0 -2px #fcfbf7, -18px 0 0 -1px var(--dl-orn-soft), 18px 0 0 -2px #fcfbf7, 18px 0 0 -1px var(--dl-orn-soft);}
+  .dl-page .dl-era-summary::before,.dl-page .dl-era-summary::after{top:8px;width:12px;height:12px;}
+  .dl-page .dl-group-index-head h4::before,
+  .dl-page .dl-court-panel h4::before{width:5px;height:5px;margin-right:.42em;}
+}
