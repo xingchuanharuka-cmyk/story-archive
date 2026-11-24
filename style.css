@@ -1651,3 +1651,58 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .dl-hero{background:#f8f9f8;}
  .dl-era-fold>.dl-chapter{padding-inline:18px;}
 }
+
+/* v9.86 · 大梁·承梁传：黛青、烟墨、浅绢白与克制的旧铜色。
+   只调整此板块色彩；不新增标签、边框、装饰文案或改动正文排版。 */
+.dl-page{
+ --dl-ink:#35483f;
+ --dl-paper:#f8f8f5;
+ --dl-line:transparent;
+ color:#35413d;
+}
+.dl-page .dl-hero{
+ background:#f5f6f2;
+}
+.dl-page .dl-hero-center h2,
+.dl-page .dl-era-summary strong,
+.dl-page .dl-chapter-title h2,
+.dl-page .dl-part-head h3,
+.dl-page .dl-group-index-head h4,
+.dl-page .dl-person h5,
+.dl-page .dl-court-panel h4,
+.dl-page .dl-stories-summary strong,
+.dl-page .dl-story-head h4,
+.dl-page .dl-qa-head h4,
+.dl-page .dl-board-detail-title h5,
+.dl-page .dl-board-detail-people strong{
+ color:#314c46;
+}
+.dl-page .dl-hero-portrait strong{color:#4a574f;}
+.dl-page .dl-hero-center h2 span{color:#a28c6b;}
+.dl-page .dl-hero-portrait small,
+.dl-page .dl-era-summary-dynasty,
+.dl-page .dl-chapter-head p{color:#897b67;}
+.dl-page .dl-era-summary{background:#e9eeea;}
+.dl-page .dl-era-summary:hover{background:#e1e9e3;}
+.dl-page .dl-era-summary-toggle,
+.dl-page .dl-stories-toggle{border-color:#7f8c7f;}
+.dl-page .dl-map-wrap{background:transparent;}
+.dl-page .dl-board-map{background:#eef1ec;}
+.dl-page .dl-board-spot .dl-board-dot{background:#aeaf98;border-color:#879285;box-shadow:0 0 0 2px #e3e9e1;}
+.dl-page .dl-board-spot.selected .dl-board-dot{background:#657b69;box-shadow:0 0 0 4px #dce5db;}
+.dl-page .dl-board-spot strong{color:#44544b;}
+.dl-page .dl-board-spot.selected strong{color:#304c41;}
+.dl-page .dl-board-detail{background:transparent;}
+.dl-page .dl-court-panel{background:#f0f3ef;}
+.dl-page .dl-court-people span{background:#fcfcfa;color:#44544b;}
+.dl-page .dl-qa,.dl-page .dl-stories-fold{background:#f1f3ef;}
+.dl-page .dl-stories-summary{background:#e9eeea;color:#354d44;}
+.dl-page .dl-question .dl-prose{background:#fbfcfa;}
+.dl-page .dl-chapter p,
+.dl-page .dl-person p,
+.dl-page .dl-prose,
+.dl-page .dl-qa-head p,
+.dl-page .dl-board-detail-people p,
+.dl-page .dl-footnotes,
+.dl-page .dl-question summary{color:#3f4943;}
+.dl-page .dl-person-description{color:#54645a!important;}
