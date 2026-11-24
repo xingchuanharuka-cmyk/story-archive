@@ -1557,7 +1557,7 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 }
 
 /* v9.84: 专用字体；恢复 v9.81 的留白、栏目、字号层级 */
-@font-face{font-family:'FZCuJinLJW';src:url('fonts/FZCuJinLJW.ttf') format('truetype');font-style:normal;font-weight:100 900;font-display:swap;}
+
 
 /* 留出正文两侧呼吸空间，沿用 v9.81 的内部卡片布局 */
 .dl-era-fold>.dl-chapter{padding-inline:clamp(18px,3.6vw,34px);}
@@ -1574,14 +1574,7 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-era-summary{max-width:none;}
 @media(max-width:560px){.dl-era-fold>.dl-chapter{padding-inline:18px;}.dl-era-fold>.dl-chapter>.dl-chapter-head{margin-inline:-18px;}.dl-index-people,.dl-board-detail-people{grid-template-columns:1fr;}}
 
-/* v9.85：三板块共用页头；大梁仅标题使用粗金陵，正文同全站 */
-@font-face {
- font-family:'FZCuJinLJW';
- src:url('./fonts/FZCuJinLJW.ttf') format('truetype');
- font-weight:normal;
- font-style:normal;
- font-display:swap;
-}
+/* v9.91：不再引用缺失的本地字体文件，采用在线宋体及系统字体回退 */
 .dl-page{
  --dl-ink:#405562;--dl-line:transparent;--dl-paper:#f8f9f8;
  color:var(--body);
@@ -1638,7 +1631,7 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-page .dl-stories-summary strong,.dl-page .dl-story-head h4,
 .dl-page .dl-qa-head h4,.dl-page .dl-board-detail-title h5,
 .dl-page .dl-board-detail-people strong{
- font-family:'FZCuJinLJW','STZhongsong','Songti SC',serif;
+ font-family:'Noto Serif SC','Source Han Serif SC','Songti SC','STSong','SimSun',serif;
  font-weight:normal;
  color:#344d5a;
 }
@@ -1788,7 +1781,7 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-page .dl-quote-emphasis{font-weight:700;color:#304940;}
 
 /* v9.89 — 两朝标题 / 四年号统一的低饱和古典配色 */
-.dl-page .dl-dynasty-heading{font:800 clamp(26px,3.2vw,35px) "FZCuJinLJW","STKaiti","KaiTi",serif;color:#334c43;letter-spacing:.14em;margin:38px auto 16px;padding:0 10px;max-width:700px;text-align:center;}
+.dl-page .dl-dynasty-heading{font:800 clamp(26px,3.2vw,35px) "Noto Serif SC","Source Han Serif SC","Songti SC","KaiTi",serif;color:#334c43;letter-spacing:.14em;margin:38px auto 16px;padding:0 10px;max-width:700px;text-align:center;}
 .dl-page .dl-era-summary-dynasty{visibility:hidden;}
 .dl-page .dl-era-fold{--era-ink:#314c46;--era-bg:#e8eeea;--era-border:#cfddd3;--era-panel:#f7f9f6;--era-side:#b3c3b5;}
 .dl-page .dl-era-yongan{--era-ink:#8b4c4b;--era-bg:#f4e9e8;--era-border:#e6d1cf;--era-panel:#fcf7f6;--era-side:#d1a6a2;}
@@ -1812,3 +1805,106 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-page .dl-era-fold .dl-intro-label{background:var(--era-bg);border-color:var(--era-border);color:var(--era-ink);}
 .dl-page .dl-era-fold .dl-quote-emphasis{color:var(--era-ink);}
 @media(max-width:560px){.dl-page .dl-dynasty-heading{font-size:28px;margin:28px auto 12px;}}
+
+/* v9.90：统一粗金陵字体声明，并重新建立标题字号层级。
+   字体只用于标题；正文仍使用全站的无衬线字体栈。 */
+.dl-page .dl-hero-center h2{
+  font-size:clamp(27px,3.8vw,43px);
+  line-height:1.3;
+  letter-spacing:.07em;
+}
+.dl-page .dl-dynasty-heading{
+  font-size:clamp(30px,3.3vw,35px);
+  line-height:1.35;
+  margin:32px auto 14px;
+  font-weight:400;
+}
+.dl-page .dl-era-summary{
+  min-height:58px;
+  padding-block:11px;
+}
+.dl-page .dl-era-summary strong{
+  font-family:'Noto Serif SC','Source Han Serif SC','Songti SC','STSong','SimSun',serif;
+  font-size:clamp(23px,2.4vw,27px);
+  line-height:1.25;
+  letter-spacing:.07em;
+  font-weight:400;
+}
+.dl-page .dl-chapter-title h2{
+  font-size:clamp(24px,2.5vw,29px);
+  line-height:1.35;
+  letter-spacing:.07em;
+  font-weight:400;
+}
+.dl-page .dl-part-head h3{font-size:clamp(21px,2.2vw,24px);letter-spacing:.05em;font-weight:400;}
+.dl-page .dl-group-index-head h4{font-size:clamp(18px,1.9vw,21px);font-weight:400;}
+.dl-page .dl-person h5{font-size:clamp(17px,1.8vw,19px);font-weight:400;}
+@media(max-width:560px){
+ .dl-page .dl-hero-center h2{font-size:clamp(27px,7.3vw,32px);}
+ .dl-page .dl-dynasty-heading{font-size:29px;margin:25px auto 12px;}
+ .dl-page .dl-era-summary{min-height:54px;padding:10px 12px;}
+ .dl-page .dl-era-summary strong{font-size:23px;}
+ .dl-page .dl-chapter-title h2{font-size:25px;}
+ .dl-page .dl-part-head h3{font-size:21px;}
+ .dl-page .dl-group-index-head h4{font-size:19px;}
+ .dl-page .dl-person h5{font-size:18px;}
+}
+
+/* v9.91：大梁·承梁传标题采用优先在线、离线可回退的宋体；字号由大至小形成明确层级。 */
+.dl-page{
+ --dl-title-font:'Noto Serif SC','Source Han Serif SC','Songti SC','STSong','Noto Serif CJK SC','SimSun',serif;
+}
+.dl-page .dl-hero-center h2,
+.dl-page .dl-dynasty-heading,
+.dl-page .dl-era-summary strong,
+.dl-page .dl-chapter-title h2,
+.dl-page .dl-part-head h3,
+.dl-page .dl-group-index-head h4,
+.dl-page .dl-story-head h4,
+.dl-page .dl-stories-summary strong,
+.dl-page .dl-qa-head h4,
+.dl-page .dl-court-panel h4,
+.dl-page .dl-person h5,
+.dl-page .dl-hero-portrait strong{
+ font-family:var(--dl-title-font);
+ font-style:normal;
+ text-shadow:none;
+}
+/* 只在本板块组织标题层级，不覆盖既有四朝配色与正文。 */
+.dl-page .dl-hero-center h2{font-size:clamp(30px,3.9vw,43px);font-weight:700;letter-spacing:.075em;line-height:1.35;}
+.dl-page .dl-dynasty-heading{font-size:clamp(28px,3vw,35px);font-weight:700;letter-spacing:.12em;line-height:1.4;margin:32px auto 15px;}
+.dl-page .dl-era-summary{min-height:56px;padding:10px 18px;}
+.dl-page .dl-era-summary strong{font-size:clamp(22px,2.35vw,26px);font-weight:600;letter-spacing:.085em;line-height:1.35;}
+.dl-page .dl-chapter-title h2{font-size:clamp(21px,2.15vw,25px);font-weight:600;letter-spacing:.06em;line-height:1.4;}
+.dl-page .dl-part-head h3{font-size:clamp(20px,2vw,23px);font-weight:600;letter-spacing:.055em;}
+.dl-page .dl-group-index-head h4,.dl-page .dl-court-panel h4{font-size:clamp(18px,1.8vw,21px);font-weight:600;letter-spacing:.035em;}
+.dl-page .dl-stories-summary strong,.dl-page .dl-story-head h4,.dl-page .dl-qa-head h4{font-size:clamp(19px,1.9vw,22px);font-weight:600;}
+.dl-page .dl-person h5{font-size:clamp(16px,1.55vw,18px);font-weight:600;letter-spacing:0;}
+.dl-page .dl-hero-portrait strong{font-weight:600;}
+@media(max-width:560px){
+ .dl-page .dl-hero-center h2{font-size:clamp(27px,7vw,31px);letter-spacing:.045em;}
+ .dl-page .dl-dynasty-heading{font-size:28px;margin:27px auto 12px;}
+ .dl-page .dl-era-summary{min-height:52px;padding:9px 12px;}
+ .dl-page .dl-era-summary strong{font-size:22px;}
+ .dl-page .dl-chapter-title h2{font-size:21px;}
+ .dl-page .dl-part-head h3{font-size:20px;}
+ .dl-page .dl-group-index-head h4,.dl-page .dl-court-panel h4{font-size:18px;}
+ .dl-page .dl-person h5{font-size:17px;}
+}
+
+/* v9.92: match the actual uploaded .TTF filename (case-sensitive on GitHub Pages).
+   This stylesheet does not bundle or redistribute the font file. */
+@font-face {
+  font-family: 'FZCuJinCustom';
+  src: url('./fonts/FZCuJinLJW.TTF') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.dl-page {
+  --dl-title-font: 'FZCuJinCustom','Noto Serif SC','Source Han Serif SC','Songti SC','STSong',serif;
+}
+.dl-page .dl-dynasty-heading {
+  font-family: var(--dl-title-font);
+  font-weight: 400;
+}
