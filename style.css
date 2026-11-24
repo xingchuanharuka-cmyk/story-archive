@@ -1777,3 +1777,12 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .dl-page .dl-board-detail-people article{padding:7px 9px 7px 12px;}
  .dl-page .dl-court-panel{padding:15px 13px;}
 }
+
+/* v9.88: 棋盘只做目录锚点，简介标记区分角色正文，重点引文强调 */
+.dl-page .dl-board-detail{display:none!important;}
+.dl-page .dl-group-index{scroll-margin-top:105px;}
+.dl-page .dl-board-spot{cursor:pointer;}
+.dl-page .dl-board-spot:focus-visible{outline:2px solid #7b968a;outline-offset:6px;}
+.dl-page .dl-intro-label{display:inline-flex;vertical-align:baseline;align-items:center;justify-content:center;margin-right:10px;padding:1px 8px;border-radius:3px;background:#e7eeea;border:1px solid #cfddd3;color:#526d5e;font:500 12px/1.6 'Noto Sans SC','Source Han Sans SC','PingFang SC',sans-serif;white-space:nowrap;}
+.dl-page .dl-person-description{display:block;}
+.dl-page .dl-quote-emphasis{font-weight:700;color:#304940;}
