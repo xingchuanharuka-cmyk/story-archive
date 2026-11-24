@@ -1558,7 +1558,7 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 
 /* v9.84: 专用字体；恢复 v9.81 的留白、栏目、字号层级 */
 @font-face{font-family:'FZCuJinLJW';src:url('fonts/FZCuJinLJW.ttf') format('truetype');font-style:normal;font-weight:100 900;font-display:swap;}
-.dl-page,.dl-page *{font-family:'FZCuJinLJW','STKaiti','KaiTi',serif !important;}
+
 /* 留出正文两侧呼吸空间，沿用 v9.81 的内部卡片布局 */
 .dl-era-fold>.dl-chapter{padding-inline:clamp(18px,3.6vw,34px);}
 .dl-era-fold>.dl-chapter>.dl-chapter-head{margin-inline:calc(-1 * clamp(18px,3.6vw,34px));}
@@ -1573,3 +1573,81 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-question .dl-prose p{margin-bottom:.67em;}
 .dl-era-summary{max-width:none;}
 @media(max-width:560px){.dl-era-fold>.dl-chapter{padding-inline:18px;}.dl-era-fold>.dl-chapter>.dl-chapter-head{margin-inline:-18px;}.dl-index-people,.dl-board-detail-people{grid-template-columns:1fr;}}
+
+/* v9.85：三板块共用页头；大梁仅标题使用粗金陵，正文同全站 */
+@font-face {
+ font-family:'FZCuJinLJW';
+ src:url('./fonts/FZCuJinLJW.ttf') format('truetype');
+ font-weight:normal;
+ font-style:normal;
+ font-display:swap;
+}
+.dl-page{
+ --dl-ink:#405562;--dl-line:transparent;--dl-paper:#f8f9f8;
+ color:var(--body);
+ font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+}
+/* 页头、切换栏使用全站统一排版和颜色 */
+.dl-page .page-head,.dl-page .page-head *,
+.dl-page .breadcrumb,.dl-page .wt-section-tabs,
+.dl-page .wt-section-tabs *{font-family:inherit;color:inherit;}
+.dl-page .page-head h1{font-family:'Noto Serif SC','Source Han Serif SC','STZhongsong','Songti SC',serif;color:var(--ink);}
+.dl-page .wt-section-tab{color:var(--muted);}
+.dl-page .wt-section-tab.active{color:var(--ink);}
+.dl-page .wt-section-tabs{border-bottom:1px solid var(--line);}
+/* 取消暖黄色底色与层层描边，改用与全站相近的柔和白 */
+.dl-hero,.dl-era-fold,.dl-era-summary,.dl-chapter-head,.dl-map-wrap,
+.dl-board-map,.dl-board-detail,.dl-court-panel,.dl-qa,.dl-question .dl-prose,
+.dl-stories-fold,.dl-stories-summary,.dl-footnotes{
+ background:#f8f9f8;
+ border-color:transparent;
+ box-shadow:none;
+}
+.dl-hero{background:#f8f9f8;border:0;}
+.dl-hero:before,.dl-hero:after,.dl-board-map::before,.dl-board-map::after{display:none;}
+.dl-hero-portrait img{border:0;box-shadow:none;filter:none;}
+.dl-era-fold{border:0;background:transparent;}
+.dl-era-summary{background:#f1f3f3;border:0;}
+.dl-era-fold>.dl-chapter>.dl-chapter-head{background:transparent;border:0;}
+.dl-map-wrap{border:0;padding:12px 0;background:transparent;}
+.dl-board-map{border:0;background:#f0f2f1;}
+.dl-board-detail{border:0;padding:16px 0;background:transparent;}
+.dl-board-detail-title,.dl-part-head,.dl-index-head,.dl-group-index,
+.dl-story,.dl-question,.dl-stories-fold,.dl-stories-summary{border-color:transparent;}
+.dl-court-panel{border:0;background:#f2f4f3;}
+.dl-court-people span{background:#fff;border-color:transparent;}
+.dl-qa,.dl-stories-fold{border:0;background:#f5f6f5;}
+.dl-question .dl-prose{background:#fff;border-left:0;}
+.dl-footnotes{border-left:0;}
+.dl-person{border-left:0;padding-left:0;}
+.dl-board-spot strong{background:transparent;color:var(--ink);}
+.dl-board-spot.selected strong{background:transparent;border:0;}
+/* 全部正文统一为站点原本的思源黑体优先字体栈 */
+.dl-page .dl-chapter p,.dl-page .dl-person p,.dl-page .dl-prose,
+.dl-page .dl-qa-head p,.dl-page .dl-board-detail-people p,
+.dl-page .dl-court-people,.dl-page .dl-board-spot strong,
+.dl-page .dl-footnotes,.dl-page .dl-question summary{
+ font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+ color:var(--body);
+}
+/* 仅标题、章节名及人物名称使用方正粗金陵；无文件时使用宋体回退 */
+.dl-page .dl-hero-center h2,.dl-page .dl-hero-portrait strong,
+.dl-page .dl-era-summary strong,.dl-page .dl-chapter-title h2,
+.dl-page .dl-part-head h3,.dl-page .dl-group-index-head h4,
+.dl-page .dl-person h5,.dl-page .dl-court-panel h4,
+.dl-page .dl-stories-summary strong,.dl-page .dl-story-head h4,
+.dl-page .dl-qa-head h4,.dl-page .dl-board-detail-title h5,
+.dl-page .dl-board-detail-people strong{
+ font-family:'FZCuJinLJW','STZhongsong','Songti SC',serif;
+ font-weight:normal;
+ color:#344d5a;
+}
+.dl-page .dl-hero-center h2 span{color:#7a91a0;}
+.dl-page .dl-hero-portrait small,.dl-page .dl-era-summary-dynasty{color:var(--muted);}
+.dl-page .dl-era-summary-toggle,.dl-page .dl-stories-toggle{border-color:#8599a3;}
+.dl-page .dl-person-description{color:var(--body)!important;}
+/* 保留四角照片位置及三排六点交互，不再增添装饰文字 */
+@media(max-width:560px){
+ .dl-hero{background:#f8f9f8;}
+ .dl-era-fold>.dl-chapter{padding-inline:18px;}
+}
