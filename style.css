@@ -1532,3 +1532,26 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .dl-board-spot.p6{left:55%;top:69%;}
  .dl-board-detail-people,.dl-index-people,.dl-court-grid,.dl-court-three,.dl-shunning-row,.dl-shunning-structure{grid-template-columns:1fr;}
 }
+
+/* V9.81: 崇明地图进一步简化为三排落点 */
+.dl-board-map{height:220px;background:#f6f0e3;border:1px solid #d6c7af;box-shadow:none;}
+.dl-board-map::before,.dl-board-map::after{display:none;}
+.dl-board-spot{gap:7px;}
+.dl-board-spot strong{background:transparent;border:0;padding:0;border-radius:0;}
+.dl-board-spot.selected strong{background:transparent;border:0;}
+.dl-board-spot.r1{left:50%;top:19%;transform:translateX(-50%);}
+.dl-board-spot.r2a{left:16%;top:47%;}
+.dl-board-spot.r2b{left:41%;top:47%;}
+.dl-board-spot.r2c{left:69%;top:47%;}
+.dl-board-spot.r3a{left:26%;top:75%;}
+.dl-board-spot.r3b{left:58%;top:75%;}
+@media(max-width:560px){
+ .dl-board-map{height:205px;}
+ .dl-board-spot strong{font-size:13px;}
+ .dl-board-spot.r1{top:17%;}
+ .dl-board-spot.r2a{left:8%;top:45%;}
+ .dl-board-spot.r2b{left:34%;top:45%;}
+ .dl-board-spot.r2c{left:61%;top:45%;}
+ .dl-board-spot.r3a{left:18%;top:74%;}
+ .dl-board-spot.r3b{left:50%;top:74%;}
+}
