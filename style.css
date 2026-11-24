@@ -1591,3 +1591,15 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-page .dl-plain-footnotes{padding:8px 0;margin:10px 0;border:0;background:transparent;font-size:14px;line-height:1.65}
 .dl-page .dl-plain-footnotes p{margin:0}
 @media(max-width:560px){.dl-page .dl-plain-person p,.dl-page .dl-plain-prose,.dl-page .dl-qa-intro{font-size:13.5px;line-height:1.63}.dl-page .dl-board-map{height:205px}}
+
+/* v9.83: 大梁·承梁传专用字体，由 GitHub fonts 目录提供文件。 */
+@font-face {
+  font-family: 'FZCuJinLJW';
+  src: url('fonts/FZCuJinLJW.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.dl-page, .dl-page * {
+  font-family: 'FZCuJinLJW', 'STKaiti', 'KaiTi', serif !important;
+}
