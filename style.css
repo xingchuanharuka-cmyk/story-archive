@@ -2084,3 +2084,101 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
   .dl-page .dl-group-index-head h4::before,
   .dl-page .dl-court-panel h4::before{width:5px;height:5px;margin-right:.42em;}
 }
+
+
+/* v9.95：书卷标题三枚小纹样；朝代标题两侧短线。去除 v9.94 多余角饰。 */
+.dl-page .dl-hero-center::before,
+.dl-page .dl-hero-center::after,
+.dl-page .dl-dynasty-heading::before,
+.dl-page .dl-era-summary::before,
+.dl-page .dl-era-summary::after,
+.dl-page .dl-part-head h3::before,
+.dl-page .dl-part-head h3::after,
+.dl-page .dl-stories-summary strong::before,
+.dl-page .dl-stories-summary strong::after,
+.dl-page .dl-qa-head h4::before,
+.dl-page .dl-qa-head h4::after,
+.dl-page .dl-group-index-head h4::before,
+.dl-page .dl-court-panel h4::before{content:none!important;display:none!important;box-shadow:none!important;}
+.dl-page .dl-hero-center h2{margin-bottom:0;}
+.dl-page .dl-title-ornaments{
+ display:flex;align-items:center;justify-content:center;
+ gap:15px;margin-top:15px;
+ color:#a89271;
+}
+.dl-page .dl-title-ornaments svg{
+ display:block;width:13px;height:13px;
+ fill:none;stroke:currentColor;stroke-width:1.2;
+ stroke-linecap:round;stroke-linejoin:round;
+}
+.dl-page .dl-title-ornaments svg.dl-title-ornament-center{
+ width:22px;height:20px;stroke-width:1.15;
+}
+.dl-page .dl-dynasty-heading{
+ display:flex;align-items:center;justify-content:center;
+ gap:20px;padding-top:0;
+}
+.dl-page .dl-dynasty-heading::before,
+.dl-page .dl-dynasty-heading::after{
+ content:""!important;display:block!important;
+ position:static;inset:auto;
+ flex:none;width:38px;height:1px;
+ transform:none;background:#bda98b;border:0;
+ box-shadow:none!important;opacity:.78;
+}
+@media(max-width:560px){
+ .dl-page .dl-title-ornaments{gap:12px;margin-top:12px;}
+ .dl-page .dl-title-ornaments svg{width:11px;height:11px;}
+ .dl-page .dl-title-ornaments svg.dl-title-ornament-center{width:20px;height:18px;}
+ .dl-page .dl-dynasty-heading{gap:14px;padding-top:0;}
+ .dl-page .dl-dynasty-heading::before,
+ .dl-page .dl-dynasty-heading::after{width:28px;}
+}
+
+/* v9.96：四年号两侧实心菱形；收紧移动端折叠正文横向留白。 */
+.dl-page .dl-era-summary::before,
+.dl-page .dl-era-summary::after{
+  content:none!important;
+  display:none!important;
+}
+.dl-page .dl-era-summary strong{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  white-space:nowrap;
+}
+.dl-page .dl-era-summary strong::before,
+.dl-page .dl-era-summary strong::after{
+  content:"";
+  display:inline-block;
+  flex:0 0 7px;
+  width:7px;
+  height:7px;
+  background:var(--era-ink);
+  transform:rotate(45deg);
+  opacity:.68;
+}
+@media(max-width:560px){
+  .dl-page .dl-era-summary{
+    padding:8px 9px;
+    min-height:50px;
+    gap:4px;
+  }
+  .dl-page .dl-era-summary strong{gap:12px;}
+  .dl-page .dl-era-summary strong::before,
+  .dl-page .dl-era-summary strong::after{
+    width:6px;height:6px;flex-basis:6px;
+  }
+  .dl-page .dl-era-fold>.dl-chapter{
+    padding-inline:10px;
+  }
+  .dl-page .dl-era-fold>.dl-chapter>.dl-chapter-head{
+    margin-inline:-10px;
+    padding-inline:10px;
+  }
+  .dl-page .dl-group-index{padding-inline:10px;}
+  .dl-page .dl-person{padding-inline:10px 5px;}
+  .dl-page .dl-qa{padding-inline:10px;}
+  .dl-page .dl-map-wrap{padding-inline:0;}
+}
