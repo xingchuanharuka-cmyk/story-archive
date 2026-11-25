@@ -2182,3 +2182,35 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
   .dl-page .dl-qa{padding-inline:10px;}
   .dl-page .dl-map-wrap{padding-inline:0;}
 }
+
+/* v9.99 — 崇明个人推测中的《诗经》引文，仅诗句里的“契阔”加粗 */
+.dl-page .dl-era-chongming .dl-poetry-quote{
+  margin:16px 0 18px;
+  padding:17px 18px 14px;
+  border:1px solid var(--era-border,#cfddd3);
+  border-left:3px solid var(--era-side,#b3c3b5);
+  border-radius:3px;
+  background:var(--era-panel,#f7f9f6);
+  color:#374a42;
+  text-indent:0;
+}
+.dl-page .dl-era-chongming .dl-poetry-source{
+  font-size:13px;
+  line-height:1.8;
+  color:#617368;
+  margin-bottom:10px;
+}
+.dl-page .dl-era-chongming .dl-poetry-quote p{
+  font-family:'Noto Serif SC','Source Han Serif SC','Songti SC','STSong',serif;
+  font-size:clamp(15px,1.5vw,17px);
+  line-height:1.9;
+  letter-spacing:.035em;
+  margin:2px 0;
+  text-indent:0;
+  color:#344d42;
+}
+.dl-page .dl-era-chongming .dl-poetry-quote .dl-quote-emphasis{font-weight:700;}
+@media(max-width:560px){
+ .dl-page .dl-era-chongming .dl-poetry-quote{padding:13px 12px 12px;margin:14px 0;}
+ .dl-page .dl-era-chongming .dl-poetry-quote p{font-size:15px;letter-spacing:0;}
+}
