@@ -2225,3 +2225,21 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .research-solar .research-portrait-person{flex:0 0 auto;}
 .research-solar .research-accordion-list{margin-top:28px;}
 @media(max-width:600px){.research-solar{margin-top:46px;}.research-solar .research-portrait-ring{width:100px;height:100px;}}
+
+
+/* v10.06 · 太阳星贵气版：松绿为主，古金为饰，仅限定太阳星题头。 */
+.research-solar .research-topic-hero{
+  background:linear-gradient(145deg,#f0f6f1 0%,#f8faf5 48%,#f8f5e9 100%);
+  border-color:#cedbd0;
+}
+.research-solar .research-topic-eyebrow{color:#637f70;}
+.research-solar .research-topic-hero h2{color:#285a49;}
+.research-solar .research-topic-decoration{color:#aa8c50;}
+.research-solar .research-portrait-ring{
+  border-color:#fcfcf7;
+  outline-color:#ad995d;
+  box-shadow:0 5px 20px #3053431c,0 0 0 4px #dddfc861;
+}
+.research-solar .research-person-name{color:#368268;}
+.research-solar .research-cross-star{color:#b19654;}
+.research-solar .research-star-name{color:#a58a49;}
