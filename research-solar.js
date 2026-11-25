@@ -69,34 +69,6 @@ window.ARCHIVE_SOLAR = (() => {
     desc('左辅、右弼：','古籍认为太阳得到辅弼等吉曜相助时，有利于其贵显性质的发挥。'),
     desc('禄存：','与财禄有关，但古籍也指出，即使太阳与禄存同宫，仍可能需要付出较多辛劳。')
   ].join('');
-  const later = [
-    p('以下主要参考王亭之《中州派紫微斗数深造讲义》上篇《星曜论·太阳》及《中州派紫微斗数初级讲义》太阳相关章节。'),
-    p('这些属于近现代中州派的命理解释，应当与《紫微斗数全书》的原始记载区分。'),
-    h4('1.主贵不主富'),
-    p('王亭之认为，太阳的重要性质在于声名与贵显，而不一定是财富。'),
-    p('这里的“贵”主要指社会地位、名誉、身份等方面。'),
-    p('“富”则更偏向实际财富的积累。'),
-    p('因此，太阳虽然能够与富贵联系起来，但在王亭之的理论中，其自身更突出贵显的性质。'),
-    p('如果与太阴、禄存、化禄等具有财禄性质的星曜会合，则需要进一步考虑其富贵情况。'),
-    h4('2.施而不受'),
-    p('王亭之将太阳的光热发散作为理解其性质的重要依据。'),
-    p('太阳向外发射光与热，因此被赋予向外施予的特性。'),
-    p('这一解释与古籍所说的慈爱、宽厚具有一定联系，但王亭之进一步从光热的运行方式出发，建立了“施而不受”的命理解释。'),
-    p('太阳的施予性质并不只是一般意义上的善良，还包含向外付出、给予的特点。不过，这不意味着太阳坐命的人必然无私，也不能将“施而不受”直接理解为注定牺牲自己。'),
-    h4('3.光芒过盛与中和'),
-    p('王亭之特别强调，太阳的光芒并非越强越好。'),
-    p('传统古籍对午宫太阳的“日丽中天”评价很高，但王亭之认为，太阳处于午宫时已经达到极盛状态，反而可能因光热过强而出现问题。'),
-    p('相比之下，巳宫太阳仍有继续发展的余地。因此，他提出判断太阳时应当注意“中和”：太阳过强，需要适当收敛；太阳光热不足，则需要考虑其他星曜能否提供帮助。'),
-    h4('4.太阳与太阴、巨门、天梁'),
-    p('王亭之在分析太阳时，尤其重视它与太阴、巨门、天梁三颗主星之间的关系。'),
-    desc('太阴：','具有与财富相关的性质，可能影响太阳的富贵表现。'),
-    desc('巨门：','具有暗曜性质，可能影响太阳声名的实际表现。'),
-    desc('天梁：','与清贵、原则等性质有关，可能使太阳的贵显表现带有不同特点。'),
-    p('王亭之认为，不能仅凭太阳所在宫位判断其性质，还需要结合这些星曜的同宫、对照及其他会合关系。'),
-    h4('5.声名与实际所得'),
-    p('在王亭之的解释中，太阳的声名、贵显与实际财富并非始终一致。'),
-    p('太阳可能具有较高的声望，却未必获得相应的物质利益。太阳过度发散，也可能出现表面光华明显、实际积累不足的情况。')
-  ].join('');
   const nameSword = [
     h('赵飞光的佩剑：“蔽日”'),
     h4('1. 战争意象'),
@@ -113,5 +85,5 @@ window.ARCHIVE_SOLAR = (() => {
     p('“飞光”在诗中指飞逝的时光，与日月运行、生命短暂有关。')
   ].join('');
   const hero = `<div class="research-topic-hero research-solar-hero"><div class="research-topic-eyebrow">CLASSICAL ALLUSIONS / 星曜与命理</div><div class="research-topic-decoration" aria-hidden="true">✧　✦　✧</div><h2>太阳星</h2><div class="research-portrait-row"><div class="research-portrait-person" style="--person-color:#9a7546"><div class="research-portrait-ring"><img src="images/historical/zhaofeiguang.jpg" alt="赵飞光头像" loading="lazy" onerror="this.style.opacity=0"></div><span class="research-person-name">赵飞光</span><span class="research-cross-star" aria-hidden="true">✦</span><div class="research-star-name">太阳</div></div></div></div>`;
-  return {render:()=>`<section class="research-solar">${hero}<div class="research-accordion-list">${accordion('01','太阳星·设定概览',overview)}${accordion('02','原文参考',originals)}${accordion('03','后世延伸',later)}${accordion('04','蔽日与飞光',nameSword)}</div></section>`};
+  return {render:()=>`<section class="research-solar">${hero}<div class="research-accordion-list">${accordion('01','太阳星·设定概览',overview)}${accordion('02','原文参考',originals)}${accordion('03','蔽日与飞光',nameSword)}</div></section>`};
 })();
