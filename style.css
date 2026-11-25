@@ -2214,3 +2214,14 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .dl-page .dl-era-chongming .dl-poetry-quote{padding:13px 12px 12px;margin:14px 0;}
  .dl-page .dl-era-chongming .dl-poetry-quote p{font-size:15px;letter-spacing:0;}
 }
+
+/* v10.00 典故考据：太阳星沿用杀破狼题头与章节式排版。 */
+.research-solar{margin-top:66px;}
+.research-solar .research-topic-hero{background:linear-gradient(135deg,#f7f4ed 0%,#faf9f5 52%,#f2f3f0 100%);border-color:#e6e0d3;}
+.research-solar .research-topic-hero h2{color:#6d5740;}
+.research-solar .research-topic-decoration{color:#b19a76;}
+.research-solar .research-topic-subtitle{color:#9d8d72;}
+.research-solar .research-portrait-row{justify-content:center;}
+.research-solar .research-portrait-person{flex:0 0 auto;}
+.research-solar .research-accordion-list{margin-top:28px;}
+@media(max-width:600px){.research-solar{margin-top:46px;}.research-solar .research-portrait-ring{width:100px;height:100px;}}
