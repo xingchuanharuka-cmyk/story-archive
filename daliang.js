@@ -7,7 +7,13 @@ window.renderDaliangChronicle=function(app,archive,escapeText){
  const highlight=(t,words)=>{let out=E(t);for(const w of words)out=out.split(E(w)).join(`<strong class="dl-quote-emphasis">${E(w)}</strong>`);return out;};
  const boldStory=['天折过一个孩子','皇帝对侄儿疼爱更胜亲子','郡主年长他近20岁，也对他颇为纵容'];
  const paragraph=t=>`<p>${E(t)}</p>`;
- const storyParagraph=(t,isChongming)=>`<p>${isChongming?highlight(t,boldStory):E(t)}</p>`;
+ const storyParagraph=(t,isChongming,isShunning=false)=>{
+  if(isShunning && /^(辜麒（瑞王）|辜煜（恒王）|辜珩（宁王）)：/.test(t)){
+   const colon=t.indexOf('：');
+   return `<blockquote class="dl-prince-quotation"><span class="dl-prince-quotation-name">${E(t.slice(0,colon))}</span><span class="dl-prince-quotation-content">${E(t.slice(colon+1))}</span></blockquote>`;
+  }
+  return `<p>${isChongming?highlight(t,boldStory):E(t)}</p>`;
+ };
  const qaParagraph=t=>`<p>${E(t)}</p>`;
  const qaAnswers=(items)=>{
   const quoteStart=items.findIndex((t,i)=>t==='最著名的出处是《诗经·邶风·击鼓》：'&&items[i+1]==='死生契阔，与子成说。'&&items[i+2]==='执子之手，与子偕老。');
@@ -19,7 +25,7 @@ window.renderDaliangChronicle=function(app,archive,escapeText){
  const introduction=(s)=>`<p class="dl-person-description"><span class="dl-intro-label">简介</span><span>${E(s)}</span></p>`;
  const personMarkup=(p,era)=>{const special=era==='chongming'&&p[0]==='赵飞光';const princes=era==='shunning'&&['辜麒（瑞王）','辜煜（恒王）','辜珩（宁王）'].includes(p[0]);return `<article class="dl-person"><h5>${E(p[0])}</h5>${p[1]?(princes?introduction(p[1]):paragraph(p[1])):''}${p[2]?(era==='chongming'&&!special?introduction(p[2]):`<p class="dl-person-description">${E(p[2])}</p>`):''}</article>`;};
  const groupIndex=(g,i,era)=>`<section class="dl-group-index" id="dl-index-${i}"><div class="dl-group-index-head"><h4>${E(g.name)}</h4></div><div class="dl-index-people">${g.people.map(p=>personMarkup(p,era)).join('')}</div></section>`;
- const story=(s,era)=>`<article class="dl-story"><div class="dl-story-head"><h4>${E(s.title)}</h4></div><div class="dl-prose">${s.paragraphs.map(t=>storyParagraph(t,era==='chongming')).join('')}</div></article>`;
+ const story=(s,era)=>`<article class="dl-story"><div class="dl-story-head"><h4>${E(s.title)}</h4></div><div class="dl-prose">${s.paragraphs.map(t=>storyParagraph(t,era==='chongming',era==='shunning')).join('')}</div></article>`;
  const power=e=>{
  if(e.id==='chongming'){const layout=[{i:0,cls:'r1',label:'皇宫'},{i:1,cls:'r2a',label:'燕王府'},{i:3,cls:'r2b',label:'晴国公府'},{i:5,cls:'r2c',label:'镇国公府'},{i:4,cls:'r3a',label:'丞相府'},{i:2,cls:'r3b',label:'学府'}];return `<div class="dl-map-wrap"><div class="dl-board-map" role="group" aria-label="崇明六方势力分布">${layout.map(({i,cls,label},k)=>`<button type="button" class="dl-board-spot ${cls}" data-dl-board="${i}" aria-label="跳转至${E(label)}"><span class="dl-board-dot" aria-hidden="true"></span><strong>${E(label)}</strong></button>`).join('')}</div></div>`;}
  if(e.id==='yongan')return `<div class="dl-court-grid dl-court-three">${e.groups.map((g,i)=>`<div class="dl-court-panel"><h4>${E(g.name)}</h4><div class="dl-court-people">${g.people.map(p=>`<span>${E(p[0])}</span>`).join('')}</div></div>`).join('')}</div>`;

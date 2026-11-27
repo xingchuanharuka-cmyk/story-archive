@@ -2243,3 +2243,29 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .research-solar .research-person-name{color:#368268;}
 .research-solar .research-cross-star{color:#b19654;}
 .research-solar .research-star-name{color:#a58a49;}
+
+/* v10.08 · 顺宁浮沉往事：亲王原设单独引用，保留走向正文样式 */
+.dl-page .dl-era-shunning .dl-prince-quotation {
+  margin: 17px 0 9px;
+  padding: 11px 15px;
+  border-left: 3px solid var(--era-side);
+  background: var(--era-bg);
+  color: var(--era-ink);
+  font-family: 'FZSongKeCustom', 'Songti SC', 'STSong', 'SimSun', serif;
+  font-size: 15px;
+  line-height: 1.85;
+  text-indent: 0;
+}
+.dl-page .dl-era-shunning .dl-prince-quotation-name {
+  font-weight: 600;
+  margin-right: .65em;
+  white-space: nowrap;
+}
+@media(max-width:560px) {
+  .dl-page .dl-era-shunning .dl-prince-quotation {
+    margin: 14px 0 8px;
+    padding: 9px 11px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
