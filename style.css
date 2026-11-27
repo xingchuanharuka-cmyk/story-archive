@@ -2279,3 +2279,105 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
 .dl-page .dl-era-chengan .dl-reflection-content{padding:14px 18px 17px;}
 .dl-page .dl-era-chengan .dl-reflection-content p{margin:0;white-space:normal;line-height:1.9;font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;}
 @media(max-width:560px){.dl-page .dl-era-chengan .dl-reflection-fold>summary{padding:10px 12px;font-size:16px;}.dl-page .dl-era-chengan .dl-reflection-content{padding:12px 13px 15px;}}
+
+/* v10.10：仅收紧承安·邢怀戎之死「个人思考」文字，避免沿用外层大字号。 */
+.dl-page .dl-era-chengan .dl-reflection-fold > summary {
+  font-size:15px;
+  line-height:1.5;
+  padding:10px 13px;
+}
+.dl-page .dl-era-chengan .dl-reflection-content {
+  padding:12px 15px 14px;
+}
+.dl-page .dl-era-chengan .dl-reflection-content p {
+  font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.75;
+  letter-spacing:0;
+  text-indent:0;
+  overflow-wrap:break-word;
+}
+@media(max-width:560px){
+  .dl-page .dl-era-chengan .dl-reflection-fold > summary {
+    font-size:14px;
+    padding:9px 11px;
+  }
+  .dl-page .dl-era-chengan .dl-reflection-content {
+    padding:11px 12px 13px;
+  }
+  .dl-page .dl-era-chengan .dl-reflection-content p {
+    font-size:13px;
+    line-height:1.72;
+  }
+}
+
+
+/* v10.11 · 永安、承安、顺宁势力分布使用三种结构；崇明六点图不变。 */
+.dl-page .dl-power-names{display:flex;flex-wrap:wrap;align-content:start;gap:9px;min-width:0;}
+.dl-page .dl-power-names span{
+  display:inline-block;padding:9px 12px;
+  background:#fff;border:1px solid var(--era-border);
+  border-radius:2px;color:#3f4943;
+  font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:13px;line-height:1.45;
+}
+/* 永安：纵向题签 + 横向名单，呈现三权并列的卷宗感。 */
+.dl-page .dl-power-yongan{display:grid;gap:13px;}
+.dl-page .dl-power-yongan-row{
+  display:grid;grid-template-columns:56px minmax(0,1fr);gap:17px;
+  align-items:stretch;background:var(--era-panel);
+  border:1px solid var(--era-border);
+  padding:15px 18px 15px 13px;border-radius:2px;
+}
+.dl-page .dl-power-yongan-row .dl-power-vertical-label{
+  writing-mode:vertical-rl;text-orientation:upright;
+  display:flex;justify-content:center;align-items:center;
+  margin:0;background:var(--era-bg);border-inline-start:2px solid var(--era-side);
+  padding:10px 15px;letter-spacing:.2em;
+  color:var(--era-ink);font-family:var(--dl-inner-title-font,'Songti SC',serif);
+  font-size:19px;font-weight:400;line-height:1.3;
+}
+.dl-page .dl-power-yongan-row .dl-power-names{align-items:center;}
+/* 承安：皇权置顶，军权／相权两翼，后宫收束。 */
+.dl-page .dl-power-chengan{display:grid;gap:15px;max-width:860px;margin:auto;}
+.dl-page .dl-power-chengan-card{background:var(--era-panel);border:1px solid var(--era-border);padding:18px 20px;border-radius:2px;min-width:0;}
+.dl-page .dl-power-chengan-card h4{
+  margin:0 0 16px;text-align:center;color:var(--era-ink);
+  font-family:var(--dl-inner-title-font,'Songti SC',serif);font-size:19px;font-weight:400;
+}
+.dl-page .dl-power-chengan-card .dl-power-names{justify-content:center;}
+.dl-page .dl-power-chengan-core{background:linear-gradient(180deg,var(--era-bg),var(--era-panel));padding:23px 18px 22px;}
+.dl-page .dl-power-chengan-core h4{font-size:24px;letter-spacing:.1em;}
+.dl-page .dl-power-chengan-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;}
+.dl-page .dl-power-chengan-palace{padding:16px 18px;}
+.dl-page .dl-power-chengan-palace h4{font-size:18px;}
+/* 顺宁：两国对照，分别集中展示本阵营人物。 */
+.dl-page .dl-power-shunning{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;}
+.dl-page .dl-power-shunning-side{border:1px solid var(--era-border);background:var(--era-panel);padding:0 15px 20px;border-radius:2px;min-width:0;}
+.dl-page .dl-power-shunning-side h4{
+  margin:0 -15px 18px;padding:13px 15px;
+  text-align:center;border-bottom:1px solid var(--era-border);
+  color:var(--era-ink);font-family:var(--dl-inner-title-font,'Songti SC',serif);
+  font-size:21px;font-weight:400;letter-spacing:.1em;
+}
+.dl-page .dl-power-shunning-chengliang h4{background:var(--era-bg);}
+.dl-page .dl-power-shunning-beisai h4{background:#f4f0f8;}
+.dl-page .dl-power-shunning-beisai{border-left:3px solid var(--era-side);}
+.dl-page .dl-power-shunning-side .dl-power-names{justify-content:center;}
+@media(max-width:600px){
+ .dl-page .dl-power-names{gap:7px;}
+ .dl-page .dl-power-names span{padding:8px 10px;font-size:12.5px;}
+ .dl-page .dl-power-yongan{gap:10px;}
+ .dl-page .dl-power-yongan-row{grid-template-columns:40px minmax(0,1fr);gap:11px;padding:12px 10px;}
+ .dl-page .dl-power-yongan-row .dl-power-vertical-label{font-size:17px;padding:8px 8px;}
+ .dl-page .dl-power-chengan{gap:11px;}
+ .dl-page .dl-power-chengan-card{padding:14px 10px;}
+ .dl-page .dl-power-chengan-core{padding:17px 10px;}
+ .dl-page .dl-power-chengan-core h4{font-size:21px;}
+ .dl-page .dl-power-chengan-branches{gap:9px;}
+ .dl-page .dl-power-chengan-branches .dl-power-names span{font-size:12px;padding:7px 8px;}
+ .dl-page .dl-power-shunning{grid-template-columns:1fr;gap:11px;}
+ .dl-page .dl-power-shunning-side{padding:0 11px 15px;}
+ .dl-page .dl-power-shunning-side h4{margin:0 -11px 13px;padding:10px 11px;font-size:19px;}
+}
