@@ -2269,3 +2269,13 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
     line-height: 1.8;
   }
 }
+
+/* v10.09：承安·邢怀戎之死的个人思考内层折叠栏，仅限该段落。 */
+.dl-page .dl-era-chengan .dl-reflection-fold{margin:18px 0 6px;border:1px solid var(--era-border);background:var(--era-panel);border-radius:3px;overflow:hidden;}
+.dl-page .dl-era-chengan .dl-reflection-fold>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:11px 16px;color:var(--era-ink);background:var(--era-bg);font-family:var(--dl-inner-title-font,'Songti SC',serif);font-size:17px;line-height:1.55;}
+.dl-page .dl-era-chengan .dl-reflection-fold>summary::-webkit-details-marker{display:none;}
+.dl-page .dl-era-chengan .dl-reflection-toggle{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);transition:transform .2s;flex-shrink:0;}
+.dl-page .dl-era-chengan .dl-reflection-fold[open] .dl-reflection-toggle{transform:rotate(225deg);}
+.dl-page .dl-era-chengan .dl-reflection-content{padding:14px 18px 17px;}
+.dl-page .dl-era-chengan .dl-reflection-content p{margin:0;white-space:normal;line-height:1.9;font-family:'Noto Sans SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',sans-serif;}
+@media(max-width:560px){.dl-page .dl-era-chengan .dl-reflection-fold>summary{padding:10px 12px;font-size:16px;}.dl-page .dl-era-chengan .dl-reflection-content{padding:12px 13px 15px;}}
