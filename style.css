@@ -2381,3 +2381,37 @@ body, button, input, textarea, select { font-family:'Noto Sans SC','Source Han S
  .dl-page .dl-power-shunning-side{padding:0 11px 15px;}
  .dl-page .dl-power-shunning-side h4{margin:0 -11px 13px;padding:10px 11px;font-size:19px;}
 }
+
+
+/* v10.12 · 崇明六势力点：第二排燕王府居中，三行对称布局。 */
+.dl-page .dl-board-map {
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  grid-template-rows:repeat(3,minmax(0,1fr));
+  align-items:center;
+  justify-items:center;
+  padding:12px 10px;
+  box-sizing:border-box;
+}
+.dl-page .dl-board-map .dl-board-spot {
+  position:static;
+  inset:auto;
+  transform:none;
+  min-width:0;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  white-space:nowrap;
+}
+.dl-page .dl-board-map .dl-board-spot.r1 {grid-column:3 / span 2; grid-row:1;}
+.dl-page .dl-board-map .dl-board-spot.r2b {grid-column:1 / span 2; grid-row:2;}
+.dl-page .dl-board-map .dl-board-spot.r2a {grid-column:3 / span 2; grid-row:2;}
+.dl-page .dl-board-map .dl-board-spot.r2c {grid-column:5 / span 2; grid-row:2;}
+.dl-page .dl-board-map .dl-board-spot.r3a {grid-column:2 / span 2; grid-row:3;}
+.dl-page .dl-board-map .dl-board-spot.r3b {grid-column:4 / span 2; grid-row:3;}
+@media(max-width:560px){
+  .dl-page .dl-board-map{padding:10px 4px;}
+  .dl-page .dl-board-map .dl-board-spot{gap:4px;}
+  .dl-page .dl-board-map .dl-board-spot strong{font-size:12px;}
+  .dl-page .dl-board-map .dl-board-dot{width:9px;height:9px;}
+}
